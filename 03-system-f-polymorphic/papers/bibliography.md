@@ -2,34 +2,24 @@
 
 ## Foundational Works
 
-### 1. Girard, Jean-Yves (1972)
-**"Interprétation fonctionnelle et élimination des coupures de l'arithmétique d'ordre supérieur"**
-- PhD Thesis, Université Paris VII
-- Original introduction of System F and second-order lambda calculus
-- Proof of strong normalization using reducibility candidates
+**Girard, J.-Y.** (1972). *Interprétation fonctionnelle et élimination des coupures de l'arithmétique d'ordre supérieur*. PhD Thesis, Université Paris VII.
+- **Key Contribution**: Original introduction of System F and second-order lambda calculus with proof of strong normalization using reducibility candidates
+- **URL**: https://www.seiller.org/documents/Girard-phd.pdf
 
-### 2. Reynolds, John C. (1974)
-**"Towards a Theory of Type Structure"**
-- Programming Symposium, Lecture Notes in Computer Science 19: 408-425
-- Springer-Verlag, Berlin
-- Independent discovery of polymorphic lambda calculus
+**Reynolds, J.C.** (1974). *Towards a Theory of Type Structure*. Programming Symposium, Lecture Notes in Computer Science, 19, 408-425. Springer-Verlag.
+- **Key Contribution**: Independent discovery of polymorphic lambda calculus
+- **DOI**: 10.1007/3-540-06859-7_148
 
-### 3. Girard, Jean-Yves (1971)
-**"Une extension de l'interprétation de Gödel à l'analyse, et son application à l'élimination des coupures dans l'analyse et la théorie des types"**
-- Proceedings of the Second Scandinavian Logic Symposium: 63-92
-- North-Holland, Amsterdam
-- Foundational work on System F
+**Girard, J.-Y.** (1971). *Une extension de l'interprétation de Gödel à l'analyse, et son application à l'élimination des coupures dans l'analyse et la théorie des types*. Proceedings of the Second Scandinavian Logic Symposium, 63-92. North-Holland.
+- **Key Contribution**: Foundational work on System F, precursor to the full development
 
-### 4. Reynolds, John C. (1983)
-**"Types, Abstraction and Parametric Polymorphism"**
-- Information Processing '83: 513-523
-- IFIP, North-Holland
-- Fundamental work on parametricity and abstraction
+**Reynolds, J.C.** (1983). *Types, Abstraction and Parametric Polymorphism*. Information Processing '83, 513-523. IFIP, North-Holland.
+- **Key Contribution**: Fundamental work on parametricity and abstraction
+- **DOI**: 10.1016/B978-0-444-86748-1.50043-3
 
-### 5. Tait, William W. (1967)
-**"Intensional Interpretations of Functionals of Finite Type I"**
-- The Journal of Symbolic Logic 32(2): 198-212
-- Reducibility method used by Girard for normalization
+**Tait, W.W.** (1967). *Intensional Interpretations of Functionals of Finite Type I*. The Journal of Symbolic Logic, 32(2), 198-212.
+- **Key Contribution**: Reducibility method used by Girard for normalization
+- **DOI**: 10.2307/2271658
 
 ## Parametricity and Free Theorems
 

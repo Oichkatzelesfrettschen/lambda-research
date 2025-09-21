@@ -2,60 +2,45 @@
 
 ## Foundational Works
 
-### 1. Church, Alonzo (1940)
-**"A Formulation of the Simple Theory of Types"**
-- The Journal of Symbolic Logic 5(2): 56-68
-- Original introduction of simply typed lambda calculus
-- Foundation for avoiding paradoxes in lambda calculus
+**Church, A.** (1940). *A Formulation of the Simple Theory of Types*. The Journal of Symbolic Logic, 5(2), 56-68.
+- **Key Contribution**: Original introduction of simply typed lambda calculus and foundation for avoiding paradoxes
+- **DOI**: 10.2307/2266170
 
-### 2. Curry, Haskell B. (1934)
-**"Functionality in Combinatory Logic"**
-- Proceedings of the National Academy of Sciences 20(11): 584-590
-- Early work on typing in combinatory logic
-- Precursor to Curry-style typing
+**Curry, H.B.** (1934). *Functionality in Combinatory Logic*. Proceedings of the National Academy of Sciences, 20(11), 584-590.
+- **Key Contribution**: Early work on typing in combinatory logic, precursor to Curry-style typing
+- **DOI**: 10.1073/pnas.20.11.584
 
-### 3. Church, Alonzo (1932-1933)
-**"A Set of Postulates for the Foundation of Logic"**
-- Part I: Annals of Mathematics 33(2): 346-366 (1932)
-- Part II: Annals of Mathematics 34(4): 839-864 (1933)
-- Early development of type theory concepts
+**Church, A.** (1932-1933). *A Set of Postulates for the Foundation of Logic*. Annals of Mathematics, Part I: 33(2), 346-366 (1932); Part II: 34(4), 839-864 (1933).
+- **Key Contribution**: Early development of type theory concepts
+- **DOI**: Part I: 10.2307/1968337; Part II: 10.2307/1968702
 
-### 4. Henkin, Leon (1950)
-**"Completeness in the Theory of Types"**
-- The Journal of Symbolic Logic 15(2): 81-91
-- Semantic completeness for simple type theory
+**Henkin, L.** (1950). *Completeness in the Theory of Types*. The Journal of Symbolic Logic, 15(2), 81-91.
+- **Key Contribution**: Semantic completeness for simple type theory
+- **DOI**: 10.2307/2266967
 
-### 5. Prawitz, Dag (1965)
-**"Natural Deduction: A Proof-Theoretical Study"**
-- Almqvist & Wiksell, Stockholm
-- Connection between natural deduction and lambda calculus
+**Prawitz, D.** (1965). *Natural Deduction: A Proof-Theoretical Study*. Almqvist & Wiksell, Stockholm.
+- **Key Contribution**: Connection between natural deduction and lambda calculus
 
 ## Type Inference Theory
 
-### 6. Hindley, J. Roger (1969)
-**"The Principal Type-Scheme of an Object in Combinatory Logic"**
-- Transactions of the American Mathematical Society 146: 29-60
-- First description of principal type inference
+**Hindley, J.R.** (1969). *The Principal Type-Scheme of an Object in Combinatory Logic*. Transactions of the American Mathematical Society, 146, 29-60.
+- **Key Contribution**: First description of principal type inference
+- **DOI**: 10.2307/1995158
 
-### 7. Milner, Robin (1978)
-**"A Theory of Type Polymorphism in Programming"**
-- Journal of Computer and System Sciences 17(3): 348-375
-- Algorithm W and ML type system
+**Milner, R.** (1978). *A Theory of Type Polymorphism in Programming*. Journal of Computer and System Sciences, 17(3), 348-375.
+- **Key Contribution**: Algorithm W and ML type system
+- **DOI**: 10.1016/0022-0000(78)90014-4
 
-### 8. Damas, Luis (1985)
-**"Type Assignment in Programming Languages"**
-- PhD Thesis, University of Edinburgh
-- Formal analysis and proof of Hindley-Milner algorithm
+**Damas, L.** (1985). *Type Assignment in Programming Languages*. PhD Thesis, University of Edinburgh.
+- **Key Contribution**: Formal analysis and proof of Hindley-Milner algorithm
 
-### 9. Damas, Luis & Milner, Robin (1982)
-**"Principal Type-Schemes for Functional Programs"**
-- Proceedings of the 9th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages
-- Definitive paper on principal types
+**Damas, L. & Milner, R.** (1982). *Principal Type-Schemes for Functional Programs*. Proceedings of the 9th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages.
+- **Key Contribution**: Definitive paper on principal types
+- **DOI**: 10.1145/582153.582176
 
-### 10. Robinson, J. Alan (1965)
-**"A Machine-Oriented Logic Based on the Resolution Principle"**
-- Journal of the ACM 12(1): 23-41
-- Unification algorithm essential for type inference
+**Robinson, J.A.** (1965). *A Machine-Oriented Logic Based on the Resolution Principle*. Journal of the ACM, 12(1), 23-41.
+- **Key Contribution**: Unification algorithm essential for type inference
+- **DOI**: 10.1145/321250.321253
 
 ## Curry-Howard Correspondence
 
