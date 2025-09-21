@@ -14,11 +14,16 @@ This is a comprehensive lambda calculus research repository containing:
 
 ## Repository Structure
 
-### Core Organization
-- `01-XX-name/` - Numbered directories for lambda calculus variants
+### Numbered Directory Structure (01-31)
+The core organization follows systematic academic progression:
+- **01-XX-name/** - Each contains: `papers/`, `implementations/`, `tutorials/`, `historical/`
+- Standardized structure ensures consistency across all 31 lambda calculus variants
+- Each directory represents a major theoretical development or practical extension
+
+### Supporting Infrastructure
 - `sources/` - Complete source code repositories (Agda, Coq, Idris2, Rust, etc.)
 - `implementations/` - Research implementations organized by language
-- `papers-archive/` - Academic paper collection with metadata
+- `papers-archive/` - Academic paper collection with metadata and automation
 - Root-level `.md` files - Cross-references, bibliographies, and comprehensive indices
 
 ### Key Files
@@ -41,30 +46,53 @@ This repository contains implementations in multiple languages with their respec
 
 ### Essential Commands
 
-#### Documentation Development
+#### Repository Validation & Quality Assurance
 ```bash
-# Set up MkDocs documentation system
-./setup-mkdocs.sh                    # Initial setup (creates venv, installs deps)
-source venv/bin/activate             # Activate Python environment
-mkdocs serve --config-file mkdocs-simplified.yml  # Development server
-mkdocs build --config-file mkdocs-simplified.yml  # Build static documentation
+# Comprehensive repository validation (RUN FIRST)
+./validate-repository.py                 # Full validation suite
+./standardize_bibliography.py           # Bibliography format standardization
+make status                             # Show repository status
+make ci                                # Run continuous integration checks
+make verify                            # Verify repository integrity
 ```
 
-#### Testing and Validation
+#### Documentation Development
 ```bash
-# Rust implementations
+# Complete documentation setup and development
+./setup-mkdocs.sh                      # One-time setup (creates venv, installs deps)
+source venv/bin/activate               # ALWAYS activate before docs work
+mkdocs serve --config-file mkdocs-simplified.yml  # Live development server (127.0.0.1:8000)
+mkdocs build --config-file mkdocs-simplified.yml  # Production build for deployment
+```
+
+#### Master Build System (Multi-Language)
+```bash
+# Unified commands across all languages
+make help                              # Show all available targets
+make build                             # Build all implementations (Idris, Scala, SML, Rust)
+make test                              # Run all available tests
+make clean                             # Clean all build artifacts
+make dev                               # Initialize development environment
+make install                           # Install built artifacts to ~/.local/bin
+```
+
+#### Language-Specific Development
+```bash
+# Rust implementations (TAPL-based workspace)
 cd sources/rust-implementations/tapl-rust/
-cargo test                           # Run all Rust tests
-cargo build --release               # Build optimized binaries
+cargo build                            # Build all workspace members
+cargo test                             # Test all implementations
+cargo fmt                              # Format code
+cargo build --release                 # Optimized production build
 
 # Haskell/Agda
 cd sources/agda-src/
-make install                         # Build and install Agda
+make install                           # Build and install Agda
 
 # Coq/Rocq
 cd sources/coq-src/
-make world                          # Full build
-make check                          # Run test suite
+make world                            # Full build
+make check                            # Run test suite
 ```
 
 #### Paper Archive Management
@@ -201,5 +229,43 @@ This is designed as a comprehensive academic resource, suitable for:
 - Formal verification tools (Coq, Agda, Lean)
 - Performance profiling tools for each language
 - Academic reference managers (Zotero, Mendeley)
+
+## Quick Reference Commands
+
+### Daily Development Workflow
+```bash
+# Health check and validation
+make status                            # Check repository health
+./validate-repository.py              # Validate all components
+./standardize_bibliography.py         # Ensure bibliography consistency
+
+# Live documentation development
+source venv/bin/activate && mkdocs serve --config-file mkdocs-simplified.yml
+
+# Build and test everything
+make ci                               # Complete CI/CD pipeline
+```
+
+### Common Academic Tasks
+```bash
+# Add new lambda calculus variant
+mkdir 32-new-variant
+cd 32-new-variant && mkdir papers implementations tutorials historical
+
+# Update cross-references after changes
+./validate-repository.py
+./standardize_bibliography.py
+
+# Generate documentation with fresh content
+mkdocs build --config-file mkdocs-simplified.yml
+```
+
+### Educational Usage
+For systematic learning progression, see `EDUCATIONAL_PATHWAYS.md` which provides:
+- Beginner to advanced learning sequences
+- Implementation complexity guidance
+- Cross-references between theoretical concepts and practical implementations
+
+---
 
 This repository represents one of the most comprehensive academic resources on lambda calculus variants, suitable for research, education, and practical application across the full spectrum of type theory and programming language design.

@@ -42,10 +42,16 @@ theme:
   icon:
     logo: material/lambda
 
-# Basic plugins
+# Advanced plugins for academic search
 plugins:
-  - search
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+      lang: en
   - meta
+  - tags:
+      tags_file: tags.md
+  - awesome-pages
+  - macros
 
 # Markdown extensions
 markdown_extensions:

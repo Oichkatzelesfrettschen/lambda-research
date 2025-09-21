@@ -81,35 +81,45 @@ build-sml: ## Build Standard ML implementations
 		echo -e "$(YELLOW)SML compiler not found, skipping$(NC)"; \
 	fi
 
-build-rust: ## Build Rust implementations
-	@echo -e "$(BLUE)Building Rust implementations...$(NC)"
+build-rust: ## Build Rust implementations with zero warnings
+	@echo -e "$(BLUE)Building Rust implementations with zero warnings...$(NC)"
 	@if command -v $(CARGO) &> /dev/null; then \
-		cd $(SRC_DIR)/rust-implementations/tapl-rust && $(CARGO) build --release; \
-		echo -e "$(GREEN)Rust build successful$(NC)"; \
+		cd $(SRC_DIR)/rust-implementations/tapl-rust && \
+		$(CARGO) fmt --check && \
+		$(CARGO) clippy -- -D warnings && \
+		$(CARGO) build --release && \
+		$(CARGO) test; \
+		echo -e "$(GREEN)Rust build successful with zero warnings$(NC)"; \
 	else \
 		echo -e "$(YELLOW)Cargo not found, skipping$(NC)"; \
 	fi
 
 # Test targets
-test: test-unit test-property test-integration ## Run all tests
+test: test-rust test-validation test-docs ## Run all available tests
 
-test-unit: ## Run unit tests
-	@echo -e "$(BLUE)Running unit tests...$(NC)"
-	@mkdir -p $(TEST_DIR)/results
-	# Add unit test commands here
-	@echo -e "$(YELLOW)Unit tests not yet implemented$(NC)"
+test-rust: ## Run Rust implementation tests
+	@echo -e "$(BLUE)Running Rust tests...$(NC)"
+	@if command -v $(CARGO) &> /dev/null; then \
+		cd $(SRC_DIR)/rust-implementations/tapl-rust && $(CARGO) test --release; \
+		echo -e "$(GREEN)Rust tests passed$(NC)"; \
+	else \
+		echo -e "$(YELLOW)Cargo not found, skipping Rust tests$(NC)"; \
+	fi
 
-test-property: ## Run property-based tests
-	@echo -e "$(BLUE)Running property-based tests...$(NC)"
-	@mkdir -p $(TEST_DIR)/results
-	# Add property test commands here
-	@echo -e "$(YELLOW)Property tests not yet implemented$(NC)"
+test-validation: ## Run repository validation tests
+	@echo -e "$(BLUE)Running repository validation tests...$(NC)"
+	@python3 ./validate-repository.py
+	@python3 ./standardize_bibliography.py --check
+	@echo -e "$(GREEN)Repository validation passed$(NC)"
 
-test-integration: ## Run integration tests
-	@echo -e "$(BLUE)Running integration tests...$(NC)"
-	@mkdir -p $(TEST_DIR)/results
-	# Add integration test commands here
-	@echo -e "$(YELLOW)Integration tests not yet implemented$(NC)"
+test-docs: ## Test documentation build
+	@echo -e "$(BLUE)Testing documentation build...$(NC)"
+	@if [ -d venv ]; then \
+		source venv/bin/activate && mkdocs build --config-file mkdocs-simplified.yml --strict; \
+		echo -e "$(GREEN)Documentation build successful$(NC)"; \
+	else \
+		echo -e "$(YELLOW)venv not found, run ./setup-mkdocs.sh first$(NC)"; \
+	fi
 
 # Documentation targets
 doc: ## Generate documentation

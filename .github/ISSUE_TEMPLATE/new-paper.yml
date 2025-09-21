@@ -1,0 +1,134 @@
+name: Add New Academic Paper
+description: Submit a new research paper to be included in the repository
+title: "[PAPER] Add: [Paper Title]"
+labels: ["paper", "bibliography"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Adding New Academic Papers
+
+        Thank you for contributing to our comprehensive lambda calculus research collection!
+
+  - type: input
+    id: paper-title
+    attributes:
+      label: Paper Title
+      description: Full title of the academic paper
+      placeholder: "Linear Logic: A Logic of Actions"
+    validations:
+      required: true
+
+  - type: input
+    id: authors
+    attributes:
+      label: Authors
+      description: Full author names (comma-separated)
+      placeholder: "Jean-Yves Girard"
+    validations:
+      required: true
+
+  - type: input
+    id: year
+    attributes:
+      label: Year
+      description: Publication year
+      placeholder: "1987"
+    validations:
+      required: true
+
+  - type: input
+    id: venue
+    attributes:
+      label: Venue
+      description: Journal, conference, or publication venue
+      placeholder: "Theoretical Computer Science"
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: Link to the paper (preferably open access)
+      placeholder: "https://www.sciencedirect.com/science/article/pii/0304397587900454"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Lambda Calculus Category
+      description: Which category does this paper belong to?
+      options:
+        - "01-untyped-lambda-calculus"
+        - "02-simply-typed-lambda-calculus"
+        - "03-system-f-polymorphic"
+        - "04-calculus-of-constructions"
+        - "05-martin-lof-type-theory"
+        - "06-linear-lambda-calculus"
+        - "07-session-types"
+        - "08-dependent-types"
+        - "09-substructural-types"
+        - "10-concurrent-variants"
+        - "11-quantum-variants"
+        - "12-pure-type-systems"
+        - "13-combinatory-logic"
+        - "14-intersection-types"
+        - "15-union-types"
+        - "16-gradual-typing"
+        - "17-effect-systems"
+        - "18-categorical-semantics"
+        - "19-modal-types"
+        - "20-refinement-types"
+        - "21-probabilistic-types"
+        - "22-quantum-lambda-calculus"
+        - "23-advanced-lambda-variants"
+        - "24-tensor-lambda-calculus"
+        - "25-geometric-algebra-lambda-calculus"
+        - "26-proof-theory"
+        - "27-domain-theory"
+        - "28-abstract-machines"
+        - "29-homotopy-type-theory"
+        - "30-cubical-type-theory"
+        - "31-directed-type-theory"
+        - "Multiple categories"
+        - "New category needed"
+    validations:
+      required: true
+
+  - type: textarea
+    id: significance
+    attributes:
+      label: Academic Significance
+      description: Why is this paper important for lambda calculus research?
+      placeholder: "Foundational work that introduced linear logic, providing resource-aware computation..."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: paper-type
+    attributes:
+      label: Paper Type
+      description: What type of contribution is this?
+      options:
+        - label: Foundational/Historical (pre-1980)
+        - label: Classical work (1980-2000)
+        - label: Modern development (2000-2020)
+        - label: Recent research (2020+)
+        - label: Tutorial/Survey paper
+        - label: Implementation paper
+        - label: Theoretical breakthrough
+
+  - type: checkboxes
+    id: copyright
+    attributes:
+      label: Copyright Verification
+      description: Please confirm the legal status
+      options:
+        - label: This is an open access paper
+          required: false
+        - label: This paper is in the public domain
+          required: false
+        - label: I have verified this paper can be legally distributed
+          required: true

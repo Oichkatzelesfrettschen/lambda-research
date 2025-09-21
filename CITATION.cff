@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+type: dataset
+title: "Lambda Calculus Research Repository: Comprehensive Academic Collection"
+abstract: "A comprehensive collection of academic papers, implementations, and educational resources covering 31 major variants of lambda calculus and type theory. This repository contains over 708 research papers, multi-language implementations, and cross-referenced theoretical connections."
+authors:
+  - family-names: "Lambda Research Collective"
+    given-names: ""
+repository-code: "https://github.com/yourusername/lambda-research"
+url: "https://yourusername.github.io/lambda-research"
+license: MIT
+keywords:
+  - lambda-calculus
+  - type-theory
+  - programming-languages
+  - formal-methods
+  - dependent-types
+  - linear-logic
+  - category-theory
+  - proof-theory
+  - academic-research
+  - bibliography
+version: "2.0.0"
+date-released: "2025-01-21"
+preferred-citation:
+  type: misc
+  title: "Lambda Calculus Research Repository: Comprehensive Academic Collection"
+  authors:
+    - family-names: "Lambda Research Collective"
+      given-names: ""
+  year: 2025
+  url: "https://github.com/yourusername/lambda-research"
+  note: "Comprehensive academic repository with 708+ papers across 31 lambda calculus variants"

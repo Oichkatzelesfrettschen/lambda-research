@@ -1,0 +1,104 @@
+name: Add Implementation
+description: Contribute a new lambda calculus implementation
+title: "[IMPL] Add: [Language] implementation for [Lambda Calculus Variant]"
+labels: ["implementation", "code"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Adding New Implementations
+
+        Help expand our multi-language implementation collection!
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Programming Language
+      description: What language is this implementation in?
+      options:
+        - "Rust"
+        - "Haskell"
+        - "OCaml"
+        - "Agda"
+        - "Coq"
+        - "Idris2"
+        - "Lean4"
+        - "Scala"
+        - "Standard ML"
+        - "Python"
+        - "JavaScript/TypeScript"
+        - "C++"
+        - "Other (please specify)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: variant
+    attributes:
+      label: Lambda Calculus Variant
+      description: Which variant does this implement?
+      options:
+        - "Untyped Lambda Calculus"
+        - "Simply Typed Lambda Calculus"
+        - "System F"
+        - "Calculus of Constructions"
+        - "Martin-Löf Type Theory"
+        - "Linear Lambda Calculus"
+        - "Session Types"
+        - "Dependent Types"
+        - "Multiple variants"
+        - "Other (please specify)"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: features
+    attributes:
+      label: Implementation Features
+      description: What does your implementation include?
+      options:
+        - label: Parser for lambda expressions
+        - label: Type checker/inference
+        - label: Evaluator/interpreter
+        - label: Pretty printer
+        - label: REPL interface
+        - label: Standard library/examples
+        - label: Comprehensive test suite
+        - label: Formal verification proofs
+        - label: Performance benchmarks
+        - label: Documentation/tutorial
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Implementation Description
+      description: Describe your implementation approach and unique features
+      placeholder: "This implementation uses GADTs to ensure type safety..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: academic-basis
+    attributes:
+      label: Academic Papers Referenced
+      description: Which papers does this implementation follow or validate?
+      placeholder: "Based on Pierce's TAPL Chapter 9, implements algorithm from Hindley (1969)..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: quality
+    attributes:
+      label: Code Quality Standards
+      description: Please confirm your implementation meets these standards
+      options:
+        - label: Follows language-specific formatting conventions
+          required: true
+        - label: Includes comprehensive comments explaining algorithms
+          required: true
+        - label: Has test coverage for core functionality
+          required: true
+        - label: Builds without warnings
+          required: true
+        - label: Includes performance complexity documentation
+          required: false
