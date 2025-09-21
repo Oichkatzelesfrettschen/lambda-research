@@ -71,3 +71,6 @@ dist-newstyle/
 *.blg
 *.fls
 *.fdb_latexmk
+
+# Sources directory (contains embedded git repositories)
+sources/
