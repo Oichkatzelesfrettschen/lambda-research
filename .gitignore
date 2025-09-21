@@ -1,0 +1,73 @@
+# MkDocs
+site/
+*.pdf
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Build artifacts
+*.o
+*.hi
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Rust
+target/
+Cargo.lock
+
+# OCaml
+_build/
+*.cmo
+*.cmi
+*.cmx
+*.cmxa
+*.native
+*.byte
+
+# Haskell
+dist/
+dist-newstyle/
+.stack-work/
+
+# Agda
+*.agdai
+
+# Coq
+*.vo
+*.glob
+*.vio
+*.vok
+*.vos
+
+# LaTeX
+*.aux
+*.log
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk

@@ -1,0 +1,175 @@
+# Simply Typed Lambda Calculus - Academic Bibliography
+
+## Foundational Works
+
+### 1. Church, Alonzo (1940)
+**"A Formulation of the Simple Theory of Types"**
+- The Journal of Symbolic Logic 5(2): 56-68
+- Original introduction of simply typed lambda calculus
+- Foundation for avoiding paradoxes in lambda calculus
+
+### 2. Curry, Haskell B. (1934)
+**"Functionality in Combinatory Logic"**
+- Proceedings of the National Academy of Sciences 20(11): 584-590
+- Early work on typing in combinatory logic
+- Precursor to Curry-style typing
+
+### 3. Church, Alonzo (1932-1933)
+**"A Set of Postulates for the Foundation of Logic"**
+- Part I: Annals of Mathematics 33(2): 346-366 (1932)
+- Part II: Annals of Mathematics 34(4): 839-864 (1933)
+- Early development of type theory concepts
+
+### 4. Henkin, Leon (1950)
+**"Completeness in the Theory of Types"**
+- The Journal of Symbolic Logic 15(2): 81-91
+- Semantic completeness for simple type theory
+
+### 5. Prawitz, Dag (1965)
+**"Natural Deduction: A Proof-Theoretical Study"**
+- Almqvist & Wiksell, Stockholm
+- Connection between natural deduction and lambda calculus
+
+## Type Inference Theory
+
+### 6. Hindley, J. Roger (1969)
+**"The Principal Type-Scheme of an Object in Combinatory Logic"**
+- Transactions of the American Mathematical Society 146: 29-60
+- First description of principal type inference
+
+### 7. Milner, Robin (1978)
+**"A Theory of Type Polymorphism in Programming"**
+- Journal of Computer and System Sciences 17(3): 348-375
+- Algorithm W and ML type system
+
+### 8. Damas, Luis (1985)
+**"Type Assignment in Programming Languages"**
+- PhD Thesis, University of Edinburgh
+- Formal analysis and proof of Hindley-Milner algorithm
+
+### 9. Damas, Luis & Milner, Robin (1982)
+**"Principal Type-Schemes for Functional Programs"**
+- Proceedings of the 9th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages
+- Definitive paper on principal types
+
+### 10. Robinson, J. Alan (1965)
+**"A Machine-Oriented Logic Based on the Resolution Principle"**
+- Journal of the ACM 12(1): 23-41
+- Unification algorithm essential for type inference
+
+## Curry-Howard Correspondence
+
+### 11. Howard, William A. (1980)
+**"The Formulae-as-Types Notion of Construction"**
+- In: To H.B. Curry: Essays on Combinatory Logic, Lambda Calculus and Formalism
+- Academic Press, pp. 479-490 (original manuscript 1969)
+- Fundamental connection between types and logic
+
+### 12. De Bruijn, Nicolaas G. (1968)
+**"Automath, a Language for Mathematics"**
+- Proceedings of the Symposium on Automatic Demonstration
+- INRIA, pp. 29-61
+- Early implementation of Curry-Howard
+
+### 13. Martin-Löf, Per (1975)
+**"An Intuitionistic Theory of Types: Predicative Part"**
+- In: Logic Colloquium '73, pp. 73-118
+- North-Holland, Amsterdam
+- Type theory foundations
+
+## Decidability and Complexity
+
+### 14. Statman, Richard (1979)
+**"The Typed λ-Calculus is not Elementary Recursive"**
+- Theoretical Computer Science 9(1): 73-81
+- Complexity of normalization in simply typed lambda calculus
+
+### 15. Schwichtenberg, Helmut (1976)
+**"Complexity of Normalization in the Pure Typed Lambda Calculus"**
+- In: The L.E.J. Brouwer Centenary Symposium, pp. 453-457
+- North-Holland, Amsterdam
+
+### 16. Beckmann, Arnold (2001)
+**"Exact Bounds for Lengths of Reductions in Typed λ-Calculus"**
+- Journal of Symbolic Logic 66(3): 1277-1285
+- Precise complexity analysis
+
+## Modern Developments
+
+### 17. Wells, J.B. (1999)
+**"Typability and Type Checking in System F are Equivalent and Undecidable"**
+- Annals of Pure and Applied Logic 98(1-3): 111-156
+- Fundamental undecidability results
+
+### 18. Kfoury, A.J. & Tiuryn, J. (1990)
+**"Type Reconstruction in the Presence of Polymorphic Recursion"**
+- ACM Transactions on Programming Languages and Systems 15(2): 290-311
+- Extensions to basic type inference
+
+### 19. Pfenning, Frank (1992)
+**"Types in Logic Programming"**
+- MIT Press
+- Applications to logic programming
+
+## Implementation and Practice
+
+### 20. Cardelli, Luca (1987)
+**"Basic Polymorphic Typechecking"**
+- Science of Computer Programming 8(2): 147-172
+- Practical implementation techniques
+
+### 21. Clément, Dominique & Despeyroux, Joëlle & Despeyroux, Thierry & Kahn, Gilles (1986)
+**"A Simple Applicative Language: Mini-ML"**
+- Proceedings of the 1986 ACM Conference on LISP and Functional Programming
+- Influential implementation
+
+### 22. Tofte, Mads (1988)
+**"Operational Semantics and Polymorphic Type Inference"**
+- PhD Thesis, University of Edinburgh
+- CST-52-88
+- Comprehensive treatment of ML semantics
+
+## Error Messages and Diagnosis
+
+### 23. Lee, Oukseh & Yi, Kwangkeun (1998)
+**"Proofs about a Folklore Let-Polymorphic Type Inference Algorithm"**
+- ACM Transactions on Programming Languages and Systems 20(4): 707-723
+- Formal verification of type inference
+
+### 24. Heeren, Bastiaan & Hage, Jurriaan & Swierstra, Doaitse (2003)
+**"Scripting the Type Inference Process"**
+- Proceedings of the 8th ACM SIGPLAN International Conference on Functional Programming
+- Improved error reporting
+
+### 25. Chitil, Olaf (2001)
+**"Compositional Explanation of Types and Algorithmic Debugging of Type Errors"**
+- Proceedings of the 6th ACM SIGPLAN International Conference on Functional Programming
+- Type error explanation techniques
+
+## Theoretical Extensions
+
+### 26. Girard, Jean-Yves & Lafont, Yves & Taylor, Paul (1989)
+**"Proofs and Types"**
+- Cambridge University Press
+- Advanced type theory and logic
+
+### 27. Reynolds, John C. (1974)
+**"Towards a Theory of Type Structure"**
+- Programming Symposium, Lecture Notes in Computer Science 19: 408-425
+- Springer-Verlag
+- Parametric polymorphism foundations
+
+### 28. Hindley, J. Roger (1997)
+**"Basic Simple Type Theory"**
+- Cambridge University Press
+- Comprehensive modern treatment
+
+### 29. Thompson, Simon (1991)
+**"Type Theory and Functional Programming"**
+- Addison-Wesley
+- Educational introduction with implementations
+
+### 30. Barendregt, Henk & Dekkers, Wil & Statman, Richard (2013)
+**"Lambda Calculus with Types"**
+- Cambridge University Press
+- Modern comprehensive reference including simply typed lambda calculus

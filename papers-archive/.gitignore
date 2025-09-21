@@ -1,0 +1,39 @@
+# Downloaded papers (too large for git, respects copyright)
+*.pdf
+
+# Generated reports and indices
+verification_report.json
+*_INDEX.md
+ARCHIVE_STATISTICS.md
+metadata/generated_statistics.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Temporary files
+*.tmp
+*.log
+*.backup
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Runtime files
+*.pid
+*.lock

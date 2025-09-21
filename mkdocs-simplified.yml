@@ -1,0 +1,96 @@
+# Lambda Calculus Research Repository - Simplified MkDocs Configuration
+site_name: Lambda Calculus Research Repository
+site_description: Comprehensive research documentation covering 31 lambda calculus variants, implementations, and theoretical foundations
+
+# Repository information
+repo_name: lambda-research
+repo_url: https://github.com/yourusername/lambda-research
+
+# Theme configuration
+theme:
+  name: material
+  language: en
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+
+  icon:
+    logo: material/lambda
+
+# Basic plugins
+plugins:
+  - search
+  - meta
+
+# Markdown extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+# Navigation
+nav:
+  - Home: index.md
+  - Foundation:
+    - foundation/index.md
+    - Untyped Lambda Calculus: foundation/01-untyped.md
+    - Simply Typed Lambda Calculus: foundation/02-simply-typed.md
+    - System F: foundation/03-system-f.md
+    - Calculus of Constructions: foundation/04-coc.md
+    - Martin-Löf Type Theory: foundation/05-mltt.md
+  - Type Systems:
+    - type-systems/index.md
+    - Linear Types: type-systems/06-linear.md
+    - Session Types: type-systems/07-session.md
+    - Dependent Types: type-systems/08-dependent.md
+  - Bibliography:
+    - bibliography/index.md
+    - Core Papers: bibliography/core.md
+    - Recent Work: bibliography/recent.md
+
+# Extra JavaScript for Math
+extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+# Development server
+dev_addr: 127.0.0.1:8000
+docs_dir: docs
+site_dir: site

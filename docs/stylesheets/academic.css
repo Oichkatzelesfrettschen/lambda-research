@@ -1,0 +1,462 @@
+/* Academic CSS for Lambda Calculus Research Repository */
+/* Optimized for academic documentation and mathematical content */
+
+/* Root variables for consistent academic styling */
+:root {
+  /* Academic color palette */
+  --academic-primary: #1565c0;
+  --academic-secondary: #424242;
+  --academic-accent: #3f51b5;
+  --academic-text: #212121;
+  --academic-text-light: #757575;
+  --academic-bg: #fafafa;
+  --academic-bg-alt: #f5f5f5;
+  --academic-border: #e0e0e0;
+  --academic-code-bg: #f8f8f8;
+
+  /* Typography scales for academic content */
+  --academic-font-body: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --academic-font-mono: 'Roboto Mono', 'Consolas', 'Monaco', monospace;
+  --academic-font-math: 'Latin Modern Math', 'STIX Two Math', serif;
+
+  /* Spacing for academic layouts */
+  --academic-spacing-xs: 0.25rem;
+  --academic-spacing-sm: 0.5rem;
+  --academic-spacing-md: 1rem;
+  --academic-spacing-lg: 1.5rem;
+  --academic-spacing-xl: 2rem;
+  --academic-spacing-xxl: 3rem;
+}
+
+/* Typography enhancements for academic content */
+.md-typeset {
+  /* Improve readability for academic texts */
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.md-typeset h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin-bottom: var(--academic-spacing-lg);
+  color: var(--academic-primary);
+  border-bottom: 2px solid var(--academic-border);
+  padding-bottom: var(--academic-spacing-sm);
+}
+
+.md-typeset h2 {
+  font-weight: 400;
+  font-size: 2rem;
+  margin-top: var(--academic-spacing-xl);
+  margin-bottom: var(--academic-spacing-md);
+  color: var(--academic-secondary);
+}
+
+.md-typeset h3 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: var(--academic-spacing-lg);
+  margin-bottom: var(--academic-spacing-sm);
+  color: var(--academic-secondary);
+}
+
+.md-typeset h4 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin-top: var(--academic-spacing-md);
+  margin-bottom: var(--academic-spacing-sm);
+  color: var(--academic-text);
+}
+
+/* Academic paragraph styling */
+.md-typeset p {
+  margin-bottom: var(--academic-spacing-md);
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Mathematics styling */
+.md-typeset .arithmatex {
+  font-family: var(--academic-font-math);
+}
+
+/* Lambda calculus notation styling */
+.lambda-notation {
+  font-family: var(--academic-font-math);
+  font-style: italic;
+  color: var(--academic-accent);
+}
+
+/* Code blocks for academic examples */
+.md-typeset pre {
+  background-color: var(--academic-code-bg);
+  border: 1px solid var(--academic-border);
+  border-radius: 4px;
+  padding: var(--academic-spacing-md);
+  margin: var(--academic-spacing-md) 0;
+  overflow-x: auto;
+}
+
+.md-typeset code {
+  background-color: var(--academic-code-bg);
+  color: var(--academic-text);
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: var(--academic-font-mono);
+  font-size: 0.9em;
+}
+
+/* Bibliography and citation styling */
+.bibliography {
+  margin-top: var(--academic-spacing-xl);
+  padding-top: var(--academic-spacing-lg);
+  border-top: 1px solid var(--academic-border);
+}
+
+.bibliography h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--academic-spacing-md);
+  color: var(--academic-primary);
+}
+
+.bibliography ol {
+  counter-reset: bib-counter;
+  list-style: none;
+  padding-left: 0;
+}
+
+.bibliography li {
+  counter-increment: bib-counter;
+  margin-bottom: var(--academic-spacing-md);
+  padding-left: 3rem;
+  position: relative;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.bibliography li::before {
+  content: "[" counter(bib-counter) "]";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: var(--academic-primary);
+}
+
+/* Citation links */
+.citation {
+  color: var(--academic-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.citation:hover {
+  text-decoration: underline;
+}
+
+/* Academic tables */
+.md-typeset table {
+  border-collapse: collapse;
+  margin: var(--academic-spacing-lg) 0;
+  width: 100%;
+  background-color: var(--academic-bg);
+  border: 1px solid var(--academic-border);
+}
+
+.md-typeset th {
+  background-color: var(--academic-bg-alt);
+  font-weight: 600;
+  text-align: left;
+  padding: var(--academic-spacing-sm) var(--academic-spacing-md);
+  border-bottom: 2px solid var(--academic-border);
+}
+
+.md-typeset td {
+  padding: var(--academic-spacing-sm) var(--academic-spacing-md);
+  border-bottom: 1px solid var(--academic-border);
+  vertical-align: top;
+}
+
+/* Definition lists for terminology */
+.md-typeset dl {
+  margin: var(--academic-spacing-lg) 0;
+}
+
+.md-typeset dt {
+  font-weight: 600;
+  color: var(--academic-primary);
+  margin-top: var(--academic-spacing-md);
+  margin-bottom: var(--academic-spacing-xs);
+}
+
+.md-typeset dd {
+  margin-left: var(--academic-spacing-lg);
+  margin-bottom: var(--academic-spacing-sm);
+  text-align: justify;
+}
+
+/* Footnotes styling */
+.md-typeset .footnote {
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.md-typeset .footnote-ref {
+  color: var(--academic-accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.md-typeset .footnote-ref:hover {
+  text-decoration: underline;
+}
+
+/* Admonitions for academic content */
+.md-typeset .admonition {
+  margin: var(--academic-spacing-lg) 0;
+  padding: var(--academic-spacing-md);
+  border-left: 4px solid var(--academic-accent);
+  background-color: var(--academic-bg-alt);
+  border-radius: 0 4px 4px 0;
+}
+
+.md-typeset .admonition.theorem {
+  border-left-color: #2e7d32;
+  background-color: #e8f5e8;
+}
+
+.md-typeset .admonition.definition {
+  border-left-color: #1976d2;
+  background-color: #e3f2fd;
+}
+
+.md-typeset .admonition.proof {
+  border-left-color: #7b1fa2;
+  background-color: #f3e5f5;
+}
+
+.md-typeset .admonition.example {
+  border-left-color: #f57c00;
+  background-color: #fff3e0;
+}
+
+.md-typeset .admonition.lemma {
+  border-left-color: #5d4037;
+  background-color: #efebe9;
+}
+
+/* Cross-reference styling */
+.cross-ref {
+  background-color: var(--academic-bg-alt);
+  border: 1px solid var(--academic-border);
+  border-radius: 4px;
+  padding: var(--academic-spacing-sm);
+  margin: var(--academic-spacing-md) 0;
+}
+
+.cross-ref h4 {
+  margin-top: 0;
+  margin-bottom: var(--academic-spacing-xs);
+  color: var(--academic-primary);
+  font-size: 1rem;
+}
+
+.cross-ref ul {
+  margin: 0;
+  padding-left: var(--academic-spacing-lg);
+}
+
+.cross-ref li {
+  margin-bottom: var(--academic-spacing-xs);
+}
+
+/* Implementation matrix styling */
+.implementation-matrix {
+  overflow-x: auto;
+  margin: var(--academic-spacing-lg) 0;
+}
+
+.implementation-matrix table {
+  font-size: 0.9em;
+  min-width: 600px;
+}
+
+.implementation-matrix .feature-yes {
+  color: #2e7d32;
+  font-weight: bold;
+  text-align: center;
+}
+
+.implementation-matrix .feature-no {
+  color: #c62828;
+  font-weight: bold;
+  text-align: center;
+}
+
+.implementation-matrix .feature-partial {
+  color: #f57c00;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Navigation enhancements for academic content */
+.md-nav__title {
+  font-weight: 500;
+  color: var(--academic-primary);
+}
+
+.md-nav__item .md-nav__link {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Search result highlighting */
+.md-search-result__teaser mark {
+  background-color: #ffeb3b;
+  color: var(--academic-text);
+  font-weight: bold;
+  padding: 1px 2px;
+  border-radius: 2px;
+}
+
+/* Print styles for academic papers */
+@media print {
+  /* Hide navigation and non-essential elements */
+  .md-header,
+  .md-sidebar,
+  .md-footer,
+  .md-nav,
+  .md-search {
+    display: none !important;
+  }
+
+  /* Optimize content for print */
+  .md-main__inner {
+    margin: 0;
+    padding: 0;
+  }
+
+  .md-content {
+    max-width: none;
+    margin: 0;
+  }
+
+  /* Typography for print */
+  .md-typeset {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: black;
+  }
+
+  /* Page breaks */
+  .md-typeset h1,
+  .md-typeset h2 {
+    page-break-after: avoid;
+  }
+
+  .md-typeset p,
+  .md-typeset pre,
+  .md-typeset blockquote {
+    page-break-inside: avoid;
+  }
+
+  /* Bibliography formatting for print */
+  .bibliography li {
+    page-break-inside: avoid;
+    font-size: 10pt;
+  }
+
+  /* Links for print */
+  .md-typeset a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #666;
+  }
+
+  .md-typeset a[href^="#"]:after {
+    content: "";
+  }
+}
+
+/* Dark theme adjustments */
+[data-md-color-scheme="slate"] {
+  --academic-primary: #5e92f3;
+  --academic-secondary: #ffffff;
+  --academic-accent: #7986cb;
+  --academic-text: #ffffff;
+  --academic-text-light: #b0bec5;
+  --academic-bg: #212121;
+  --academic-bg-alt: #303030;
+  --academic-border: #424242;
+  --academic-code-bg: #2d2d30;
+}
+
+/* High contrast mode for accessibility */
+@media (prefers-contrast: high) {
+  :root {
+    --academic-primary: #000080;
+    --academic-secondary: #000000;
+    --academic-accent: #800080;
+    --academic-text: #000000;
+    --academic-bg: #ffffff;
+    --academic-border: #000000;
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .md-typeset {
+    font-size: 14px;
+  }
+
+  .md-typeset h1 {
+    font-size: 2rem;
+  }
+
+  .md-typeset h2 {
+    font-size: 1.5rem;
+  }
+
+  .md-typeset p {
+    text-align: left;
+    hyphens: none;
+  }
+
+  .implementation-matrix {
+    font-size: 0.8em;
+  }
+
+  .bibliography li {
+    padding-left: 2rem;
+  }
+}
+
+/* Focus indicators for accessibility */
+.md-typeset a:focus,
+.md-typeset button:focus,
+.md-typeset input:focus {
+  outline: 2px solid var(--academic-accent);
+  outline-offset: 2px;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

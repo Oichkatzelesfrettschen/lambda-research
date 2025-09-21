@@ -1,0 +1,380 @@
+{
+  "authors": {
+    "Church, Alonzo": {
+      "birth_year": 1903,
+      "death_year": 1995,
+      "affiliation": "Princeton University",
+      "major_contributions": [
+        "Lambda calculus",
+        "Church thesis",
+        "Type theory"
+      ],
+      "papers_in_archive": [
+        {
+          "year": 1936,
+          "title": "An Unsolvable Problem of Elementary Number Theory",
+          "path": "historical/church-lambda-calculus/1936_church_unsolvable_problem_oa.pdf",
+          "significance": "Introduces lambda calculus and proves undecidability"
+        },
+        {
+          "year": 1941,
+          "title": "The Calculi of Lambda-Conversion",
+          "path": "historical/church-lambda-calculus/1941_church_calculi_lambda_conversion_pd.pdf",
+          "significance": "Comprehensive treatment after consistency resolution"
+        }
+      ],
+      "external_resources": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Alonzo_Church",
+        "stanford_encyclopedia": "https://plato.stanford.edu/entries/church/",
+        "princeton_archives": "https://findingaids.library.upenn.edu/records/PRIN_MUDD_C0948"
+      }
+    },
+    "Curry, Haskell B.": {
+      "birth_year": 1900,
+      "death_year": 1982,
+      "affiliation": "Pennsylvania State University",
+      "major_contributions": [
+        "Combinatory logic",
+        "Curry-Howard correspondence",
+        "Type theory"
+      ],
+      "papers_in_archive": [
+        {
+          "year": 1958,
+          "title": "Combinatory Logic, Volume I",
+          "coauthors": ["Robert Feys"],
+          "path": "historical/curry-combinatory-logic/1958_curry_feys_combinatory_logic_ir.pdf",
+          "significance": "Foundational work on combinatory logic"
+        }
+      ],
+      "external_resources": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Haskell_Curry",
+        "biography": "https://people.uleth.ca/~jonathan.seldin/CURRY.pdf"
+      }
+    },
+    "Feys, Robert": {
+      "birth_year": 1889,
+      "death_year": 1961,
+      "affiliation": "Catholic University of Louvain",
+      "major_contributions": [
+        "Combinatory logic",
+        "Modal logic"
+      ],
+      "papers_in_archive": [
+        {
+          "year": 1958,
+          "title": "Combinatory Logic, Volume I",
+          "coauthors": ["Haskell B. Curry"],
+          "path": "historical/curry-combinatory-logic/1958_curry_feys_combinatory_logic_ir.pdf",
+          "significance": "Collaboration on foundational combinatory logic"
+        }
+      ]
+    },
+    "Scott, Dana S.": {
+      "birth_year": 1932,
+      "affiliation": "Carnegie Mellon University, Oxford University",
+      "major_contributions": [
+        "Domain theory",
+        "Denotational semantics",
+        "Modal logic"
+      ],
+      "papers_in_archive": [
+        {
+          "year": 1970,
+          "title": "Outline of a Mathematical Theory of Computation",
+          "path": "historical/scott-domain-theory/1970_scott_mathematical_theory_computation_oa.pdf",
+          "significance": "Introduces domain theory for lambda calculus"
+        },
+        {
+          "year": 1971,
+          "title": "Toward a Mathematical Semantics for Computer Languages",
+          "coauthors": ["Christopher Strachey"],
+          "path": "historical/scott-domain-theory/1971_scott_strachey_mathematical_semantics_oa.pdf",
+          "significance": "Establishes denotational semantics methodology"
+        }
+      ],
+      "external_resources": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Dana_Scott",
+        "cmu_page": "https://www.cs.cmu.edu/~scott/"
+      }
+    },
+    "Strachey, Christopher": {
+      "birth_year": 1916,
+      "death_year": 1975,
+      "affiliation": "Oxford University",
+      "major_contributions": [
+        "Denotational semantics",
+        "Programming language theory"
+      ],
+      "papers_in_archive": [
+        {
+          "year": 1971,
+          "title": "Toward a Mathematical Semantics for Computer Languages",
+          "coauthors": ["Dana S. Scott"],
+          "path": "historical/scott-domain-theory/1971_scott_strachey_mathematical_semantics_oa.pdf",
+          "significance": "Co-develops denotational semantics"
+        }
+      ]
+    },
+    "Girard, Jean-Yves": {
+      "birth_year": 1947,
+      "affiliation": "CNRS, Université de Marseille",
+      "major_contributions": [
+        "Linear logic",
+        "System F",
+        "Proof theory"
+      ],
+      "papers_in_archive": [
+        {
+          "year": 1986,
+          "title": "The System F of Variable Types, Fifteen Years Later",
+          "path": "classical/girard-system-f/1986_girard_system_f_fifteen_years_oa.pdf",
+          "significance": "Retrospective on System F and polymorphism"
+        },
+        {
+          "year": 1987,
+          "title": "Linear Logic",
+          "path": "classical/girard-system-f/1987_girard_linear_logic_oa.pdf",
+          "significance": "Introduces linear logic as resource-aware system"
+        },
+        {
+          "year": 1989,
+          "title": "Proofs and Types",
+          "path": "classical/girard-system-f/1989_girard_proofs_types_oa.pdf",
+          "significance": "Comprehensive introduction to proof theory"
+        }
+      ],
+      "external_resources": {
+        "homepage": "https://girard.perso.math.cnrs.fr/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Jean-Yves_Girard"
+      }
+    },
+    "Martin-Löf, Per": {
+      "birth_year": 1942,
+      "affiliation": "Stockholm University",
+      "major_contributions": [
+        "Dependent type theory",
+        "Constructive mathematics",
+        "Intuitionistic type theory"
+      ],
+      "papers_in_archive": [
+        {
+          "year": 1982,
+          "title": "Constructive Mathematics and Computer Programming",
+          "path": "classical/martin-lof-type-theory/1982_martin_lof_constructive_mathematics_oa.pdf",
+          "significance": "Connects constructive mathematics with programming"
+        },
+        {
+          "year": 1984,
+          "title": "Intuitionistic Type Theory",
+          "path": "classical/martin-lof-type-theory/1984_martin_lof_intuitionistic_type_theory_oa.pdf",
+          "significance": "Definitive exposition of dependent type theory"
+        }
+      ],
+      "external_resources": {
+        "archive": "https://archive-pml.github.io/martin-lof/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Per_Martin-L%C3%B6f"
+      }
+    },
+    "Taylor, Paul": {
+      "affiliation": "University of Manchester",
+      "major_contributions": [
+        "Category theory",
+        "Locale theory",
+        "Type theory translation"
+      ],
+      "papers_in_archive": [
+        {
+          "year": 1989,
+          "title": "Proofs and Types",
+          "role": "translator",
+          "original_author": "Jean-Yves Girard",
+          "path": "classical/girard-system-f/1989_girard_proofs_types_oa.pdf",
+          "significance": "English translation of Girard's work"
+        }
+      ],
+      "external_resources": {
+        "homepage": "https://www.paultaylor.eu/"
+      }
+    },
+    "Univalent Foundations Program, The": {
+      "type": "collective",
+      "institution": "Institute for Advanced Study",
+      "year_active": "2012-2013",
+      "major_contributions": [
+        "Homotopy type theory",
+        "Univalent foundations"
+      ],
+      "papers_in_archive": [
+        {
+          "year": 2013,
+          "title": "Homotopy Type Theory: Univalent Foundations of Mathematics",
+          "path": "modern/homotopy-type-theory/2013_univalent_foundations_hott_book_oa.pdf",
+          "significance": "Revolutionary approach connecting type theory with homotopy theory"
+        }
+      ],
+      "external_resources": {
+        "project_page": "https://homotopytypetheory.org/",
+        "book_page": "https://homotopytypetheory.org/book/"
+      }
+    },
+    "Wadler, Philip": {
+      "birth_year": 1956,
+      "affiliation": "University of Edinburgh",
+      "major_contributions": [
+        "Linear types",
+        "Monads in programming",
+        "Parametricity"
+      ],
+      "papers_in_archive": [
+        {
+          "year": 1990,
+          "title": "Linear Types Can Change the World!",
+          "path": "modern/linear-session-types/1990_wadler_linear_types_ap.pdf",
+          "significance": "Influential paper on linear types for resource management"
+        }
+      ],
+      "external_resources": {
+        "homepage": "https://homepages.inf.ed.ac.uk/wadler/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Philip_Wadler"
+      }
+    },
+    "Barendregt, Henk": {
+      "birth_year": 1947,
+      "affiliation": "Radboud University",
+      "major_contributions": [
+        "Lambda calculus theory",
+        "Type systems",
+        "Pure type systems"
+      ],
+      "papers_in_archive": [
+        {
+          "year": 1992,
+          "title": "Lambda Calculi with Types",
+          "path": "surveys/tutorial-materials/1992_barendregt_lambda_calculi_types_ir.pdf",
+          "significance": "Definitive survey of typed lambda calculi"
+        }
+      ],
+      "external_resources": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Henk_Barendregt",
+        "radboud_page": "https://www.cs.ru.nl/~henk/"
+      }
+    },
+    "Hindley, J. Roger": {
+      "birth_year": 1935,
+      "death_year": 2021,
+      "affiliation": "Swansea University",
+      "major_contributions": [
+        "Type inference",
+        "Principal types",
+        "Combinatory logic"
+      ],
+      "papers_in_archive": [
+        {
+          "year": 2008,
+          "title": "Lambda-Calculus and Combinators: An Introduction (2nd edition)",
+          "coauthors": ["Jonathan P. Seldin"],
+          "path": "surveys/tutorial-materials/2008_hindley_seldin_lambda_combinators_ir.pdf",
+          "significance": "Comprehensive textbook for learning lambda calculus"
+        }
+      ]
+    },
+    "Seldin, Jonathan P.": {
+      "affiliation": "University of Lethbridge",
+      "major_contributions": [
+        "Combinatory logic",
+        "Type theory",
+        "Curry's work preservation"
+      ],
+      "papers_in_archive": [
+        {
+          "year": 2008,
+          "title": "Lambda-Calculus and Combinators: An Introduction (2nd edition)",
+          "coauthors": ["J. Roger Hindley"],
+          "path": "surveys/tutorial-materials/2008_hindley_seldin_lambda_combinators_ir.pdf",
+          "significance": "Authoritative introduction to the field"
+        }
+      ],
+      "external_resources": {
+        "uleth_page": "https://people.uleth.ca/~jonathan.seldin/"
+      }
+    }
+  },
+  "collaboration_networks": {
+    "curry_school": [
+      "Haskell B. Curry",
+      "Robert Feys",
+      "J. Roger Hindley",
+      "Jonathan P. Seldin"
+    ],
+    "oxford_semantics": [
+      "Dana S. Scott",
+      "Christopher Strachey"
+    ],
+    "french_logic": [
+      "Jean-Yves Girard"
+    ],
+    "constructive_mathematics": [
+      "Per Martin-Löf"
+    ],
+    "homotopy_type_theory": [
+      "Vladimir Voevodsky",
+      "Steve Awodey",
+      "Thierry Coquand",
+      "Martin Hofmann",
+      "Daniel Licata"
+    ]
+  },
+  "institutional_affiliations": {
+    "Princeton University": [
+      "Alonzo Church"
+    ],
+    "Pennsylvania State University": [
+      "Haskell B. Curry"
+    ],
+    "Oxford University": [
+      "Dana S. Scott",
+      "Christopher Strachey"
+    ],
+    "Carnegie Mellon University": [
+      "Dana S. Scott"
+    ],
+    "CNRS": [
+      "Jean-Yves Girard"
+    ],
+    "Stockholm University": [
+      "Per Martin-Löf"
+    ],
+    "University of Edinburgh": [
+      "Philip Wadler"
+    ],
+    "Radboud University": [
+      "Henk Barendregt"
+    ],
+    "Institute for Advanced Study": [
+      "The Univalent Foundations Program"
+    ]
+  },
+  "chronological_influence": {
+    "1930s": {
+      "pioneers": ["Alonzo Church"],
+      "key_concepts": ["lambda calculus", "computability"]
+    },
+    "1940s-1950s": {
+      "developers": ["Haskell B. Curry", "Robert Feys"],
+      "key_concepts": ["combinatory logic", "type theory"]
+    },
+    "1960s-1970s": {
+      "semanticists": ["Dana S. Scott", "Christopher Strachey"],
+      "key_concepts": ["domain theory", "denotational semantics"]
+    },
+    "1980s-1990s": {
+      "type_theorists": ["Jean-Yves Girard", "Per Martin-Löf"],
+      "key_concepts": ["linear logic", "dependent types", "System F"]
+    },
+    "2000s-2010s": {
+      "modernizers": ["The Univalent Foundations Program", "Philip Wadler"],
+      "key_concepts": ["homotopy type theory", "linear types"]
+    }
+  }
+}

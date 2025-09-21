@@ -1,0 +1,195 @@
+{
+  "download_sources": {
+    "historical_papers": {
+      "church_1936": {
+        "title": "An Unsolvable Problem of Elementary Number Theory",
+        "author": "Alonzo Church",
+        "year": 1936,
+        "url": "https://ics.uci.edu/~lopes/teaching/inf212W12/readings/church.pdf",
+        "access_type": "OA",
+        "status": "verified",
+        "last_checked": "2025-09-20",
+        "local_path": "historical/church-lambda-calculus/1936_church_unsolvable_problem_oa.pdf",
+        "download_priority": "high",
+        "notes": "Available through UC Irvine, stable URL"
+      },
+      "church_1941": {
+        "title": "The Calculi of Lambda-Conversion",
+        "author": "Alonzo Church",
+        "year": 1941,
+        "url": "https://archive.org/details/AnnalsOfMathematicalStudies6ChurchAlonzoTheCalculiOfLambdaConversionPrincetonUniversityPress1941",
+        "access_type": "PD",
+        "status": "verified",
+        "last_checked": "2025-09-20",
+        "local_path": "historical/church-lambda-calculus/1941_church_calculi_lambda_conversion_pd.pdf",
+        "download_priority": "high",
+        "notes": "Internet Archive, public domain"
+      },
+      "scott_1970": {
+        "title": "Outline of a Mathematical Theory of Computation",
+        "author": "Dana S. Scott",
+        "year": 1970,
+        "url": "https://www.cs.ox.ac.uk/publications/publication2984-abstract.html",
+        "access_type": "OA",
+        "status": "pending_verification",
+        "last_checked": "2025-09-20",
+        "local_path": "historical/scott-domain-theory/1970_scott_mathematical_theory_computation_oa.pdf",
+        "download_priority": "high",
+        "notes": "Oxford Technical Monograph PRG-2"
+      }
+    },
+    "classical_papers": {
+      "girard_1987": {
+        "title": "Linear Logic",
+        "author": "Jean-Yves Girard",
+        "year": 1987,
+        "url": "https://girard.perso.math.cnrs.fr/Synsem.pdf",
+        "access_type": "OA",
+        "status": "verified",
+        "last_checked": "2025-09-20",
+        "local_path": "classical/girard-system-f/1987_girard_linear_logic_oa.pdf",
+        "download_priority": "high",
+        "notes": "Author's personal page, stable URL"
+      },
+      "girard_1989": {
+        "title": "Proofs and Types",
+        "author": "Jean-Yves Girard",
+        "year": 1989,
+        "url": "https://www.paultaylor.eu/stable/prot.pdf",
+        "access_type": "OA",
+        "status": "verified",
+        "last_checked": "2025-09-20",
+        "local_path": "classical/girard-system-f/1989_girard_proofs_types_oa.pdf",
+        "download_priority": "high",
+        "notes": "Paul Taylor translation, openly available"
+      },
+      "martin_lof_1984": {
+        "title": "Intuitionistic Type Theory",
+        "author": "Per Martin-Löf",
+        "year": 1984,
+        "url": "https://archive-pml.github.io/martin-lof/pdfs/Bibliopolis-Book-retypeset-1984.pdf",
+        "access_type": "OA",
+        "status": "verified",
+        "last_checked": "2025-09-20",
+        "local_path": "classical/martin-lof-type-theory/1984_martin_lof_intuitionistic_type_theory_oa.pdf",
+        "download_priority": "high",
+        "notes": "Official Martin-Löf archive, retypeset version"
+      }
+    },
+    "modern_papers": {
+      "hott_book_2013": {
+        "title": "Homotopy Type Theory: Univalent Foundations of Mathematics",
+        "author": "The Univalent Foundations Program",
+        "year": 2013,
+        "url": "https://homotopytypetheory.org/book/",
+        "access_type": "OA",
+        "status": "verified",
+        "last_checked": "2025-09-20",
+        "local_path": "modern/homotopy-type-theory/2013_univalent_foundations_hott_book_oa.pdf",
+        "download_priority": "high",
+        "notes": "Official HoTT book, multiple formats available"
+      }
+    },
+    "recent_arxiv": {
+      "quantum_lambda_2024": {
+        "title": "A Rewriting Theory for Quantum Lambda-Calculus",
+        "author": "TBD",
+        "year": 2024,
+        "url": "https://arxiv.org/abs/2411.14856",
+        "arxiv_id": "2411.14856",
+        "access_type": "AR",
+        "status": "verified",
+        "last_checked": "2025-09-20",
+        "local_path": "recent/quantum-calculi/2024_quantum_lambda_rewriting_ar.pdf",
+        "download_priority": "medium",
+        "notes": "arXiv preprint, quantum computing applications"
+      },
+      "prompt_programming_2025": {
+        "title": "Type-Driven Prompt Programming: From Typed Interfaces to a Calculus of Constraints",
+        "author": "TBD",
+        "year": 2025,
+        "url": "https://arxiv.org/abs/2508.12475",
+        "arxiv_id": "2508.12475",
+        "access_type": "AR",
+        "status": "verified",
+        "last_checked": "2025-09-20",
+        "local_path": "recent/probabilistic-types/2025_type_driven_prompt_programming_ar.pdf",
+        "download_priority": "medium",
+        "notes": "arXiv preprint, AI applications of type theory"
+      },
+      "linear_subexponentials_2025": {
+        "title": "Term Assignment and Categorical Models for Intuitionistic Linear Logic with Subexponentials",
+        "author": "TBD",
+        "year": 2025,
+        "url": "https://arxiv.org/abs/2507.12360",
+        "arxiv_id": "2507.12360",
+        "access_type": "AR",
+        "status": "verified",
+        "last_checked": "2025-09-20",
+        "local_path": "recent/categorical-semantics/2025_linear_logic_subexponentials_ar.pdf",
+        "download_priority": "medium",
+        "notes": "arXiv preprint, linear logic extensions"
+      }
+    }
+  },
+  "author_repositories": {
+    "jean_yves_girard": {
+      "homepage": "https://girard.perso.math.cnrs.fr/",
+      "status": "active",
+      "papers_available": [
+        "Linear Logic: Its Syntax and Semantics",
+        "The Blind Spot",
+        "Various logic papers"
+      ],
+      "notes": "CNRS personal page with several papers available"
+    },
+    "martin_lof_archive": {
+      "homepage": "https://archive-pml.github.io/martin-lof/",
+      "status": "active",
+      "papers_available": [
+        "Intuitionistic Type Theory (retypeset)",
+        "Various lecture notes and papers"
+      ],
+      "notes": "Dedicated archive for Martin-Löf's papers"
+    }
+  },
+  "institutional_sources": {
+    "internet_archive": {
+      "base_url": "https://archive.org/",
+      "lambda_calculus_collection": "https://archive.org/search.php?query=lambda%20calculus",
+      "status": "active",
+      "access_notes": "Many historical papers in public domain"
+    },
+    "arxiv": {
+      "base_url": "https://arxiv.org/",
+      "cs_lo": "https://arxiv.org/list/cs.LO/recent",
+      "cs_pl": "https://arxiv.org/list/cs.PL/recent",
+      "status": "active",
+      "access_notes": "Primary source for recent preprints",
+      "update_frequency": "daily"
+    },
+    "philpapers": {
+      "base_url": "https://philpapers.org/",
+      "lambda_calculus": "https://philpapers.org/browse/lambda-calculus",
+      "status": "active",
+      "access_notes": "Philosophical papers on foundations"
+    }
+  },
+  "download_policies": {
+    "respect_robots_txt": true,
+    "rate_limiting": {
+      "arxiv.org": 3,
+      "general": 5
+    },
+    "user_agent": "Lambda Research Archive Bot (Academic Use)",
+    "retry_policy": {
+      "max_retries": 3,
+      "backoff_factor": 2
+    }
+  },
+  "verification_schedule": {
+    "high_priority": "weekly",
+    "medium_priority": "monthly",
+    "low_priority": "quarterly"
+  }
+}

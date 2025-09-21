@@ -1,0 +1,345 @@
+# Lambda Calculus Research Repository - MkDocs Configuration
+# Modern academic documentation system for lambda calculus research
+# https://squidfunk.github.io/mkdocs-material/
+
+site_name: Lambda Calculus Research Repository
+site_description: Comprehensive research documentation covering 31 lambda calculus variants, implementations, and theoretical foundations
+site_author: Lambda Calculus Research Team
+site_url: https://lambda-research.readthedocs.io/
+
+# Repository information
+repo_name: lambda-research
+repo_url: https://github.com/yourusername/lambda-research
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2025 Lambda Calculus Research Team
+
+# Configuration
+theme:
+  name: material
+  language: en
+
+  # Color scheme - professional academic theme
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+  # Material theme features for academic documentation
+  features:
+    # Navigation
+    - navigation.tabs              # Top-level tabs for major sections
+    - navigation.tabs.sticky       # Sticky navigation tabs
+    - navigation.sections          # Collapsible sections in sidebar
+    - navigation.expand            # Expand all navigation sections by default
+    - navigation.indexes           # Enable index pages for sections
+    - navigation.top               # Back-to-top button
+    - navigation.tracking          # URL tracking for navigation state
+
+    # Search
+    - search.highlight             # Highlight search terms
+    - search.share                 # Share search results
+    - search.suggest               # Search suggestions
+
+    # Header
+    - header.autohide              # Auto-hide header on scroll
+
+    # Table of contents
+    - toc.follow                   # Follow anchor links in TOC
+    - toc.integrate                # Integrate TOC with navigation
+
+    # Content
+    - content.code.copy            # Copy code button
+    - content.code.annotate        # Code annotations
+    - content.tabs.link            # Link tabbed content
+    - content.tooltips             # Enhanced tooltips
+    - content.footnote.tooltips    # Footnote tooltips
+
+  # Custom icon
+  icon:
+    logo: material/lambda
+    repo: fontawesome/brands/github
+
+  # Custom fonts for academic readability
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+# Plugins
+plugins:
+  # Built-in search with academic enhancements
+  - search:
+      lang: en
+      separator: '[\s\-\.]+'
+
+  # Bibliography management
+  - bibtex:
+      bib_file: "papers-archive/metadata/bibliography.bib"
+      bib_dir: "papers-archive"
+      csl_file: "https://raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl"
+
+  # PDF generation for academic publishing
+  - with-pdf:
+      author: Lambda Calculus Research Team
+      copyright: Copyright 2025
+      cover_title: Lambda Calculus Research Repository
+      cover_subtitle: Comprehensive Documentation of Lambda Calculus Variants
+      heading_shift: false
+      toc_level: 3
+      ordered_chapter_level: 2
+      excludes_children:
+        - 'release-notes/:upgrading'
+        - 'release-notes/:changelog'
+      exclude_pages:
+        - 'bugs/'
+        - 'appendix/contribute/'
+      convert_iframe:
+        - src: IFRAME SRC
+          img: POSTER IMAGE URL
+          text: ALTERNATE TEXT
+      two_columns_level: 3
+      render_js: true
+      headless_chrome_path: chromium-browser
+      output_path: lambda-calculus-research.pdf
+      enabled_if_env: ENABLE_PDF_EXPORT
+      debug_html: true
+      show_anchors: true
+      verbose: true
+
+  # Tags for content organization
+  - tags:
+      tags_file: tags.md
+
+  # Meta plugin for enhanced control
+  - meta
+
+  # Git revision dates for academic tracking
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+
+  # Minification for performance
+  - minify:
+      minify_html: true
+      minify_js: true
+      htmlmin_opts:
+        remove_comments: true
+
+# Markdown Extensions
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 4
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Navigation Structure
+nav:
+  - Home: index.md
+  - Introduction:
+    - Overview: introduction/overview.md
+    - Cross-Reference System: introduction/cross-reference-system.md
+    - Implementation Catalog: introduction/implementation-catalog.md
+    - Research Methodology: introduction/methodology.md
+
+  # Core Lambda Calculus Foundation
+  - Foundation:
+    - foundation/index.md
+    - Untyped Lambda Calculus: foundation/01-untyped-lambda-calculus.md
+    - Simply Typed Lambda Calculus: foundation/02-simply-typed-lambda-calculus.md
+    - System F (Polymorphic): foundation/03-system-f-polymorphic.md
+    - Calculus of Constructions: foundation/04-calculus-of-constructions.md
+    - Martin-Löf Type Theory: foundation/05-martin-lof-type-theory.md
+
+  # Type Systems and Extensions
+  - Type Systems:
+    - type-systems/index.md
+    - Linear Lambda Calculus: type-systems/06-linear-lambda-calculus.md
+    - Session Types: type-systems/07-session-types.md
+    - Dependent Types: type-systems/08-dependent-types.md
+    - Substructural Types: type-systems/09-substructural-types.md
+    - Pure Type Systems: type-systems/12-pure-type-systems.md
+    - Intersection Types: type-systems/14-intersection-types.md
+    - Union Types: type-systems/15-union-types.md
+    - Gradual Typing: type-systems/16-gradual-typing.md
+    - Effect Systems: type-systems/17-effect-systems.md
+    - Modal Types: type-systems/19-modal-types.md
+    - Refinement Types: type-systems/20-refinement-types.md
+    - Probabilistic Types: type-systems/21-probabilistic-types.md
+
+  # Advanced and Specialized Variants
+  - Advanced Variants:
+    - advanced/index.md
+    - Concurrent Variants: advanced/10-concurrent-variants.md
+    - Quantum Variants: advanced/11-quantum-variants.md
+    - Combinatory Logic: advanced/13-combinatory-logic.md
+    - Categorical Semantics: advanced/18-categorical-semantics.md
+    - Quantum Lambda Calculus: advanced/22-quantum-lambda-calculus.md
+    - Advanced Lambda Variants: advanced/23-advanced-lambda-variants.md
+    - Tensor Lambda Calculus: advanced/24-tensor-lambda-calculus.md
+    - Geometric Algebra Lambda Calculus: advanced/25-geometric-algebra-lambda-calculus.md
+
+  # Theoretical Foundations
+  - Theory:
+    - theory/index.md
+    - Proof Theory: theory/26-proof-theory.md
+    - Domain Theory: theory/27-domain-theory.md
+    - Abstract Machines: theory/28-abstract-machines.md
+    - Homotopy Type Theory: theory/29-homotopy-type-theory.md
+    - Cubical Type Theory: theory/30-cubical-type-theory.md
+    - Directed Type Theory: theory/31-directed-type-theory.md
+
+  # Implementations and Practice
+  - Implementations:
+    - implementations/index.md
+    - Language Implementations: implementations/languages.md
+    - Proof Assistants: implementations/proof-assistants.md
+    - Research Prototypes: implementations/prototypes.md
+    - Performance Analysis: implementations/performance.md
+    - Comparison Matrix: implementations/comparison.md
+
+  # Bibliography and References
+  - Bibliography:
+    - bibliography/index.md
+    - Core Bibliography: bibliography/core.md
+    - Historical Papers: bibliography/historical.md
+    - Recent Advances: bibliography/recent.md
+    - Implementation Papers: bibliography/implementations.md
+    - Survey Papers: bibliography/surveys.md
+    - Thesis Collection: bibliography/theses.md
+
+  # Research Resources
+  - Resources:
+    - resources/index.md
+    - Paper Archive: resources/papers.md
+    - Source Code: resources/sources.md
+    - Educational Materials: resources/education.md
+    - Research Tools: resources/tools.md
+    - Conference Proceedings: resources/conferences.md
+
+  # Appendices
+  - Appendices:
+    - appendices/index.md
+    - Notation Guide: appendices/notation.md
+    - Glossary: appendices/glossary.md
+    - Historical Timeline: appendices/timeline.md
+    - Contributors: appendices/contributors.md
+    - License: appendices/license.md
+
+# Extra JavaScript for Math Rendering
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+# Extra CSS
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/academic.css
+
+# Additional configuration
+extra:
+  # Social media links
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername/lambda-research
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/yourusername
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:contact@lambda-research.org
+
+  # Version information
+  version:
+    provider: mike
+    default: stable
+
+  # Analytics (optional)
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+
+  # Announcement bar for important updates
+  announcement:
+    text: "New release: Lambda Calculus Research Repository v2.0 is now available!"
+
+  # Tags for content organization
+  tags:
+    Mathematical Foundations: mathematical
+    Type Theory: type-theory
+    Implementation: implementation
+    Historical: historical
+    Advanced: advanced
+    Practical: practical
+
+# Hook for custom functionality
+hooks:
+  - hooks/bibliography.py
+  - hooks/cross_references.py
+  - hooks/search_enhancement.py
+
+# Development server configuration
+dev_addr: 127.0.0.1:8000
+use_directory_urls: true
+strict: true
+
+# Build configuration
+site_dir: site
+docs_dir: docs

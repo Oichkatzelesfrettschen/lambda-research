@@ -1,0 +1,300 @@
+{
+  "topic_taxonomy": {
+    "foundations": {
+      "lambda_calculus": [
+        "untyped lambda calculus",
+        "Church encoding",
+        "beta reduction",
+        "alpha conversion",
+        "eta conversion",
+        "normal forms",
+        "confluence",
+        "Church-Rosser theorem"
+      ],
+      "combinatory_logic": [
+        "combinators",
+        "S combinator",
+        "K combinator",
+        "I combinator",
+        "Y combinator",
+        "fixed points",
+        "bracket abstraction"
+      ],
+      "type_theory": [
+        "simply typed lambda calculus",
+        "type assignment",
+        "type inference",
+        "type checking",
+        "principal types",
+        "polymorphism",
+        "type variables"
+      ]
+    },
+    "advanced_systems": {
+      "system_f": [
+        "second-order lambda calculus",
+        "polymorphic types",
+        "universal quantification",
+        "parametricity",
+        "System F omega",
+        "higher kinds"
+      ],
+      "dependent_types": [
+        "Pi types",
+        "Sigma types",
+        "dependent functions",
+        "dependent pairs",
+        "universe levels",
+        "type families",
+        "indexed types"
+      ],
+      "linear_types": [
+        "linear logic",
+        "resource management",
+        "affine types",
+        "relevant types",
+        "ordered types",
+        "substructural logic",
+        "exponentials",
+        "bang types"
+      ],
+      "session_types": [
+        "communication protocols",
+        "channel types",
+        "protocol compliance",
+        "deadlock freedom",
+        "progress",
+        "multiparty sessions"
+      ]
+    },
+    "semantic_foundations": {
+      "denotational_semantics": [
+        "domain theory",
+        "Scott domains",
+        "continuous functions",
+        "fixed point semantics",
+        "lattices",
+        "dcpos",
+        "algebraic domains"
+      ],
+      "operational_semantics": [
+        "small-step semantics",
+        "big-step semantics",
+        "reduction strategies",
+        "call-by-value",
+        "call-by-name",
+        "call-by-need",
+        "lazy evaluation"
+      ],
+      "categorical_semantics": [
+        "cartesian closed categories",
+        "topos theory",
+        "adjunctions",
+        "monads",
+        "natural transformations",
+        "functors",
+        "category theory"
+      ]
+    },
+    "proof_theory": {
+      "curry_howard": [
+        "propositions as types",
+        "proofs as programs",
+        "normalization",
+        "cut elimination",
+        "natural deduction",
+        "sequent calculus"
+      ],
+      "constructive_mathematics": [
+        "intuitionistic logic",
+        "constructive proofs",
+        "realizability",
+        "effective mathematics",
+        "Bishop mathematics",
+        "computation extraction"
+      ],
+      "linear_logic": [
+        "multiplicatives",
+        "additives",
+        "exponentials",
+        "proof nets",
+        "coherence spaces",
+        "geometry of interaction"
+      ]
+    },
+    "modern_developments": {
+      "homotopy_type_theory": [
+        "univalent foundations",
+        "higher inductive types",
+        "path types",
+        "equivalence types",
+        "universe univalence",
+        "infinity groupoids",
+        "homotopy levels"
+      ],
+      "quantum_computing": [
+        "quantum lambda calculus",
+        "quantum types",
+        "superposition",
+        "entanglement",
+        "measurement",
+        "quantum circuits",
+        "no-cloning"
+      ],
+      "probabilistic_types": [
+        "stochastic lambda calculus",
+        "probabilistic programming",
+        "measure theory",
+        "sampling",
+        "inference",
+        "Bayesian computation"
+      ],
+      "gradual_typing": [
+        "dynamic types",
+        "type migration",
+        "blame tracking",
+        "cast insertion",
+        "consistency",
+        "type soundness"
+      ]
+    },
+    "applications": {
+      "programming_languages": [
+        "functional programming",
+        "type systems",
+        "compiler design",
+        "language implementation",
+        "abstract machines",
+        "optimization"
+      ],
+      "theorem_proving": [
+        "proof assistants",
+        "interactive theorem proving",
+        "automated reasoning",
+        "tactics",
+        "reflection",
+        "certified programming"
+      ],
+      "verification": [
+        "program verification",
+        "correctness proofs",
+        "specification languages",
+        "refinement types",
+        "contracts",
+        "invariants"
+      ]
+    }
+  },
+  "author_specializations": {
+    "Church": ["lambda calculus", "computability", "logic"],
+    "Curry": ["combinatory logic", "formal systems"],
+    "Scott": ["domain theory", "denotational semantics"],
+    "Girard": ["linear logic", "System F", "proof theory"],
+    "Martin-Löf": ["dependent types", "constructive mathematics", "type theory"],
+    "Wadler": ["linear types", "monads", "parametricity"],
+    "Reynolds": ["polymorphism", "parametricity", "abstraction"],
+    "Hindley": ["type inference", "principal types"],
+    "Milner": ["type inference", "polymorphism", "calculi"],
+    "Howard": ["Curry-Howard correspondence", "proof theory"],
+    "Lawvere": ["categorical semantics", "topos theory"],
+    "Voevodsky": ["univalent foundations", "homotopy type theory"]
+  },
+  "era_characteristics": {
+    "historical": {
+      "period": "pre-1980",
+      "key_themes": [
+        "foundations of computation",
+        "mathematical logic",
+        "computability theory",
+        "formal systems"
+      ],
+      "major_results": [
+        "lambda calculus definition",
+        "Church-Rosser theorem",
+        "combinatory completeness",
+        "domain theory foundations"
+      ]
+    },
+    "classical": {
+      "period": "1980-2000",
+      "key_themes": [
+        "type systems",
+        "polymorphism",
+        "linear logic",
+        "dependent types"
+      ],
+      "major_results": [
+        "System F",
+        "linear logic",
+        "Martin-Löf type theory",
+        "parametricity"
+      ]
+    },
+    "modern": {
+      "period": "2000-2020",
+      "key_themes": [
+        "homotopy type theory",
+        "practical type systems",
+        "mechanized proofs",
+        "categorical semantics"
+      ],
+      "major_results": [
+        "univalent foundations",
+        "practical dependent types",
+        "session types",
+        "gradual typing"
+      ]
+    },
+    "recent": {
+      "period": "2020+",
+      "key_themes": [
+        "quantum computing applications",
+        "AI and machine learning",
+        "probabilistic programming",
+        "effect systems"
+      ],
+      "emerging_areas": [
+        "quantum lambda calculi",
+        "differentiable programming",
+        "neural type theory",
+        "computational linguistics"
+      ]
+    }
+  },
+  "cross_references": {
+    "lambda_calculus": {
+      "related_topics": [
+        "combinatory_logic",
+        "type_theory",
+        "functional_programming"
+      ],
+      "foundational_papers": [
+        "church_1936",
+        "church_1941",
+        "curry_feys_1958"
+      ]
+    },
+    "linear_logic": {
+      "related_topics": [
+        "resource_management",
+        "session_types",
+        "quantum_computing"
+      ],
+      "foundational_papers": [
+        "girard_1987",
+        "wadler_1990"
+      ]
+    },
+    "dependent_types": {
+      "related_topics": [
+        "proof_assistants",
+        "theorem_proving",
+        "homotopy_type_theory"
+      ],
+      "foundational_papers": [
+        "martin_lof_1984",
+        "hott_book_2013"
+      ]
+    }
+  }
+}
