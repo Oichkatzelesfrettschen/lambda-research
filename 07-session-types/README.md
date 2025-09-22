@@ -306,17 +306,17 @@ SecureType = encrypt(Key, ?Secret.!Secret.end)
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](papers/bibliography.md) for session type foundations
+- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for session type foundations
 - **Implementations**: Session type checkers and runtime systems
 - **Tutorials**: Protocol specification and verification examples
 - **Applications**: Distributed systems and concurrent programming case studies
 
 ## Related Systems
 
-- [Linear Lambda Calculus](../06-linear-lambda-calculus/) - Resource-aware foundation
-- [Concurrent Variants](../10-concurrent-variants/) - Process calculi foundations
-- [Substructural Types](../09-substructural-types/) - General resource logics
-- [Pi-Calculus](../10-concurrent-variants/) - Mobile process communication
+- [Linear Lambda Calculus](/../06-linear-lambda-calculus/) - Resource-aware foundation
+- [Concurrent Variants](/../10-concurrent-variants/) - Process calculi foundations
+- [Substructural Types](/../09-substructural-types/) - General resource logics
+- [Pi-Calculus](/../10-concurrent-variants/) - Mobile process communication
 
 ---
 

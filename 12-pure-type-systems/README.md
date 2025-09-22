@@ -428,17 +428,17 @@ cast : A → ? → B  -- Runtime type conversion
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](papers/bibliography.md) for PTS foundations
+- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for PTS foundations
 - **Implementations**: PTS type checkers and proof assistants
 - **Tutorials**: Type system design using PTS framework
 - **Metatheory**: Formal verification of PTS properties
 
 ## Related Systems
 
-- [System F](../03-system-f-polymorphic/) - λ2 corner of lambda cube
-- [Calculus of Constructions](../04-calculus-of-constructions/) - λC corner of lambda cube
-- [Martin-Löf Type Theory](../05-martin-lof-type-theory/) - Predicative dependent types
-- [Dependent Types](../08-dependent-types/) - Core concept in PTS framework
+- [System F](/../03-system-f-polymorphic/) - λ2 corner of lambda cube
+- [Calculus of Constructions](/../04-calculus-of-constructions/) - λC corner of lambda cube
+- [Martin-Löf Type Theory](/../05-martin-lof-type-theory/) - Predicative dependent types
+- [Dependent Types](/../08-dependent-types/) - Core concept in PTS framework
 
 ---
 

@@ -194,11 +194,6 @@
     - **Impact**: Advanced semantic foundations for effect reasoning
     - **Repository**: https://dl.acm.org/doi/10.1145/3158096
 
-35. **Forster, Y., Kammar, O., Lindley, S., Pretnar, M.** (2020). *On the expressive power of user-defined effects: effect handlers, monadic reflection, delimited control*. In International Conference on Functional Programming (ICFP), pages 56:1-56:29.
-    - **Significance**: Comparative expressiveness of effect mechanisms
-    - **Impact**: Clarified relationships between different effect approaches
-    - **Repository**: https://dl.acm.org/doi/10.1145/3408993
-
 ## Implementation Catalog
 
 ### Advanced Type System Implementations

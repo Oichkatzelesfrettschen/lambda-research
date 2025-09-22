@@ -17,8 +17,8 @@ These systems represent the historical development and theoretical foundation up
 
 ## Contents
 
-1. [Untyped Lambda Calculus](01-untyped.md)
-2. [Simply Typed Lambda Calculus](02-simply-typed.md)
-3. [System F (Polymorphic)](03-system-f.md)
-4. [Calculus of Constructions](04-coc.md)
-5. [Martin-Löf Type Theory](05-mltt.md)
+1. [Untyped Lambda Calculus](/01-untyped.md)
+2. [Simply Typed Lambda Calculus](/02-simply-typed.md)
+3. [System F (Polymorphic)](/03-system-f.md)
+4. [Calculus of Constructions](/04-coc.md)
+5. [Martin-Löf Type Theory](/05-mltt.md)

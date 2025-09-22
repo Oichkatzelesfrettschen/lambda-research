@@ -95,7 +95,7 @@ make verify
 make status
 ```
 
-See [papers-archive/README.md](papers-archive/README.md) for detailed documentation.
+See [papers-archive/README.md](/papers-archive/README.md) for detailed documentation.
 
 ## Contributing
 

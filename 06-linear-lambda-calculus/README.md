@@ -217,17 +217,17 @@ Elimination preserves linearity and reduces proof complexity.
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](papers/bibliography.md) for linear logic foundations
+- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for linear logic foundations
 - **Implementations**: Linear type checkers and compilers (Rust, Clean, ATS)
 - **Tutorials**: Resource-aware programming examples
 - **Applications**: Systems programming and quantum computing case studies
 
 ## Related Systems
 
-- [Substructural Types](../09-substructural-types/) - General framework for resource logics
-- [Session Types](../07-session-types/) - Communication protocol types
-- [Quantum Variants](../11-quantum-variants/) - Quantum resource management
-- [Simply Typed Lambda Calculus](../02-simply-typed-lambda-calculus/) - Non-linear foundation
+- [Substructural Types](/../09-substructural-types/) - General framework for resource logics
+- [Session Types](/../07-session-types/) - Communication protocol types
+- [Quantum Variants](/../11-quantum-variants/) - Quantum resource management
+- [Simply Typed Lambda Calculus](/../02-simply-typed-lambda-calculus/) - Non-linear foundation
 
 ---
 

@@ -49,7 +49,7 @@ Terms: M ::= x                          (variable)
            | M · N                      (inner product)
            | M * N                      (geometric product)
            | M̃                          (reverse)
-           | grade[k](M)                (grade selection)
+           | grade[k](/M)                (grade selection)
 ```
 
 ## Key Operations
@@ -190,7 +190,7 @@ Applications: Unified geometric transformations
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](papers/bibliography.md) for theoretical foundations and applications
+- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for theoretical foundations and applications
 ## Geometric Algebra Lambda Calculus - Implementations
 
 A comprehensive catalog of implementations, libraries, and systems that incorporate geometric algebra (Clifford algebra) within lambda calculus, functional programming, or related computational frameworks.
@@ -493,15 +493,15 @@ A comprehensive catalog of implementations, libraries, and systems that incorpor
 - **Research Collaborations**: Academic and industry partnerships
 - **Standardization Efforts**: Common interfaces and abstractions
 - **Tool Development**: Supporting tools for GA development
-- **Tutorials**: Educational materials covering theory and practice in [tutorials/](tutorials/)
-- **Historical**: Development of Clifford algebra and geometric computation in [historical/](historical/)
+- **Tutorials**: Educational materials covering theory and practice in [tutorials/](/tutorials/)
+- **Historical**: Development of Clifford algebra and geometric computation in [historical/](/historical/)
 
 ## Related Systems
 
-- [Linear Lambda Calculus](../06-linear-lambda-calculus/) - Resource-aware computation foundation
-- [Tensor Lambda Calculus](../24-tensor-lambda-calculus/) - Multidimensional array computation
-- [Quantum Lambda Calculus](../22-quantum-lambda-calculus/) - Quantum geometric phases
-- [Modal Types](../19-modal-types/) - Geometric modalities and coordinate frames
+- [Linear Lambda Calculus](/../06-linear-lambda-calculus/) - Resource-aware computation foundation
+- [Tensor Lambda Calculus](/../24-tensor-lambda-calculus/) - Multidimensional array computation
+- [Quantum Lambda Calculus](/../22-quantum-lambda-calculus/) - Quantum geometric phases
+- [Modal Types](/../19-modal-types/) - Geometric modalities and coordinate frames
 
 ## Notable Systems and Libraries
 

@@ -177,19 +177,6 @@
 **License**: Open source
 **Maturity**: Experimental/incomplete
 
-### G-Machine Implementations
-
-#### puff-lang/g-machine - JavaScript G-Machine
-**Repository**: https://github.com/puff-lang/g-machine
-**Language**: JavaScript
-**Description**: G-machine implementation in JavaScript
-**Features**:
-- Web-compatible implementation
-- JavaScript functional programming
-**Documentation**: Basic documentation
-**License**: Open source
-**Maturity**: Complete JavaScript implementation
-
 #### bitfield/gmachine - Go G-Machine
 **Repository**: https://github.com/bitfield/gmachine
 **Language**: Go

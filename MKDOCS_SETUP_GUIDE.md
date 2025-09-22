@@ -227,9 +227,9 @@ Later work by Curry and Feys [@curry1958] developed combinatory logic.
 Link related concepts:
 ```markdown
 See also:
-- [Linear Lambda Calculus](../type-systems/06-linear-lambda-calculus.md)
-- [Session Types](../type-systems/07-session-types.md)
-- [Cross-Reference System](../introduction/cross-reference-system.md)
+- [Linear Lambda Calculus](/../type-systems/06-linear-lambda-calculus.md)
+- [Session Types](/../type-systems/07-session-types.md)
+- [Cross-Reference System](/../introduction/cross-reference-system.md)
 ```
 
 #### Code Examples

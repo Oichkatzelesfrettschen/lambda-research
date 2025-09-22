@@ -194,7 +194,7 @@ A comprehensive catalog of source code implementations for major lambda calculus
 
 **CoC Typechecker Zoo**
 - **Description**: Educational implementation from Typechecker Zoo
-- **Repository**: https://sdiehl.github.io/typechecker-zoo/implementations/coc/calculus-of-constructions.html
+- **Repository**: https://github.com/sdiehl/typechecker-zoo
 - **Language**: Rust
 - **Institution**: Educational project by Stephen Diehl
 - **Key Features**: Lambda cube pinnacle, unified framework

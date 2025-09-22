@@ -153,11 +153,6 @@
     - **Impact**: Formal verification of quantum program transformations
     - **Repository**: https://github.com/inQWIRE/SQIR
 
-26. **Li, L., Hsu, M., Ying, M.** (2019). *A type system for quantum computation*. In Programming Language Design and Implementation (PLDI) Student Research Competition.
-    - **Significance**: Type system for quantum computation verification
-    - **Impact**: Static analysis for quantum program correctness
-    - **Repository**: https://github.com/liyili2/QafnY
-
 27. **Zhou, L., Barthe, G., Strub, P.-Y., Li, J., Ying, M.** (2021). *CoqQ: Foundational verification of quantum programs*. In Object-Oriented Programming, Systems, Languages & Applications (OOPSLA), pages 1-29.
     - **Significance**: Foundational verification of quantum programs in Coq
     - **Impact**: Formal verification framework for quantum computation

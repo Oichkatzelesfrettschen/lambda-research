@@ -148,17 +148,17 @@ succ = λn:Nat.λX:*.λs:X→X.λz:X.s (n X s z)
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](papers/bibliography.md) for foundational works
+- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for foundational works
 - **Implementations**: CoC implementations and proof assistants
 - **Tutorials**: Dependent type programming examples
 - **Historical**: Development from lambda calculus to modern proof assistants
 
 ## Related Systems
 
-- [System F](../03-system-f-polymorphic/) - Polymorphic foundation
-- [Martin-Löf Type Theory](../05-martin-lof-type-theory/) - Constructive alternative
-- [Pure Type Systems](../12-pure-type-systems/) - General framework
-- [Dependent Types](../08-dependent-types/) - Core concept exploration
+- [System F](/../03-system-f-polymorphic/) - Polymorphic foundation
+- [Martin-Löf Type Theory](/../05-martin-lof-type-theory/) - Constructive alternative
+- [Pure Type Systems](/../12-pure-type-systems/) - General framework
+- [Dependent Types](/../08-dependent-types/) - Core concept exploration
 
 ---
 

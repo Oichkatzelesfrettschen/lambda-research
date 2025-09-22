@@ -71,16 +71,16 @@ Typing: Γ ⊢ M : σ
 
 ## Resources
 
-- **Papers**: See [bibliography.md](papers/bibliography.md) for 30+ key papers
+- **Papers**: See [bibliography.md](/papers/bibliography.md) for 30+ key papers
 - **Implementations**: Type checkers and interpreters
 - **Tutorials**: Step-by-step type checking examples
 - **Historical**: Development from Church to modern systems
 
 ## Related Systems
 
-- [Untyped Lambda Calculus](../01-untyped-lambda-calculus/) - Untyped foundation
-- [System F](../03-system-f-polymorphic/) - Polymorphic extension
-- [Martin-Löf Type Theory](../05-martin-lof-type-theory/) - Dependent types
+- [Untyped Lambda Calculus](/../01-untyped-lambda-calculus/) - Untyped foundation
+- [System F](/../03-system-f-polymorphic/) - Polymorphic extension
+- [Martin-Löf Type Theory](/../05-martin-lof-type-theory/) - Dependent types
 
 ---
 

@@ -41,16 +41,16 @@ Church's original lambda calculus predates and influenced:
 
 ## Resources
 
-- **Papers**: See [bibliography.md](papers/bibliography.md) for 25+ foundational papers
+- **Papers**: See [bibliography.md](/papers/bibliography.md) for 25+ foundational papers
 - **Implementations**: Available in multiple languages in `/implementations/`
 - **Tutorials**: Educational materials in `/tutorials/`
 - **Historical**: Original papers and development in `/historical/`
 
 ## Related Systems
 
-- [Simply Typed Lambda Calculus](../02-simply-typed-lambda-calculus/) - Adding type safety
-- [Combinatory Logic](../13-combinatory-logic/) - Combinator-based equivalent
-- [System F](../03-system-f-polymorphic/) - Polymorphic extension
+- [Simply Typed Lambda Calculus](/../02-simply-typed-lambda-calculus/) - Adding type safety
+- [Combinatory Logic](/../13-combinatory-logic/) - Combinator-based equivalent
+- [System F](/../03-system-f-polymorphic/) - Polymorphic extension
 
 ---
 

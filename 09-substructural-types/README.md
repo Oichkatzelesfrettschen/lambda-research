@@ -311,17 +311,17 @@ measure : Qubit ⊸ Bool  -- Measurement consumes qubit
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](papers/bibliography.md) for substructural logic foundations
+- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for substructural logic foundations
 - **Implementations**: Substructural type checkers and compilers
 - **Tutorials**: Resource-aware programming examples
 - **Applications**: Systems programming and protocol verification
 
 ## Related Systems
 
-- [Linear Lambda Calculus](../06-linear-lambda-calculus/) - Pure linear types
-- [Session Types](../07-session-types/) - Protocol-specific linear types
-- [Quantum Variants](../11-quantum-variants/) - Quantum resource management
-- [Modal Types](../19-modal-types/) - General modal type theory
+- [Linear Lambda Calculus](/../06-linear-lambda-calculus/) - Pure linear types
+- [Session Types](/../07-session-types/) - Protocol-specific linear types
+- [Quantum Variants](/../11-quantum-variants/) - Quantum resource management
+- [Modal Types](/../19-modal-types/) - General modal type theory
 
 ---
 

@@ -442,17 +442,17 @@ quantum_classical_optimization : Objective → Parameters → OptimalParameters
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](papers/bibliography.md) for quantum computation foundations
+- **Papers**: See [papers/bibliography.md](/11-quantum-variants/papers/bibliography.md) for quantum computation foundations
 - **Implementations**: Quantum lambda calculus interpreters and simulators
 - **Tutorials**: Quantum programming and algorithm development
 - **Hardware**: Current quantum computing platforms and architectures
 
 ## Related Systems
 
-- [Linear Lambda Calculus](../06-linear-lambda-calculus/) - Resource-aware foundation
-- [Substructural Types](../09-substructural-types/) - Resource management principles
-- [Concurrent Variants](../10-concurrent-variants/) - Process calculi for quantum communication
-- [Modal Types](../19-modal-types/) - Quantum logic and necessity
+- [Linear Lambda Calculus](/../06-linear-lambda-calculus/) - Resource-aware foundation
+- [Substructural Types](/../09-substructural-types/) - Resource management principles
+- [Concurrent Variants](/../10-concurrent-variants/) - Process calculi for quantum communication
+- [Modal Types](/../19-modal-types/) - Quantum logic and necessity
 
 ---
 

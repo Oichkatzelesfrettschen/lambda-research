@@ -167,17 +167,17 @@ ua : Π A,B : U. (A ≃ B) → Id_U(A,B)
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](papers/bibliography.md) for foundational works
+- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for foundational works
 - **Implementations**: Agda, Coq, NuPRL, and other proof assistants
 - **Tutorials**: Constructive mathematics and dependent type programming
 - **Historical**: Development from intuitionistic logic to modern type theory
 
 ## Related Systems
 
-- [Calculus of Constructions](../04-calculus-of-constructions/) - Impredicative variant
-- [Dependent Types](../08-dependent-types/) - Core concept exploration
-- [Pure Type Systems](../12-pure-type-systems/) - General framework
-- [Homotopy Type Theory](../29-homotopy-type-theory/) - Higher-dimensional extension
+- [Calculus of Constructions](/../04-calculus-of-constructions/) - Impredicative variant
+- [Dependent Types](/../08-dependent-types/) - Core concept exploration
+- [Pure Type Systems](/../12-pure-type-systems/) - General framework
+- [Homotopy Type Theory](/../29-homotopy-type-theory/) - Higher-dimensional extension
 
 ---
 

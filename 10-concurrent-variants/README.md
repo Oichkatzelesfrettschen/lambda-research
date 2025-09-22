@@ -433,17 +433,17 @@ invoke : ContractAddr → Transaction → Result
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](papers/bibliography.md) for concurrent calculi research
+- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for concurrent calculi research
 - **Implementations**: Process calculus interpreters and actor systems
 - **Tutorials**: Concurrent programming patterns and verification
 - **Case Studies**: Distributed systems and parallel algorithms
 
 ## Related Systems
 
-- [Session Types](../07-session-types/) - Communication protocol types
-- [Linear Lambda Calculus](../06-linear-lambda-calculus/) - Resource-aware concurrency
-- [Quantum Variants](../11-quantum-variants/) - Quantum process calculi
-- [Modal Types](../19-modal-types/) - Distributed computation types
+- [Session Types](/../07-session-types/) - Communication protocol types
+- [Linear Lambda Calculus](/../06-linear-lambda-calculus/) - Resource-aware concurrency
+- [Quantum Variants](/../11-quantum-variants/) - Quantum process calculi
+- [Modal Types](/../19-modal-types/) - Distributed computation types
 
 ---
 

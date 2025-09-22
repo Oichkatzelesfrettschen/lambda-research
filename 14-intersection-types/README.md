@@ -4,7 +4,7 @@ This directory contains comprehensive research materials on intersection types i
 
 ## Contents
 
-### [Bibliography](bibliography.md)
+### [Bibliography](/bibliography.md)
 Comprehensive academic bibliography covering:
 - **Foundational Works (1978-1983)**: Coppo-Dezani original work, BCD system development
 - **Principal Type Inference**: Kfoury-Tiuryn contributions, decidability results
@@ -13,7 +13,7 @@ Comprehensive academic bibliography covering:
 - **Modern Developments**: TypeScript, Flow, and contemporary implementations
 - **Connections to Other Systems**: Polymorphism, subtyping, higher-order systems
 
-### [Implementations](implementations.md)
+### [Implementations](/implementations.md)
 Catalog of source code implementations including:
 - **Production Languages**: TypeScript, Flow, Scala 3
 - **Research Type Checkers**: Ezno, tyty, academic prototypes

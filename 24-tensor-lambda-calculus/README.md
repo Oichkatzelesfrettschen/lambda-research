@@ -24,7 +24,7 @@ Terms: M ::= x                          (variable)
            | tensor[e₁,...,eₙ]          (tensor construction)
            | M ⊗ N                      (tensor product)
            | M · N                      (matrix multiplication)
-           | contract[i,j](M)           (index contraction)
+           | contract[i,j](/M)           (index contraction)
 ```
 
 ## Key Operations
@@ -39,7 +39,7 @@ tensor[[1,2], [3,4]] : T[2,2]           (matrix)
 ```
 A · B                                    (matrix multiplication)
 A ⊗ B                                    (Kronecker product)
-contract[0,1](T)                        (trace operation)
+contract[0,1](/T)                        (trace operation)
 ```
 
 ### Shape Polymorphism
@@ -138,7 +138,7 @@ transpose : ∀n m. T[n,m] → T[m,n]
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](papers/bibliography.md) for foundational and recent research
+- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for foundational and recent research
 ## Tensor Lambda Calculus - Implementations
 
 A comprehensive catalog of implementations, libraries, and systems that incorporate tensor operations within lambda calculus or functional programming frameworks.
@@ -353,15 +353,15 @@ A comprehensive catalog of implementations, libraries, and systems that incorpor
 - **Benchmarks**: Performance comparison across implementations
 - **Examples**: Real-world tensor applications
 - **Documentation**: API documentation and best practices
-- **Tutorials**: Educational materials covering theory and practice in [tutorials/](tutorials/)
-- **Historical**: Development of tensor computation and linear algebra in [historical/](historical/)
+- **Tutorials**: Educational materials covering theory and practice in [tutorials/](/tutorials/)
+- **Historical**: Development of tensor computation and linear algebra in [historical/](/historical/)
 
 ## Related Systems
 
-- [Linear Lambda Calculus](../06-linear-lambda-calculus/) - Resource-aware computation foundation
-- [Quantum Lambda Calculus](../22-quantum-lambda-calculus/) - Quantum tensor networks
-- [Effect Systems](../17-effect-systems/) - Computational effects in numerical code
-- [Dependent Types](../08-dependent-types/) - Types depending on runtime values
+- [Linear Lambda Calculus](/../06-linear-lambda-calculus/) - Resource-aware computation foundation
+- [Quantum Lambda Calculus](/../22-quantum-lambda-calculus/) - Quantum tensor networks
+- [Effect Systems](/../17-effect-systems/) - Computational effects in numerical code
+- [Dependent Types](/../08-dependent-types/) - Types depending on runtime values
 
 ## Notable Systems and Languages
 

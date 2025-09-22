@@ -16,23 +16,23 @@ This repository serves as a comprehensive resource for researchers, educators, a
 
 ### Foundation
 Core lambda calculus systems that form the theoretical foundation:
-- [Untyped Lambda Calculus](foundation/01-untyped.md)
-- [Simply Typed Lambda Calculus](foundation/02-simply-typed.md)
-- [System F (Polymorphic Lambda Calculus)](foundation/03-system-f.md)
-- [Calculus of Constructions](foundation/04-coc.md)
-- [Martin-Löf Type Theory](foundation/05-mltt.md)
+- [Untyped Lambda Calculus](/foundation/01-untyped.md)
+- [Simply Typed Lambda Calculus](/foundation/02-simply-typed.md)
+- [System F (Polymorphic Lambda Calculus)](/foundation/03-system-f.md)
+- [Calculus of Constructions](/foundation/04-coc.md)
+- [Martin-Löf Type Theory](/foundation/05-mltt.md)
 
 ### Type Systems
 Advanced type systems and extensions:
-- [Linear Lambda Calculus](type-systems/06-linear.md)
-- [Session Types](type-systems/07-session.md)
-- [Dependent Types](type-systems/08-dependent.md)
+- [Linear Lambda Calculus](/type-systems/06-linear.md)
+- [Session Types](/type-systems/07-session.md)
+- [Dependent Types](/type-systems/08-dependent.md)
 - And many more...
 
 ### Bibliography
 Comprehensive academic references:
-- [Core Bibliography](bibliography/core.md)
-- [Recent Advances](bibliography/recent.md)
+- [Core Bibliography](/bibliography/core.md)
+- [Recent Advances](/bibliography/recent.md)
 
 ## Features
 

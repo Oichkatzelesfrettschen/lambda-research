@@ -285,17 +285,17 @@ Runtime Code = erase_proofs(Verified_Code)
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](papers/bibliography.md) for foundational dependent type research
+- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for foundational dependent type research
 - **Implementations**: Dependent type checkers and proof assistants
 - **Tutorials**: Programming with dependent types and verification
 - **Examples**: Verified algorithms and data structures
 
 ## Related Systems
 
-- [Martin-Löf Type Theory](../05-martin-lof-type-theory/) - Constructive foundation
-- [Calculus of Constructions](../04-calculus-of-constructions/) - Impredicative variant
-- [Pure Type Systems](../12-pure-type-systems/) - General framework
-- [Refinement Types](../20-refinement-types/) - Lightweight verification approach
+- [Martin-Löf Type Theory](/../05-martin-lof-type-theory/) - Constructive foundation
+- [Calculus of Constructions](/../04-calculus-of-constructions/) - Impredicative variant
+- [Pure Type Systems](/../12-pure-type-systems/) - General framework
+- [Refinement Types](/../20-refinement-types/) - Lightweight verification approach
 
 ---
 

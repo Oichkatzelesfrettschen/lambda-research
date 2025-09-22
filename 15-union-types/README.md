@@ -4,7 +4,7 @@ This directory contains comprehensive research materials on union types in type 
 
 ## Contents
 
-### [Bibliography](bibliography.md)
+### [Bibliography](/15-union-types/papers/bibliography.md)
 Comprehensive academic bibliography covering:
 - **Historical Development**: Early foundations from Hoare's discriminators to modern systems
 - **Typed Assembly Language**: Union types in low-level programming contexts

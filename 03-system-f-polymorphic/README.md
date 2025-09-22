@@ -114,17 +114,17 @@ cons = ΛX.λh:X.λt:List X.ΛY.λc:X→Y→Y.λn:Y.c h (t[Y] c n)
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](papers/bibliography.md) for foundational works
+- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for foundational works
 - **Implementations**: Type checkers and interpreters in various languages
 - **Tutorials**: Step-by-step examples of polymorphic programming
 - **Historical**: Development from proof theory to programming languages
 
 ## Related Systems
 
-- [Simply Typed Lambda Calculus](../02-simply-typed-lambda-calculus/) - Monomorphic foundation
-- [Calculus of Constructions](../04-calculus-of-constructions/) - Dependent types extension
-- [Pure Type Systems](../12-pure-type-systems/) - Generalization framework
-- [Martin-Löf Type Theory](../05-martin-lof-type-theory/) - Constructive alternative
+- [Simply Typed Lambda Calculus](/../02-simply-typed-lambda-calculus/) - Monomorphic foundation
+- [Calculus of Constructions](/../04-calculus-of-constructions/) - Dependent types extension
+- [Pure Type Systems](/../12-pure-type-systems/) - Generalization framework
+- [Martin-Löf Type Theory](/../05-martin-lof-type-theory/) - Constructive alternative
 
 ---
 

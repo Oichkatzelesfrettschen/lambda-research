@@ -493,17 +493,17 @@ node_t* reduce(node_t* term) {
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](papers/bibliography.md) for combinatory logic foundations
+- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for combinatory logic foundations
 - **Implementations**: Combinator interpreters and compilers
 - **Tutorials**: Variable-free programming and reduction techniques
 - **Historical**: Development from Schönfinkel to modern applications
 
 ## Related Systems
 
-- [Untyped Lambda Calculus](../01-untyped-lambda-calculus/) - Alternative computational foundation
-- [Simply Typed Lambda Calculus](../02-simply-typed-lambda-calculus/) - Typed variant comparison
-- [Linear Lambda Calculus](../06-linear-lambda-calculus/) - Resource-aware alternatives
-- [Pure Type Systems](../12-pure-type-systems/) - Type system frameworks
+- [Untyped Lambda Calculus](/../01-untyped-lambda-calculus/) - Alternative computational foundation
+- [Simply Typed Lambda Calculus](/../02-simply-typed-lambda-calculus/) - Typed variant comparison
+- [Linear Lambda Calculus](/../06-linear-lambda-calculus/) - Resource-aware alternatives
+- [Pure Type Systems](/../12-pure-type-systems/) - Type system frameworks
 
 ---
 

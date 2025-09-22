@@ -7,17 +7,17 @@ This document provides structured learning pathways for different audiences and 
 ### For Complete Beginners
 **Goal**: Understand basic computation and functional programming concepts
 
-1. **Start Here**: [Untyped Lambda Calculus](01-untyped-lambda-calculus/README.md)
+1. **Start Here**: [Untyped Lambda Calculus](/01-untyped-lambda-calculus/README.md)
    - Learn basic syntax: variables, abstraction, application
    - Understand Church numerals and basic data encoding
    - Practice reduction and evaluation
 
-2. **Add Safety**: [Simply Typed Lambda Calculus](02-simply-typed-lambda-calculus/README.md)
+2. **Add Safety**: [Simply Typed Lambda Calculus](/02-simply-typed-lambda-calculus/README.md)
    - Understand why types matter
    - Learn typing rules and type checking
    - See how types prevent errors
 
-3. **Explore Extensions**: [System F](03-system-f-polymorphic/README.md)
+3. **Explore Extensions**: [System F](/03-system-f-polymorphic/README.md)
    - Learn parametric polymorphism
    - Understand universal quantification
    - See practical applications in programming languages
@@ -25,17 +25,17 @@ This document provides structured learning pathways for different audiences and 
 ### For Programmers
 **Goal**: Connect theory to practical programming language features
 
-1. **Foundations**: Review [Core Bibliography](bibliography/core.md) for essential papers
-2. **Type Systems**: Explore [Union Types](15-union-types/README.md) and [Effect Systems](17-effect-systems/README.md)
-3. **Modern Applications**: Study [Session Types](07-session-types/README.md) for concurrent programming
-4. **Implementation**: Check [Implementation Catalog](implementations/catalog.md) for practical systems
+1. **Foundations**: Review [Core Bibliography](/docs/bibliography/core.md) for essential papers
+2. **Type Systems**: Explore [Union Types](/15-union-types/README.md) and [Effect Systems](/17-effect-systems/README.md)
+3. **Modern Applications**: Study [Session Types](/07-session-types/README.md) for concurrent programming
+4. **Implementation**: Check [Implementation Catalog](/implementations/catalog.md) for practical systems
 
 ### For Researchers
 **Goal**: Understand current state of the field and identify research opportunities
 
-1. **Survey the Field**: Read [Comprehensive Index](COMPREHENSIVE_INDEX.md)
-2. **Theoretical Foundations**: Study [Cross-Reference System](CROSS_REFERENCE_SYSTEM.md)
-3. **Current Research**: Explore advanced variants like [Homotopy Type Theory](29-homotopy-type-theory/README.md)
+1. **Survey the Field**: Read [Comprehensive Index](/COMPREHENSIVE_INDEX.md)
+2. **Theoretical Foundations**: Study [Cross-Reference System](/CROSS_REFERENCE_SYSTEM.md)
+3. **Current Research**: Explore advanced variants like [Homotopy Type Theory](/29-homotopy-type-theory/README.md)
 4. **Open Problems**: Review recent papers in each subdomain
 
 ## Learning Pathways by Interest
@@ -46,16 +46,16 @@ This document provides structured learning pathways for different audiences and 
 **Prerequisites**: Mathematical maturity, basic logic
 
 **Sequence**:
-1. [Untyped Lambda Calculus](01-untyped-lambda-calculus/) - Computational model
-2. [Combinatory Logic](13-combinatory-logic/) - Variable-free foundation
-3. [Domain Theory](27-domain-theory/) - Semantic foundations
-4. [Proof Theory](26-proof-theory/) - Logical foundations
-5. [Categorical Semantics](18-categorical-semantics/) - Mathematical structure
-6. [Homotopy Type Theory](29-homotopy-type-theory/) - Modern foundations
+1. [Untyped Lambda Calculus](/01-untyped-lambda-calculus/) - Computational model
+2. [Combinatory Logic](/13-combinatory-logic/) - Variable-free foundation
+3. [Domain Theory](/27-domain-theory/) - Semantic foundations
+4. [Proof Theory](/26-proof-theory/) - Logical foundations
+5. [Categorical Semantics](/18-categorical-semantics/) - Mathematical structure
+6. [Homotopy Type Theory](/29-homotopy-type-theory/) - Modern foundations
 
 **Advanced Topics**:
-- [Cubical Type Theory](30-cubical-type-theory/) - Constructive univalence
-- [Directed Type Theory](31-directed-type-theory/) - Asymmetric reasoning
+- [Cubical Type Theory](/30-cubical-type-theory/) - Constructive univalence
+- [Directed Type Theory](/31-directed-type-theory/) - Asymmetric reasoning
 
 ### Path 2: Programming Language Design
 *For language designers and implementers*
@@ -63,15 +63,15 @@ This document provides structured learning pathways for different audiences and 
 **Prerequisites**: Programming experience, basic type theory
 
 **Sequence**:
-1. [Simply Typed Lambda Calculus](02-simply-typed-lambda-calculus/) - Type safety
-2. [System F](03-system-f-polymorphic/) - Parametric polymorphism
-3. [Intersection Types](14-intersection-types/) - Principal types
-4. [Union Types](15-union-types/) - Sum types and pattern matching
-5. [Effect Systems](17-effect-systems/) - Computational effects
-6. [Gradual Typing](16-gradual-typing/) - Dynamic-static integration
+1. [Simply Typed Lambda Calculus](/02-simply-typed-lambda-calculus/) - Type safety
+2. [System F](/03-system-f-polymorphic/) - Parametric polymorphism
+3. [Intersection Types](/14-intersection-types/) - Principal types
+4. [Union Types](/15-union-types/) - Sum types and pattern matching
+5. [Effect Systems](/17-effect-systems/) - Computational effects
+6. [Gradual Typing](/16-gradual-typing/) - Dynamic-static integration
 
 **Practical Focus**:
-- Study implementation patterns in [implementations/](implementations/)
+- Study implementation patterns in [/implementations/](/implementations/)
 - Review language design decisions in major systems
 - Understand type inference algorithms
 
@@ -81,11 +81,11 @@ This document provides structured learning pathways for different audiences and 
 **Prerequisites**: Logic, basic proof theory
 
 **Sequence**:
-1. [Calculus of Constructions](04-calculus-of-constructions/) - Dependent types
-2. [Martin-Löf Type Theory](05-martin-lof-type-theory/) - Constructive foundations
-3. [Pure Type Systems](12-pure-type-systems/) - Lambda cube framework
-4. [Dependent Types](08-dependent-types/) - Advanced dependent typing
-5. [Proof Theory](26-proof-theory/) - Proof-theoretic foundations
+1. [Calculus of Constructions](/04-calculus-of-constructions/) - Dependent types
+2. [Martin-Löf Type Theory](/05-martin-lof-type-theory/) - Constructive foundations
+3. [Pure Type Systems](/12-pure-type-systems/) - Lambda cube framework
+4. [Dependent Types](/08-dependent-types/) - Advanced dependent typing
+5. [Proof Theory](/26-proof-theory/) - Proof-theoretic foundations
 
 **Applications**:
 - Study major proof assistants (Coq, Agda, Lean)
@@ -98,11 +98,11 @@ This document provides structured learning pathways for different audiences and 
 **Prerequisites**: Systems programming, computer architecture
 
 **Sequence**:
-1. [Linear Lambda Calculus](06-linear-lambda-calculus/) - Resource awareness
-2. [Substructural Types](09-substructural-types/) - Fine-grained control
-3. [Abstract Machines](28-abstract-machines/) - Implementation models
-4. [Concurrent Variants](10-concurrent-variants/) - Parallel computation
-5. [Session Types](07-session-types/) - Communication protocols
+1. [Linear Lambda Calculus](/06-linear-lambda-calculus/) - Resource awareness
+2. [Substructural Types](/09-substructural-types/) - Fine-grained control
+3. [Abstract Machines](/28-abstract-machines/) - Implementation models
+4. [Concurrent Variants](/10-concurrent-variants/) - Parallel computation
+5. [Session Types](/07-session-types/) - Communication protocols
 
 **Performance Focus**:
 - Memory management and linear types
@@ -115,10 +115,10 @@ This document provides structured learning pathways for different audiences and 
 **Prerequisites**: Advanced mathematics, category theory
 
 **Sequence**:
-1. [Tensor Lambda Calculus](24-tensor-lambda-calculus/) - Multidimensional computation
-2. [Geometric Algebra Lambda Calculus](25-geometric-algebra-lambda-calculus/) - Geometric computation
-3. [Quantum Lambda Calculus](22-quantum-lambda-calculus/) - Quantum computation
-4. [Probabilistic Types](21-probabilistic-types/) - Uncertainty quantification
+1. [Tensor Lambda Calculus](/24-tensor-lambda-calculus/) - Multidimensional computation
+2. [Geometric Algebra Lambda Calculus](/25-geometric-algebra-lambda-calculus/) - Geometric computation
+3. [Quantum Lambda Calculus](/22-quantum-lambda-calculus/) - Quantum computation
+4. [Probabilistic Types](/21-probabilistic-types/) - Uncertainty quantification
 
 **Research Areas**:
 - Scientific computing applications
