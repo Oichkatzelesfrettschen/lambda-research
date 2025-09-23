@@ -306,7 +306,7 @@ SecureType = encrypt(Key, ?Secret.!Secret.end)
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for session type foundations
+- **Papers**: See [papers/bibliography.md](../../07-session-types/papers/bibliography.md) for session type foundations
 - **Implementations**: Session type checkers and runtime systems
 - **Tutorials**: Protocol specification and verification examples
 - **Applications**: Distributed systems and concurrent programming case studies

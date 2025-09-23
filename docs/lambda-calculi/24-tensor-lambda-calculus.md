@@ -138,7 +138,7 @@ transpose : ∀n m. T[n,m] → T[m,n]
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for foundational and recent research
+- **Papers**: See [papers/bibliography.md](../../24-tensor-lambda-calculus/papers/bibliography.md) for foundational and recent research
 ## Tensor Lambda Calculus - Implementations
 
 A comprehensive catalog of implementations, libraries, and systems that incorporate tensor operations within lambda calculus or functional programming frameworks.

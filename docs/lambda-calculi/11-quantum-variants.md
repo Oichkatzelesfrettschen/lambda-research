@@ -442,7 +442,7 @@ quantum_classical_optimization : Objective → Parameters → OptimalParameters
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](/11-quantum-variants/papers/bibliography.md) for quantum computation foundations
+- **Papers**: See [papers/bibliography.md](../../11-quantum-variants/papers/bibliography.md) for quantum computation foundations
 - **Implementations**: Quantum lambda calculus interpreters and simulators
 - **Tutorials**: Quantum programming and algorithm development
 - **Hardware**: Current quantum computing platforms and architectures

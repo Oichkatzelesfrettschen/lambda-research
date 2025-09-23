@@ -493,7 +493,7 @@ node_t* reduce(node_t* term) {
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for combinatory logic foundations
+- **Papers**: See [papers/bibliography.md](../../13-combinatory-logic/papers/bibliography.md) for combinatory logic foundations
 - **Implementations**: Combinator interpreters and compilers
 - **Tutorials**: Variable-free programming and reduction techniques
 - **Historical**: Development from Schönfinkel to modern applications

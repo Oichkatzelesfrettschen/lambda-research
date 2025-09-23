@@ -311,7 +311,7 @@ measure : Qubit ⊸ Bool  -- Measurement consumes qubit
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for substructural logic foundations
+- **Papers**: See [papers/bibliography.md](../../09-substructural-types/papers/bibliography.md) for substructural logic foundations
 - **Implementations**: Substructural type checkers and compilers
 - **Tutorials**: Resource-aware programming examples
 - **Applications**: Systems programming and protocol verification

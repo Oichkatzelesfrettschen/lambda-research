@@ -285,7 +285,7 @@ Runtime Code = erase_proofs(Verified_Code)
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for foundational dependent type research
+- **Papers**: See [papers/bibliography.md](../../08-dependent-types/papers/bibliography.md) for foundational dependent type research
 - **Implementations**: Dependent type checkers and proof assistants
 - **Tutorials**: Programming with dependent types and verification
 - **Examples**: Verified algorithms and data structures

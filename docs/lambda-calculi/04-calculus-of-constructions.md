@@ -148,7 +148,7 @@ succ = λn:Nat.λX:*.λs:X→X.λz:X.s (n X s z)
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for foundational works
+- **Papers**: See [papers/bibliography.md](../../04-calculus-of-constructions/papers/bibliography.md) for foundational works
 - **Implementations**: CoC implementations and proof assistants
 - **Tutorials**: Dependent type programming examples
 - **Historical**: Development from lambda calculus to modern proof assistants

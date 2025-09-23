@@ -41,7 +41,7 @@ Church's original lambda calculus predates and influenced:
 
 ## Resources
 
-- **Papers**: See [bibliography.md](/papers/bibliography.md) for 25+ foundational papers
+- **Papers**: See [bibliography.md](../../01-untyped-lambda-calculus/papers/bibliography.md) for 25+ foundational papers
 - **Implementations**: Available in multiple languages in `/implementations/`
 - **Tutorials**: Educational materials in `/tutorials/`
 - **Historical**: Original papers and development in `/historical/`

@@ -217,7 +217,7 @@ Elimination preserves linearity and reduces proof complexity.
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for linear logic foundations
+- **Papers**: See [papers/bibliography.md](../../06-linear-lambda-calculus/papers/bibliography.md) for linear logic foundations
 - **Implementations**: Linear type checkers and compilers (Rust, Clean, ATS)
 - **Tutorials**: Resource-aware programming examples
 - **Applications**: Systems programming and quantum computing case studies

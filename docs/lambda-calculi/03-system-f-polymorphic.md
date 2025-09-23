@@ -114,7 +114,7 @@ cons = ΛX.λh:X.λt:List X.ΛY.λc:X→Y→Y.λn:Y.c h (t[Y] c n)
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for foundational works
+- **Papers**: See [papers/bibliography.md](../../03-system-f-polymorphic/papers/bibliography.md) for foundational works
 - **Implementations**: Type checkers and interpreters in various languages
 - **Tutorials**: Step-by-step examples of polymorphic programming
 - **Historical**: Development from proof theory to programming languages

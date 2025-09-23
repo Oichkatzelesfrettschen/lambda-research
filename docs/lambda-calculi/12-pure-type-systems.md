@@ -428,7 +428,7 @@ cast : A → ? → B  -- Runtime type conversion
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for PTS foundations
+- **Papers**: See [papers/bibliography.md](../../12-pure-type-systems/papers/bibliography.md) for PTS foundations
 - **Implementations**: PTS type checkers and proof assistants
 - **Tutorials**: Type system design using PTS framework
 - **Metatheory**: Formal verification of PTS properties

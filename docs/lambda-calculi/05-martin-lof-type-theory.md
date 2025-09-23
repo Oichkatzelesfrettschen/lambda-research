@@ -167,7 +167,7 @@ ua : Π A,B : U. (A ≃ B) → Id_U(A,B)
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for foundational works
+- **Papers**: See [papers/bibliography.md](../../05-martin-lof-type-theory/papers/bibliography.md) for foundational works
 - **Implementations**: Agda, Coq, NuPRL, and other proof assistants
 - **Tutorials**: Constructive mathematics and dependent type programming
 - **Historical**: Development from intuitionistic logic to modern type theory

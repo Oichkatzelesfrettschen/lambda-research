@@ -433,7 +433,7 @@ invoke : ContractAddr → Transaction → Result
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for concurrent calculi research
+- **Papers**: See [comprehensive bibliography](../comprehensive-bibliography.md) for concurrent calculi research
 - **Implementations**: Process calculus interpreters and actor systems
 - **Tutorials**: Concurrent programming patterns and verification
 - **Case Studies**: Distributed systems and parallel algorithms

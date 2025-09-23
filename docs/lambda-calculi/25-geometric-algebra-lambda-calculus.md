@@ -190,7 +190,7 @@ Applications: Unified geometric transformations
 
 ## Resources
 
-- **Papers**: See [papers/bibliography.md](/papers/bibliography.md) for theoretical foundations and applications
+- **Papers**: See [papers/bibliography.md](../../25-geometric-algebra-lambda-calculus/papers/bibliography.md) for theoretical foundations and applications
 ## Geometric Algebra Lambda Calculus - Implementations
 
 A comprehensive catalog of implementations, libraries, and systems that incorporate geometric algebra (Clifford algebra) within lambda calculus, functional programming, or related computational frameworks.
