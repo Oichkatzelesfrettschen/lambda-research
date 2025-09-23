@@ -75,7 +75,40 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Foundation:
-    - foundation/index.md
+    - Overview: foundation/index.md
+  - Core Lambda Calculi:
+    - 01 Untyped: lambda-calculi/01-untyped-lambda-calculus.md
+    - 02 Simply Typed: lambda-calculi/02-simply-typed-lambda-calculus.md
+    - 03 System F: lambda-calculi/03-system-f-polymorphic.md
+  - Advanced Type Systems:
+    - 04 Calculus of Constructions: lambda-calculi/04-calculus-of-constructions.md
+    - 05 Martin-Löf Type Theory: lambda-calculi/05-martin-lof-type-theory.md
+    - 06 Linear Lambda Calculus: lambda-calculi/06-linear-lambda-calculus.md
+    - 07 Session Types: lambda-calculi/07-session-types.md
+    - 08 Dependent Types: lambda-calculi/08-dependent-types.md
+    - 09 Substructural Types: lambda-calculi/09-substructural-types.md
+  - Concurrent & Quantum:
+    - 10 Concurrent Variants: lambda-calculi/10-concurrent-variants.md
+    - 11 Quantum Variants: lambda-calculi/11-quantum-variants.md
+  - Modern Extensions:
+    - 12 Pure Type Systems: lambda-calculi/12-pure-type-systems.md
+    - 13 Combinatory Logic: lambda-calculi/13-combinatory-logic.md
+    - 14 Intersection Types: lambda-calculi/14-intersection-types.md
+    - 15 Union Types: lambda-calculi/15-union-types.md
+  - Mathematical Foundations:
+    - 24 Tensor Lambda Calculus: lambda-calculi/24-tensor-lambda-calculus.md
+    - 25 Geometric Algebra: lambda-calculi/25-geometric-algebra-lambda-calculus.md
+    - 26 Proof Theory: lambda-calculi/26-proof-theory.md
+    - 27 Domain Theory: lambda-calculi/27-domain-theory.md
+    - 28 Abstract Machines: lambda-calculi/28-abstract-machines.md
+  - Homotopy & Cubical:
+    - 29 Homotopy Type Theory: lambda-calculi/29-homotopy-type-theory.md
+    - 30 Cubical Type Theory: lambda-calculi/30-cubical-type-theory.md
+    - 31 Directed Type Theory: lambda-calculi/31-directed-type-theory.md
+  - Research Resources:
+    - Comprehensive Index: research/COMPREHENSIVE_INDEX.md
+    - Cross References: research/CROSS_REFERENCE_SYSTEM.md
+    - Implementation Catalog: research/lambda-calculus-implementations-catalog.md
   - Bibliography:
     - Core Papers: bibliography/core.md
 
