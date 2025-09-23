@@ -71,7 +71,7 @@ Typing: Γ ⊢ M : σ
 
 ## Resources
 
-- **Papers**: See [bibliography.md](../../02-simply-typed-lambda-calculus/papers/bibliography.md) for 30+ key papers
+- **Papers**: See [bibliography.md](02-simply-typed-lambda-calculus/bibliography.md) for 30+ key papers
 - **Implementations**: Type checkers and interpreters
 - **Tutorials**: Step-by-step type checking examples
 - **Historical**: Development from Church to modern systems

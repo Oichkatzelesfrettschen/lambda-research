@@ -1,0 +1,222 @@
+# Simply Typed Lambda Calculus - Academic Bibliography
+
+## Foundational Works
+
+**Church, A.** (1940). *A Formulation of the Simple Theory of Types*. The Journal of Symbolic Logic, 5(2), 56-68.
+- **Key Contribution**: Original introduction of simply typed lambda calculus and foundation for avoiding paradoxes
+- **DOI**: 10.2307/2266170
+
+**Curry, H.B.** (1934). *Functionality in Combinatory Logic*. Proceedings of the National Academy of Sciences, 20(11), 584-590.
+- **Key Contribution**: Early work on typing in combinatory logic, precursor to Curry-style typing
+- **DOI**: 10.1073/pnas.20.11.584
+
+**Church, A.** (1932-1933). *A Set of Postulates for the Foundation of Logic*. Annals of Mathematics, Part I: 33(2), 346-366 (1932); Part II: 34(4), 839-864 (1933).
+- **Key Contribution**: Early development of type theory concepts
+- **DOI**: Part I: 10.2307/1968337; Part II: 10.2307/1968702
+
+**Henkin, L.** (1950). *Completeness in the Theory of Types*. The Journal of Symbolic Logic, 15(2), 81-91.
+- **Key Contribution**: Semantic completeness for simple type theory
+- **DOI**: 10.2307/2266967
+
+**Prawitz, D.** (1965). *Natural Deduction: A Proof-Theoretical Study*. Almqvist & Wiksell, Stockholm.
+- **Key Contribution**: Connection between natural deduction and lambda calculus
+
+## Type Inference Theory
+
+**Hindley, J.R.** (1969). *The Principal Type-Scheme of an Object in Combinatory Logic*. Transactions of the American Mathematical Society, 146, 29-60.
+- **Key Contribution**: First description of principal type inference
+- **DOI**: 10.2307/1995158
+
+**Milner, R.** (1978). *A Theory of Type Polymorphism in Programming*. Journal of Computer and System Sciences, 17(3), 348-375.
+- **Key Contribution**: Algorithm W and ML type system
+- **DOI**: 10.1016/0022-0000(78)90014-4
+
+**Damas, L.** (1985). *Type Assignment in Programming Languages*. PhD Thesis, University of Edinburgh.
+- **Key Contribution**: Formal analysis and proof of Hindley-Milner algorithm
+
+**Damas, L. & Milner, R.** (1982). *Principal Type-Schemes for Functional Programs*. Proceedings of the 9th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages.
+- **Key Contribution**: Definitive paper on principal types
+- **DOI**: 10.1145/582153.582176
+
+**Robinson, J.A.** (1965). *A Machine-Oriented Logic Based on the Resolution Principle*. Journal of the ACM, 12(1), 23-41.
+- **Key Contribution**: Unification algorithm essential for type inference
+- **DOI**: 10.1145/321250.321253
+
+## Curry-Howard Correspondence
+
+### 11. Howard, William A. (1980)
+**"The Formulae-as-Types Notion of Construction"**
+- In: To H.B. Curry: Essays on Combinatory Logic, Lambda Calculus and Formalism
+- Academic Press, pp. 479-490 (original manuscript 1969)
+- Fundamental connection between types and logic
+
+### 12. De Bruijn, Nicolaas G. (1968)
+**"Automath, a Language for Mathematics"**
+- Proceedings of the Symposium on Automatic Demonstration
+- INRIA, pp. 29-61
+- Early implementation of Curry-Howard
+
+### 13. Martin-Löf, Per (1975)
+**"An Intuitionistic Theory of Types: Predicative Part"**
+- In: Logic Colloquium '73, pp. 73-118
+- North-Holland, Amsterdam
+- Type theory foundations
+
+## Decidability and Complexity
+
+### 14. Statman, Richard (1979)
+**"The Typed λ-Calculus is not Elementary Recursive"**
+- Theoretical Computer Science 9(1): 73-81
+- Complexity of normalization in simply typed lambda calculus
+
+### 15. Schwichtenberg, Helmut (1976)
+**"Complexity of Normalization in the Pure Typed Lambda Calculus"**
+- In: The L.E.J. Brouwer Centenary Symposium, pp. 453-457
+- North-Holland, Amsterdam
+
+### 16. Beckmann, Arnold (2001)
+**"Exact Bounds for Lengths of Reductions in Typed λ-Calculus"**
+- Journal of Symbolic Logic 66(3): 1277-1285
+- Precise complexity analysis
+
+## Modern Developments
+
+### 17. Wells, J.B. (1999)
+**"Typability and Type Checking in System F are Equivalent and Undecidable"**
+- Annals of Pure and Applied Logic 98(1-3): 111-156
+- Fundamental undecidability results
+
+### 18. Kfoury, A.J. & Tiuryn, J. (1990)
+**"Type Reconstruction in the Presence of Polymorphic Recursion"**
+- ACM Transactions on Programming Languages and Systems 15(2): 290-311
+- Extensions to basic type inference
+
+### 19. Pfenning, Frank (1992)
+**"Types in Logic Programming"**
+- MIT Press
+- Applications to logic programming
+
+## Implementation and Practice
+
+### 20. Cardelli, Luca (1987)
+**"Basic Polymorphic Typechecking"**
+- Science of Computer Programming 8(2): 147-172
+- Practical implementation techniques
+
+### 21. Clément, Dominique & Despeyroux, Joëlle & Despeyroux, Thierry & Kahn, Gilles (1986)
+**"A Simple Applicative Language: Mini-ML"**
+- Proceedings of the 1986 ACM Conference on LISP and Functional Programming
+- Influential implementation
+
+### 22. Tofte, Mads (1988)
+**"Operational Semantics and Polymorphic Type Inference"**
+- PhD Thesis, University of Edinburgh
+- CST-52-88
+- Comprehensive treatment of ML semantics
+
+## Error Messages and Diagnosis
+
+### 23. Lee, Oukseh & Yi, Kwangkeun (1998)
+**"Proofs about a Folklore Let-Polymorphic Type Inference Algorithm"**
+- ACM Transactions on Programming Languages and Systems 20(4): 707-723
+- Formal verification of type inference
+
+### 24. Heeren, Bastiaan & Hage, Jurriaan & Swierstra, Doaitse (2003)
+**"Scripting the Type Inference Process"**
+- Proceedings of the 8th ACM SIGPLAN International Conference on Functional Programming
+- Improved error reporting
+
+### 25. Chitil, Olaf (2001)
+**"Compositional Explanation of Types and Algorithmic Debugging of Type Errors"**
+- Proceedings of the 6th ACM SIGPLAN International Conference on Functional Programming
+- Type error explanation techniques
+
+## Theoretical Extensions
+
+### 26. Girard, Jean-Yves & Lafont, Yves & Taylor, Paul (1989)
+**"Proofs and Types"**
+- Cambridge University Press
+- Advanced type theory and logic
+
+### 27. Reynolds, John C. (1974)
+**"Towards a Theory of Type Structure"**
+- Programming Symposium, Lecture Notes in Computer Science 19: 408-425
+- Springer-Verlag
+- Parametric polymorphism foundations
+
+### 28. Hindley, J. Roger (1997)
+**"Basic Simple Type Theory"**
+- Cambridge University Press
+- Comprehensive modern treatment
+
+### 29. Thompson, Simon (1991)
+**"Type Theory and Functional Programming"**
+- Addison-Wesley
+- Educational introduction with implementations
+
+### 30. Barendregt, Henk & Dekkers, Wil & Statman, Richard (2013)
+**"Lambda Calculus with Types"**
+- Cambridge University Press
+- Modern comprehensive reference including simply typed lambda calculus
+
+## Performance Analysis and Implementation
+
+### 31. Plotkin, Gordon D. (1975)
+**"Call-by-Name, Call-by-Value and the λ-Calculus"**
+- Theoretical Computer Science 1(2): 125-159
+- DOI: 10.1016/0304-3975(75)90017-1
+- Foundational analysis of evaluation strategies
+
+### 32. Krivine, Jean-Louis (2007)
+**"A Call-by-Name Lambda-Calculus Machine"**
+- Higher-Order and Symbolic Computation 20(3): 199-207
+- DOI: 10.1007/s10990-007-9018-9
+- Abstract machine for lazy evaluation
+
+### 33. Felleisen, Matthias & Friedman, Daniel P. (1987)
+**"Control Operators, the SECD-Machine, and the λ-Calculus"**
+- In: 3rd Working Conference on the Formal Description of Programming Concepts
+- North-Holland, Amsterdam
+- Evaluation strategies and abstract machines
+
+### 34. Sestoft, Peter (1997)
+**"Deriving a Lazy Abstract Machine"**
+- Journal of Functional Programming 7(3): 231-264
+- DOI: 10.1017/S0956796897002712
+- Performance analysis of lazy evaluation
+
+### 35. Diehl, Stephan & Hartel, Pieter & Sestoft, Peter (2000)
+**"Abstract Machines for Programming Language Implementation"**
+- Future Generation Computer Systems 16(7): 739-751
+- DOI: 10.1016/S0167-739X(99)00088-6
+- Comparative analysis of evaluation strategies
+
+### 36. Garcia, Ronald & Lumsdaine, Andrew & Sabry, Amr (2009)
+**"Lazy Evaluation and Delimited Control"**
+- Proceedings of the 36th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages
+- DOI: 10.1145/1480881.1480917
+- Advanced evaluation strategy analysis
+
+### 37. Maurer, Luke (2017)
+**"Compiling without Continuations"**
+- Proceedings of the 38th ACM SIGPLAN Conference on Programming Language Design and Implementation
+- DOI: 10.1145/3062341.3062380
+- Modern compilation and evaluation techniques
+
+### 38. Danvy, Olivier & Filinski, Andrzej (1992)
+**"Representing Control: A Study of the CPS Transformation"**
+- Mathematical Structures in Computer Science 2(4): 361-391
+- DOI: 10.1017/S0960129500001535
+- Continuation-passing style and evaluation
+
+### 39. Ariola, Zena M. & Felleisen, Matthias (1997)
+**"The Call-by-Need Lambda Calculus"**
+- Journal of Functional Programming 7(3): 265-301
+- DOI: 10.1017/S0956796897002724
+- Formal semantics of lazy evaluation with sharing
+
+### 40. Maraist, John & Odersky, Martin & Wadler, Philip (1998)
+**"The Call-by-Need Lambda Calculus"**
+- Journal of Functional Programming 8(3): 275-317
+- DOI: 10.1017/S0956796898003001
+- Call-by-need operational semantics and implementation
