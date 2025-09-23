@@ -4,7 +4,8 @@ site_description: Comprehensive research documentation covering 31 lambda calcul
 
 # Repository information
 repo_name: lambda-research
-repo_url: https://github.com/yourusername/lambda-research
+repo_url: https://github.com/Oichkatzelesfrettschen/lambda-research
+site_url: https://oichkatzelesfrettschen.github.io/lambda-research/
 
 # Theme configuration
 theme:
