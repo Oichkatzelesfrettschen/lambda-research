@@ -48,8 +48,7 @@ plugins:
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
       lang: en
   - meta
-  - tags:
-      tags_file: tags.md
+  - tags
   - awesome-pages
   - macros
 
@@ -77,20 +76,8 @@ nav:
   - Home: index.md
   - Foundation:
     - foundation/index.md
-    - Untyped Lambda Calculus: foundation/01-untyped.md
-    - Simply Typed Lambda Calculus: foundation/02-simply-typed.md
-    - System F: foundation/03-system-f.md
-    - Calculus of Constructions: foundation/04-coc.md
-    - Martin-Löf Type Theory: foundation/05-mltt.md
-  - Type Systems:
-    - type-systems/index.md
-    - Linear Types: type-systems/06-linear.md
-    - Session Types: type-systems/07-session.md
-    - Dependent Types: type-systems/08-dependent.md
   - Bibliography:
-    - bibliography/index.md
     - Core Papers: bibliography/core.md
-    - Recent Work: bibliography/recent.md
 
 # Extra JavaScript for Math
 extra_javascript:
