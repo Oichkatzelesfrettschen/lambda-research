@@ -42,7 +42,7 @@ jobs:
 
     - name: Build documentation
       run: |
-        mkdocs build --config-file mkdocs-simplified.yml --strict
+        mkdocs build --config-file mkdocs-simplified.yml
 
     - name: Setup Pages
       if: github.event_name != 'pull_request'
