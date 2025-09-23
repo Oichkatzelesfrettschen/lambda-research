@@ -38,7 +38,19 @@
 
 ## How to Access
 
-Click any link above to view the PDF directly in your browser. All papers are legally accessible under open access, public domain, or author permission.
+**Note**: GitHub Pages may not serve PDFs directly. If links above don't work, use these verified sources:
+
+### Alternative Sources
+- **Church (1936)**: [UC Irvine](https://ics.uci.edu/~lopes/teaching/inf212W12/readings/church.pdf)
+- **Church (1941)**: [Internet Archive](https://archive.org/details/AnnalsOfMathematicalStudies6ChurchAlonzoTheCalculiOfLambdaConversionPrincetonUniversityPress1941)
+- **Scott (1970)**: [Oxford CS](https://www.cs.ox.ac.uk/publications/publication2984-abstract.html)
+- **Girard (1987)**: [Author's page](https://girard.perso.math.cnrs.fr/Synsem.pdf)
+- **Girard (1989)**: [Cambridge](https://www.paultaylor.eu/stable/prot.pdf)
+- **Martin-Löf (1984)**: [Archive PML](https://archive-pml.github.io/martin-lof/pdfs/Bibliopolis-Book-retypeset-1984.pdf)
+- **HoTT Book (2013)**: [Official site](https://homotopytypetheory.org/book/)
+- **Recent papers (2024-2025)**: All available on [arXiv](https://arxiv.org/)
+
+All papers are legally accessible under open access, public domain, or author permission.
 
 ## Note on Paper Collection
 

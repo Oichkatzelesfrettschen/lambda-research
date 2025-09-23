@@ -76,7 +76,8 @@ nav:
   - Home: index.md
   - Research Highlights: research-highlights.md
   - PDF Library: pdf-library.md
-  - Test PDF Access: test-pdf-access.md
+  - Comprehensive Bibliography: comprehensive-bibliography.md
+  - PDF Access Test: pdf-access-test.md
   - Implementations:
     - Untyped Lambda (Python): implementations/untyped-lambda-python.md
     - Simply Typed (Haskell): implementations/simply-typed-haskell.md
