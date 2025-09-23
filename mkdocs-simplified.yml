@@ -75,6 +75,10 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Research Highlights: research-highlights.md
+  - PDF Library: pdf-library.md
+  - Implementations:
+    - Untyped Lambda (Python): implementations/untyped-lambda-python.md
+    - Simply Typed (Haskell): implementations/simply-typed-haskell.md
   - Foundation:
     - Overview: foundation/index.md
   - Core Lambda Calculi:
