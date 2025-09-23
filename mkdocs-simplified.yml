@@ -76,6 +76,7 @@ nav:
   - Home: index.md
   - Research Highlights: research-highlights.md
   - PDF Library: pdf-library.md
+  - Test PDF Access: test-pdf-access.md
   - Implementations:
     - Untyped Lambda (Python): implementations/untyped-lambda-python.md
     - Simply Typed (Haskell): implementations/simply-typed-haskell.md
@@ -100,7 +101,15 @@ nav:
     - 13 Combinatory Logic: lambda-calculi/13-combinatory-logic.md
     - 14 Intersection Types: lambda-calculi/14-intersection-types.md
     - 15 Union Types: lambda-calculi/15-union-types.md
+    - 16 Gradual Typing: lambda-calculi/16-gradual-typing.md
+    - 17 Effect Systems: lambda-calculi/17-effect-systems.md
   - Mathematical Foundations:
+    - 18 Categorical Semantics: lambda-calculi/18-categorical-semantics.md
+    - 19 Modal Types: lambda-calculi/19-modal-types.md
+    - 20 Refinement Types: lambda-calculi/20-refinement-types.md
+    - 21 Probabilistic Types: lambda-calculi/21-probabilistic-types.md
+    - 22 Quantum Lambda Calculus: lambda-calculi/22-quantum-lambda-calculus.md
+    - 23 Advanced Variants: lambda-calculi/23-advanced-lambda-variants.md
     - 24 Tensor Lambda Calculus: lambda-calculi/24-tensor-lambda-calculus.md
     - 25 Geometric Algebra: lambda-calculi/25-geometric-algebra-lambda-calculus.md
     - 26 Proof Theory: lambda-calculi/26-proof-theory.md
