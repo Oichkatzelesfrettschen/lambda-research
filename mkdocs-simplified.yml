@@ -74,6 +74,7 @@ markdown_extensions:
 # Navigation
 nav:
   - Home: index.md
+  - Research Highlights: research-highlights.md
   - Foundation:
     - Overview: foundation/index.md
   - Core Lambda Calculi:
@@ -109,6 +110,12 @@ nav:
     - Comprehensive Index: research/COMPREHENSIVE_INDEX.md
     - Cross References: research/CROSS_REFERENCE_SYSTEM.md
     - Implementation Catalog: research/lambda-calculus-implementations-catalog.md
+  - Papers Archive:
+    - Citation Index: CITATION_INDEX.md
+    - Author Index: AUTHOR_INDEX.md
+    - Topic Index: TOPIC_INDEX.md
+    - Chronological Index: CHRONOLOGICAL_INDEX.md
+    - Access Types: ACCESS_TYPE_INDEX.md
   - Bibliography:
     - Core Papers: bibliography/core.md
 

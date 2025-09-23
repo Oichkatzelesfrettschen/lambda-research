@@ -1,0 +1,10 @@
+{
+  "total_papers": 10,
+  "by_category": {
+    "historical_papers": 3,
+    "classical_papers": 3,
+    "modern_papers": 1,
+    "recent_arxiv": 3
+  },
+  "last_updated": "2025-09-20"
+}
