@@ -158,3 +158,65 @@
 **"Lambda Calculus with Types"**
 - Cambridge University Press
 - Modern comprehensive reference including simply typed lambda calculus
+
+## Performance Analysis and Implementation
+
+### 31. Plotkin, Gordon D. (1975)
+**"Call-by-Name, Call-by-Value and the λ-Calculus"**
+- Theoretical Computer Science 1(2): 125-159
+- DOI: 10.1016/0304-3975(75)90017-1
+- Foundational analysis of evaluation strategies
+
+### 32. Krivine, Jean-Louis (2007)
+**"A Call-by-Name Lambda-Calculus Machine"**
+- Higher-Order and Symbolic Computation 20(3): 199-207
+- DOI: 10.1007/s10990-007-9018-9
+- Abstract machine for lazy evaluation
+
+### 33. Felleisen, Matthias & Friedman, Daniel P. (1987)
+**"Control Operators, the SECD-Machine, and the λ-Calculus"**
+- In: 3rd Working Conference on the Formal Description of Programming Concepts
+- North-Holland, Amsterdam
+- Evaluation strategies and abstract machines
+
+### 34. Sestoft, Peter (1997)
+**"Deriving a Lazy Abstract Machine"**
+- Journal of Functional Programming 7(3): 231-264
+- DOI: 10.1017/S0956796897002712
+- Performance analysis of lazy evaluation
+
+### 35. Diehl, Stephan & Hartel, Pieter & Sestoft, Peter (2000)
+**"Abstract Machines for Programming Language Implementation"**
+- Future Generation Computer Systems 16(7): 739-751
+- DOI: 10.1016/S0167-739X(99)00088-6
+- Comparative analysis of evaluation strategies
+
+### 36. Garcia, Ronald & Lumsdaine, Andrew & Sabry, Amr (2009)
+**"Lazy Evaluation and Delimited Control"**
+- Proceedings of the 36th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages
+- DOI: 10.1145/1480881.1480917
+- Advanced evaluation strategy analysis
+
+### 37. Maurer, Luke (2017)
+**"Compiling without Continuations"**
+- Proceedings of the 38th ACM SIGPLAN Conference on Programming Language Design and Implementation
+- DOI: 10.1145/3062341.3062380
+- Modern compilation and evaluation techniques
+
+### 38. Danvy, Olivier & Filinski, Andrzej (1992)
+**"Representing Control: A Study of the CPS Transformation"**
+- Mathematical Structures in Computer Science 2(4): 361-391
+- DOI: 10.1017/S0960129500001535
+- Continuation-passing style and evaluation
+
+### 39. Ariola, Zena M. & Felleisen, Matthias (1997)
+**"The Call-by-Need Lambda Calculus"**
+- Journal of Functional Programming 7(3): 265-301
+- DOI: 10.1017/S0956796897002724
+- Formal semantics of lazy evaluation with sharing
+
+### 40. Maraist, John & Odersky, Martin & Wadler, Philip (1998)
+**"The Call-by-Need Lambda Calculus"**
+- Journal of Functional Programming 8(3): 275-317
+- DOI: 10.1017/S0956796898003001
+- Call-by-need operational semantics and implementation

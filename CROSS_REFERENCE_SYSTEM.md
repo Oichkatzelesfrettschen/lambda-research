@@ -76,6 +76,29 @@ Proof normalization ↔ Program evaluation ↔ Categorical composition
 - `28-abstract-machines/` → Concrete execution models
 - `27-domain-theory/` → Mathematical foundations for semantics
 
+### Performance Analysis and Evaluation Strategies
+```
+Theoretical Complexity ↔ Empirical Validation ↔ Implementation Optimization
+        |                        |                           |
+   Statman (1979)         STLC Benchmarks            Zero-Cost Abstractions
+```
+
+**Category Connections:**
+- `02-simply-typed-lambda-calculus/` → **Performance benchmarking foundation**
+  - **Evaluation Strategies**: CallByValue, CallByName, CallByNeed, ParallelApplicative, NormalOrder
+  - **Empirical Validation**: 95% confidence intervals validating theoretical complexity bounds
+  - **Abstract Machine Correlation**: SECD (CallByValue), Krivine (CallByName), CEK (Environment-based)
+- `28-abstract-machines/` → Theoretical execution models for performance comparison
+- `03-system-f-polymorphic/` → Polymorphic extension performance baseline
+- `08-dependent-types/` → Complex type system performance implications
+- `17-effect-systems/` → Computational effects impact on evaluation strategies
+
+**Performance Research Foundations:**
+- Plotkin (1975): Call-by-name vs call-by-value semantics
+- Ariola & Felleisen (1997): Call-by-need formal semantics
+- Sestoft (1997): Lazy evaluation abstract machine derivation
+- Diehl, Hartel & Sestoft (2000): Comparative analysis of evaluation strategies
+
 ## Modern Integration Patterns
 ```
 Unrestricted -----> Affine -----> Linear -----> Relevant -----> Ordered

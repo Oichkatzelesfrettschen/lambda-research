@@ -4,95 +4,113 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This is a comprehensive lambda calculus research repository containing:
-- 31 numbered categories of lambda calculus variants and type systems (01-31)
-- Extensive academic bibliographies with 708+ research papers
-- Implementation catalogs across multiple programming languages
-- Cross-reference system mapping theoretical connections
-- Papers archive with automated download capabilities
-- Source code repositories for major proof assistants and implementations
+This is a comprehensive lambda calculus research repository focused on building production-ready implementations with world-class academic foundations. The repository contains:
+
+**CORE STRENGTHS:**
+- 31 numbered categories with 708+ research papers (world-class academic organization)
+- Functional TAPL-based Rust implementations (our implementation foundation)
+- Modern documentation infrastructure with MkDocs
+- Automated validation and quality assurance systems
+- Comprehensive cross-reference system and bibliography management
+
+**CURRENT FOCUS:**
+- Building from existing TAPL Rust implementations in `sources/rust-implementations/tapl-rust/`
+- Progressive development: Untyped λ-calculus → Simply Typed → System F → Dependent Types
+- Academic rigor with practical implementation emphasis
+- Quality over quantity: deep implementation rather than superficial coverage
 
 ## Repository Structure
 
-### Numbered Directory Structure (01-31)
-The core organization follows systematic academic progression:
-- **01-XX-name/** - Each contains: `papers/`, `implementations/`, `tutorials/`, `historical/`
-- Standardized structure ensures consistency across all 31 lambda calculus variants
-- Each directory represents a major theoretical development or practical extension
+### Primary Implementation Core
+- **`sources/rust-implementations/tapl-rust/`** - PRODUCTION IMPLEMENTATIONS (our development focus)
+  - `01_arith/` - Arithmetic expressions (working)
+  - `02_lambda/` - Untyped lambda calculus (working)
+  - `03_typedarith/` - Typed arithmetic (working)
+  - `04_stlc/` - Simply typed lambda calculus (working)
+  - `05_recon/` - Type reconstruction (working)
+  - `06_system_f/` - System F polymorphism (working)
+  - Plus advanced variants (bidirectional typing, dependent types)
+
+### Academic Reference Structure (01-31)
+The numbered directories provide comprehensive academic foundations:
+- **01-XX-name/** - Academic organization: `papers/`, `implementations/`, `tutorials/`, `historical/`
+- **Current State**: Excellent bibliographies (708+ papers), minimal implementations
+- **Strategy**: Use as reference while building implementations in `sources/`
 
 ### Supporting Infrastructure
-- `sources/` - Complete source code repositories (Agda, Coq, Idris2, Rust, etc.)
-- `implementations/` - Research implementations organized by language
-- `papers-archive/` - Academic paper collection with metadata and automation
-- Root-level `.md` files - Cross-references, bibliographies, and comprehensive indices
+- **`papers-archive/`** - Academic paper collection with download automation
+- **`implementations/`** - Multi-language research implementations (secondary to Rust core)
+- **Root Documentation** - Cross-references, bibliographies, comprehensive indices
+- **Build System** - Unified Makefile targeting actual implementations
 
 ### Key Files
-- `README.md` - Main repository documentation
-- `COMPREHENSIVE_INDEX.md` - Complete academic index with 708+ papers
-- `CROSS_REFERENCE_SYSTEM.md` - Theoretical connections between systems
-- `mkdocs.yml` / `mkdocs-simplified.yml` - Modern documentation system
-- Various `*_bibliography.md` files - Academic references by topic
+- **`sources/rust-implementations/tapl-rust/Cargo.toml`** - Main build configuration
+- **`Makefile`** - Master build system (updated for actual implementations)
+- **`validate-repository.py`** - Quality assurance and validation
+- **`mkdocs-simplified.yml`** - Documentation generation
+- **`COMPREHENSIVE_INDEX.md`** - Academic reference index
 
 ## Build Systems and Development
 
-### Multi-Language Build Infrastructure
-This repository contains implementations in multiple languages with their respective build systems:
+### PRIORITY BUILD SYSTEM: Rust TAPL Implementations
 
-- **Rust**: Cargo workspaces in `sources/rust-implementations/tapl-rust/`
-- **Haskell**: Cabal projects in `sources/agda-src/` and implementations
-- **OCaml**: Dune build system in `sources/coq-src/`
-- **Idris2**: Native IPkg system in `sources/idris2-src/`
-- **Python**: Requirements files for documentation tooling
+**PRIMARY DEVELOPMENT TARGET:**
+```bash
+cd sources/rust-implementations/tapl-rust/
+cargo build --release                 # Build all TAPL implementations
+cargo test                            # Run comprehensive test suite
+cargo fmt                             # Format code (required before commits)
+cargo clippy                          # Lint and quality checks
+cargo doc --open                      # Generate and view documentation
+```
+
+**WORKING IMPLEMENTATIONS:**
+- Untyped Lambda Calculus (`02_lambda/`)
+- Simply Typed Lambda Calculus (`04_stlc/`)
+- System F Polymorphism (`06_system_f/`)
+- Type Reconstruction (`05_recon/`)
+- Bidirectional Typing (`x1_bidir/`)
+- Dependent Types prototype (`x2_dependent/`)
 
 ### Essential Commands
 
-#### Repository Validation & Quality Assurance
+#### Repository Health & Quality Assurance
 ```bash
-# Comprehensive repository validation (RUN FIRST)
-./validate-repository.py                 # Full validation suite
-./standardize_bibliography.py           # Bibliography format standardization
-make status                             # Show repository status
-make ci                                # Run continuous integration checks
-make verify                            # Verify repository integrity
+# ALWAYS RUN THESE FIRST
+./validate-repository.py                 # Full validation (49k files, 708+ papers)
+./standardize_bibliography.py           # Bibliography consistency check
+make status                             # Repository health status
+make verify                            # Academic integrity verification
 ```
 
-#### Documentation Development
+#### Core Development Workflow
 ```bash
-# Complete documentation setup and development
-./setup-mkdocs.sh                      # One-time setup (creates venv, installs deps)
+# Primary development cycle
+cd sources/rust-implementations/tapl-rust/
+cargo build && cargo test && cargo fmt && cargo clippy
+
+# Documentation development
 source venv/bin/activate               # ALWAYS activate before docs work
-mkdocs serve --config-file mkdocs-simplified.yml  # Live development server (127.0.0.1:8000)
-mkdocs build --config-file mkdocs-simplified.yml  # Production build for deployment
-```
+mkdocs serve --config-file mkdocs-simplified.yml  # Live server (127.0.0.1:8000)
+mkdocs build --config-file mkdocs-simplified.yml  # Production build
 
-#### Master Build System (Multi-Language)
-```bash
-# Unified commands across all languages
-make help                              # Show all available targets
-make build                             # Build all implementations (Idris, Scala, SML, Rust)
+# Master build system (targets actual implementations)
+make build                             # Build working Rust implementations + docs
 make test                              # Run all available tests
 make clean                             # Clean all build artifacts
-make dev                               # Initialize development environment
-make install                           # Install built artifacts to ~/.local/bin
+make ci                               # Full CI pipeline
 ```
 
-#### Language-Specific Development
+#### Supporting Language Targets (Secondary)
 ```bash
-# Rust implementations (TAPL-based workspace)
-cd sources/rust-implementations/tapl-rust/
-cargo build                            # Build all workspace members
-cargo test                             # Test all implementations
-cargo fmt                              # Format code
-cargo build --release                 # Optimized production build
+# Multi-language implementations (when they exist)
+make build-scala                       # Build Scala implementations (if any)
+make build-haskell                     # Build Haskell implementations (if any)
+make build-idris                       # Build Idris implementations (if any)
 
-# Haskell/Agda
-cd sources/agda-src/
-make install                           # Build and install Agda
-
-# Coq/Rocq
-cd sources/coq-src/
-make world                            # Full build
-make check                            # Run test suite
+# Academic source repositories (reference only)
+cd sources/agda-src/ && make install   # Agda compiler source
+cd sources/coq-src/ && make world      # Coq/Rocq theorem prover source
 ```
 
 #### Paper Archive Management
@@ -106,166 +124,258 @@ make status                         # Get repository status
 
 ## Code Architecture
 
-### Academic Research Focus
-This repository is primarily an academic research collection, not a production software system. The architecture reflects this:
+### PRODUCTION-READY RESEARCH PLATFORM
 
-1. **Bibliography-Centric**: Each topic has comprehensive academic references
-2. **Implementation Diversity**: Multiple language implementations for comparison
-3. **Theoretical Connections**: Cross-reference system maps relationships
-4. **Educational Progression**: Organized from basic to advanced concepts
+This repository balances academic rigor with production-quality implementations:
 
-### Multi-Language Implementation Strategy
-- **Language-Specific Directories**: Each major language has its own subtree
-- **Independent Build Systems**: Respect existing language conventions
-- **Cross-Language Testing**: Shared test cases in JSON format (when available)
-- **Academic Validation**: Implementations validated against papers
+1. **Implementation-First**: Working code drives theoretical understanding
+2. **Academic Foundation**: 708+ papers provide comprehensive theoretical backing
+3. **Quality Focus**: Deep implementation of core concepts vs shallow coverage of everything
+4. **Progressive Complexity**: Build understanding through working implementations
 
-### Key Implementation Patterns
-- **Type-Safe Representations**: Use phantom types and GADTs where available
-- **Church Encoding**: Fundamental lambda calculus representations
-- **Effect Systems**: Separate pure computation from IO operations
-- **Formal Verification**: Links to Coq/Agda proofs when available
+### RUST-CENTERED ARCHITECTURE
+
+**PRIMARY IMPLEMENTATIONS** (`sources/rust-implementations/tapl-rust/`):
+- **Type-Safe Design**: Rust's type system enforces correctness
+- **Performance Focus**: Zero-cost abstractions for lambda calculus operations
+- **Memory Safety**: No garbage collector overhead, deterministic performance
+- **Academic Validation**: All algorithms reference original papers (TAPL, Pierce)
+
+**IMPLEMENTATION PATTERNS:**
+```rust
+// Type-safe lambda calculus representations
+pub enum Term {
+    Var(String),
+    Abs(String, Box<Term>),
+    App(Box<Term>, Box<Term>),
+}
+
+// Context-aware type checking
+pub fn typecheck(ctx: &Context, term: &Term) -> Result<Type, TypeError>
+
+// Capture-avoiding substitution
+pub fn substitute(term: Term, var: &str, replacement: Term) -> Term
+```
+
+### SUPPORTING MULTI-LANGUAGE ECOSYSTEM
+- **Haskell**: Academic prototyping and research validation
+- **OCaml**: Formal verification links (Coq integration)
+- **Scala**: JVM-based implementations for industry integration
+- **Academic Sources**: Agda/Coq for formal proofs and verification
 
 ## Development Workflow
 
-### Adding New Lambda Calculus Variants
-1. Create numbered directory (e.g., `32-new-variant/`)
-2. Add subdirectories: `papers/`, `implementations/`, `tutorials/`, `historical/`
-3. Create `papers/bibliography.md` with academic references
-4. Update `COMPREHENSIVE_INDEX.md` with new content
-5. Add cross-references in `CROSS_REFERENCE_SYSTEM.md`
-6. Include implementations in appropriate language directories
+### PRIORITY: Extending Core Implementations
 
-### Bibliography Management
-- Use academic citation standards (author, year, title, venue, pages)
-- Include DOI links when available
-- Verify URL accessibility regularly
-- Maintain chronological and topical organization
-- Follow existing formatting patterns in bibliography files
+**IMPLEMENTATION-FIRST APPROACH:**
+1. **Start in Rust**: Extend `sources/rust-implementations/tapl-rust/`
+2. **Build Core Functionality**: Focus on working, tested, documented code
+3. **Academic Integration**: Reference papers, add to bibliography after implementation
+4. **Quality Gate**: `cargo test && cargo fmt && cargo clippy` before any commit
 
-### Implementation Standards
-- Include comprehensive comments explaining theoretical background
-- Reference specific papers for algorithms
-- Use language-appropriate testing frameworks
-- Maintain compatibility with existing build systems
-- Document performance characteristics and complexity
+**NEW VARIANT DEVELOPMENT:**
+```bash
+# 1. Implement in Rust first
+cd sources/rust-implementations/tapl-rust/
+cargo new 07_new_variant --lib
+# Implement, test, document
+
+# 2. Update academic structure
+mkdir 32-new-variant/
+cd 32-new-variant/ && mkdir papers implementations tutorials historical
+# Add bibliography.md with academic references
+
+# 3. Cross-reference integration
+./validate-repository.py    # Ensure quality
+./standardize_bibliography.py    # Bibliography consistency
+```
+
+### REALISTIC BIBLIOGRAPHY MANAGEMENT
+- **Implementation-Driven**: Add papers as you implement concepts
+- **Quality Over Quantity**: Focus on foundational papers, not everything ever written
+- **Academic Standards**: Author, year, title, venue, DOI when available
+- **Regular Validation**: `./validate-repository.py` catches broken links and inconsistencies
+
+### IMPLEMENTATION STANDARDS (ENFORCED)
+```rust
+//! Module: System F Polymorphism
+//!
+//! Implementation of second-order polymorphic lambda calculus.
+//!
+//! References:
+//! - Girard, J-Y. (1972). "Interpretation fonctionnelle et elimination des coupures"
+//! - Reynolds, J. (1974). "Towards a theory of type structure"
+//! - Pierce, B. (2002). "Types and Programming Languages" Chapter 23
+
+use std::collections::HashMap;
+
+/// System F term representation with type abstraction and application
+#[derive(Debug, Clone, PartialEq)]
+pub enum Term {
+    // ... type-safe implementation
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_polymorphic_identity() {
+        // Test cases based on TAPL examples
+    }
+}
+```
 
 ## Quality Standards
 
-### Academic Rigor
-- All theoretical claims must be referenced to academic sources
-- Implementations should be validated against formal specifications
-- Bibliography quality is paramount - verify sources and citations
-- Maintain separation between educational and research content
-
-### Code Quality
-- Use language-specific linting tools (rustfmt, hlint, ocamlformat)
-- Comprehensive test coverage for all implementations
-- Performance benchmarking for algorithmic comparisons
-- Cross-platform compatibility where applicable
-
-### Documentation Standards
-- Mathematical notation using MathJax in markdown
-- Clear explanations of theoretical concepts
-- Links between related implementations and papers
-- Examples and educational material for complex topics
-
-## Research Integration
-
-### Paper Archive System
-The `papers-archive/` directory contains:
-- Automated download scripts for open-access papers
-- Metadata management with BibTeX integration
-- Copyright-compliant collection policies
-- Search and indexing capabilities
-
-### Cross-Reference Validation
-The cross-reference system requires:
-- Theoretical accuracy validation by category theory experts
-- Regular verification of claimed relationships
-- Citations for all theoretical connections
-- Updates as new research emerges
-
-### Implementation Validation
-All implementations should be:
-- Validated against academic specifications
-- Cross-tested with equivalent implementations in other languages
-- Benchmarked for performance characteristics
-- Documented with complexity analysis
-
-## Special Considerations
-
-### Unicode Policy
-Follow ANSI/ASCII-appropriate symbols only in code (per CLAUDE.md constraints).
-Use standard mathematical notation in documentation.
-
-### Academic Copyright
-- Only include legally accessible papers
-- Respect copyright restrictions
-- Use open-access sources when possible
-- Provide proper attribution for all sources
-
-### Version Control Strategy
-This is designed as a comprehensive academic resource, suitable for:
-- Research collaboration
-- Educational use
-- Implementation comparison
-- Literature review and survey work
-
-## Dependencies and External Tools
-
-### Required for Full Development
-- Python 3.13+ with venv support
-- Rust toolchain (latest stable)
-- Haskell Platform or Stack
-- OCaml and Dune
-- Idris2 compiler
-- Pandoc for bibliography processing
-- Chrome/Chromium for PDF generation
-- Git for version control
-
-### Optional but Recommended
-- LaTeX for mathematical document generation
-- Formal verification tools (Coq, Agda, Lean)
-- Performance profiling tools for each language
-- Academic reference managers (Zotero, Mendeley)
-
-## Quick Reference Commands
-
-### Daily Development Workflow
+### IMPLEMENTATION QUALITY (ENFORCED)
 ```bash
-# Health check and validation
-make status                            # Check repository health
-./validate-repository.py              # Validate all components
-./standardize_bibliography.py         # Ensure bibliography consistency
+# REQUIRED before any commit
+cd sources/rust-implementations/tapl-rust/
+cargo test     # All tests pass
+cargo fmt      # Code formatted
+cargo clippy   # No linting warnings
+cargo build --release  # Release build succeeds
 
-# Live documentation development
-source venv/bin/activate && mkdocs serve --config-file mkdocs-simplified.yml
-
-# Build and test everything
-make ci                               # Complete CI/CD pipeline
+# Repository validation
+./validate-repository.py  # No errors allowed
+./standardize_bibliography.py  # Bibliography consistency
 ```
 
-### Common Academic Tasks
-```bash
-# Add new lambda calculus variant
-mkdir 32-new-variant
-cd 32-new-variant && mkdir papers implementations tutorials historical
+### ACADEMIC RIGOR
+- **Paper References**: Every algorithm must cite original paper
+- **Implementation Validation**: Code validated against formal specifications
+- **Bibliography Quality**: Verified URLs, consistent formatting, academic sources
+- **Theoretical Accuracy**: Cross-reference system validates theoretical connections
 
-# Update cross-references after changes
-./validate-repository.py
-./standardize_bibliography.py
-
-# Generate documentation with fresh content
-mkdocs build --config-file mkdocs-simplified.yml
+### PERFORMANCE STANDARDS
+```rust
+// Example: Beta reduction performance requirement
+#[cfg(test)]
+mod performance_tests {
+    #[test]
+    fn test_beta_reduction_performance() {
+        let large_term = generate_large_term(1000);
+        let start = std::time::Instant::now();
+        let result = beta_reduce(large_term);
+        let duration = start.elapsed();
+        assert!(duration < std::time::Duration::from_millis(100));
+    }
+}
 ```
 
-### Educational Usage
-For systematic learning progression, see `EDUCATIONAL_PATHWAYS.md` which provides:
-- Beginner to advanced learning sequences
-- Implementation complexity guidance
-- Cross-references between theoretical concepts and practical implementations
+### DOCUMENTATION STANDARDS
+- **Comprehensive**: Every public function documented with examples
+- **Mathematical Notation**: MathJax for complex formulas
+- **Educational Links**: Connect theory to implementation
+- **Working Examples**: All code examples must compile and run
+
+## CURRENT DEVELOPMENT PRIORITIES
+
+### PHASE 1: Core Implementation Completion (IMMEDIATE)
+```bash
+# Focus areas for next development cycle
+cd sources/rust-implementations/tapl-rust/
+
+# 1. Enhance existing implementations
+# - Add comprehensive error messages
+# - Improve performance of beta reduction
+# - Add pretty-printing and debugging tools
+
+# 2. Add missing core features
+# - De Bruijn indices for efficient substitution
+# - Parallel reduction strategies
+# - Interactive evaluation REPL
+
+# 3. Testing and validation
+# - Property-based testing with QuickCheck
+# - Performance benchmarks
+# - Cross-implementation validation
+```
+
+### PHASE 2: Advanced Type Systems (NEXT)
+- **Linear Types**: Resource-aware computation (extend existing foundation)
+- **Dependent Types**: Complete the x2_dependent prototype
+- **Effect Systems**: Computational effects and monadic encapsulation
+
+### PHASE 3: Ecosystem Integration (FUTURE)
+- **Multi-Language**: Haskell and OCaml implementations
+- **Formal Verification**: Coq proofs for key properties
+- **Educational Tools**: Interactive learning environment
+
+## REQUIRED DEPENDENCIES
+
+### ESSENTIAL (INSTALL FIRST)
+```bash
+# Rust toolchain (primary development)
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup update stable && rustup default stable
+
+# Python documentation environment
+python3 -m venv venv
+source venv/bin/activate
+pip install mkdocs mkdocs-material mkdocs-mermaid2-plugin
+
+# Repository validation
+python3 -m pip install requests beautifulsoup4 pyyaml
+```
+
+### SECONDARY (OPTIONAL)
+- Haskell Platform (for academic implementations)
+- OCaml/Dune (for Coq integration)
+- LaTeX (for mathematical document generation)
+
+## DAILY DEVELOPMENT WORKFLOW
+
+### STANDARD DEVELOPMENT CYCLE
+```bash
+# 1. Repository health check
+./validate-repository.py && ./standardize_bibliography.py
+
+# 2. Core implementation work
+cd sources/rust-implementations/tapl-rust/
+cargo build && cargo test && cargo fmt && cargo clippy
+
+# 3. Documentation updates
+source venv/bin/activate
+mkdocs serve --config-file mkdocs-simplified.yml  # Live preview
+
+# 4. Quality assurance
+make ci  # Full build and test cycle
+
+# 5. Commit only after all checks pass
+git add . && git commit -m "feat: implement <feature> with academic validation"
+```
+
+### RESEARCH WORKFLOW
+```bash
+# Academic paper integration
+cd papers-archive/
+make search QUERY="<topic>"  # Find relevant papers
+# Read, understand, implement, then add to bibliography
+
+# Cross-reference updates
+./validate-repository.py  # Ensure theoretical connections are valid
+```
+
+## PROJECT VISION STATEMENT
+
+**This repository transforms lambda calculus from academic theory into production-ready, performant implementations while maintaining the highest standards of academic rigor.**
+
+**CORE VALUES:**
+- **Quality over Quantity**: Deep implementation beats superficial coverage
+- **Academic Rigor**: Every line of code references foundational papers
+- **Performance**: Production-ready systems, not just academic toys
+- **Progressive Complexity**: Build understanding through working implementations
+- **Open Science**: Comprehensive bibliography and reproducible research
+
+**SUCCESS METRICS:**
+- Zero-warning Rust builds with comprehensive test coverage
+- All implementations validated against academic specifications
+- Documentation that teaches both theory and practice
+- Used by both researchers and practitioners in industry
 
 ---
 
-This repository represents one of the most comprehensive academic resources on lambda calculus variants, suitable for research, education, and practical application across the full spectrum of type theory and programming language design.
+*This repository represents a new paradigm: academically rigorous lambda calculus implementations optimized for both research and production use, bridging the gap between theory and practice in programming language design.*
+- treat all warnings as errors: build, scope out, sanity check, engineer, design, code, fix, test, implement and synthesize fully complete solutions.

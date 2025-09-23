@@ -14,9 +14,12 @@ This repository contains comprehensive academic research on lambda calculus vari
 
 ### 02-simply-typed-lambda-calculus/
 **Typed lambda calculus with function types only**
-- **papers/bibliography.md**: 30 papers covering type inference and decidability
-- Key topics: Hindley-Milner inference, Curry-Howard correspondence, complexity
-- Notable papers: Church (1940), Hindley (1969), Milner (1978)
+- **papers/bibliography.md**: 40 papers covering type inference, decidability, and performance analysis
+- **implementations/rust-tapl-benchmarks.md**: Production Rust implementation with comprehensive performance benchmarking
+- **sources/rust-implementations/tapl-rust/02_lambda/**: Five evaluation strategies with statistical performance analysis
+- Key topics: Hindley-Milner inference, Curry-Howard correspondence, complexity, evaluation strategies
+- Notable papers: Church (1940), Hindley (1969), Milner (1978), Plotkin (1975), Ariola & Felleisen (1997)
+- **Performance Data**: Empirical validation of theoretical complexity bounds with 95% confidence intervals
 
 ### 03-system-f-polymorphic/
 **Second-order polymorphic lambda calculus**
