@@ -33,7 +33,121 @@ Church's answer was revolutionary: **No, such an algorithm cannot exist.** To pr
 
 ## The Paper
 
-{% include pdf-viewer.html file="essential/1936_church_unsolvable_problem_oa.pdf" title="Church (1936) - An Unsolvable Problem" %}
+<!-- PDF Viewer for Church (1936) Paper -->
+<div class="pdf-viewer-container">
+  <div class="pdf-controls">
+    <h4>[PDF] Church (1936) - An Unsolvable Problem</h4>
+    <div class="pdf-actions">
+      <a href="../papers/essential/1936_church_unsolvable_problem_oa.pdf"
+         target="_blank" class="btn-download">
+        Download PDF
+      </a>
+      <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://oichkatzelesfrettschen.github.io/lambda-research/papers/essential/1936_church_unsolvable_problem_oa.pdf"
+         target="_blank" class="btn-external">
+        Open PDF Viewer
+      </a>
+    </div>
+  </div>
+
+  <div class="pdf-embed">
+    <iframe src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://oichkatzelesfrettschen.github.io/lambda-research/papers/essential/1936_church_unsolvable_problem_oa.pdf"
+            width="100%"
+            height="600px"
+            frameborder="0">
+      <p>Your browser doesn't support embedded PDFs.
+         <a href="../papers/essential/1936_church_unsolvable_problem_oa.pdf">Download the PDF</a> instead.
+      </p>
+    </iframe>
+  </div>
+
+  <div class="pdf-fallback">
+    <details>
+      <summary>[MOBILE] PDF not loading?</summary>
+      <p>Some mobile browsers have issues with embedded PDFs. Try:</p>
+      <ul>
+        <li><a href="../papers/essential/1936_church_unsolvable_problem_oa.pdf">Direct download link</a></li>
+        <li>Opening in your device's PDF app</li>
+        <li>Using a desktop browser</li>
+      </ul>
+    </details>
+  </div>
+</div>
+
+<style>
+.pdf-viewer-container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1rem 0;
+  background: #f9f9f9;
+}
+
+.pdf-controls {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pdf-controls h4 {
+  margin: 0;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.pdf-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pdf-actions a {
+  background: #007acc;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  transition: background 0.2s;
+}
+
+.pdf-actions a:hover {
+  background: #005999;
+}
+
+.pdf-fallback {
+  padding: 1rem;
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.pdf-fallback summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #666;
+}
+
+.pdf-fallback ul {
+  margin: 0.5rem 0 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .pdf-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .pdf-actions {
+    justify-content: center;
+  }
+  .pdf-embed iframe {
+    height: 400px;
+  }
+}
+</style>
 
 ---
 

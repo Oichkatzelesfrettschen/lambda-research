@@ -15,7 +15,7 @@
 - **Contextual explanations** for each paper
 - **Links to 200+ external papers** for deeper research
 
-**❌ What We Don't Claim**:
+**[X] What We Don't Claim**:
 - We're not a comprehensive research database
 - We don't host hundreds of papers (we focus on the essentials)
 - We're not trying to replace formal education
@@ -24,7 +24,7 @@
 
 ## Choose Your Starting Point
 
-### 🌱 New to Lambda Calculus?
+### [NEW] New to Lambda Calculus?
 
 **Start here if**: You've heard of lambda calculus but don't know what it is.
 
@@ -32,11 +32,11 @@
 
 **Essential papers**: 3 foundational papers with beginner-friendly explanations.
 
-[**→ Start Your Journey**](fundamentals/index.md)
+[**-> Start Your Journey**](fundamentals/index.md)
 
 ---
 
-### 🧠 Ready for Advanced Topics?
+### [ADVANCED] Ready for Advanced Topics?
 
 **Start here if**: You understand basic lambda calculus and simple types.
 
@@ -44,11 +44,11 @@
 
 **Research papers**: 5 advanced papers that shaped modern programming languages.
 
-[**→ Explore Advanced Topics**](advanced/index.md)
+[**-> Explore Advanced Topics**](advanced/index.md)
 
 ---
 
-### 💻 Want to Build Something?
+### [CODE] Want to Build Something?
 
 **Start here if**: You learn best by implementing and experimenting.
 
@@ -56,11 +56,11 @@
 
 **Programming languages**: Examples in Haskell, OCaml, Python, and JavaScript.
 
-[**→ See Implementations**](implementations/index.md)
+[**-> See Implementations**](implementations/index.md)
 
 ---
 
-### 📖 Looking for Research Papers?
+### [RESEARCH] Looking for Research Papers?
 
 **Start here if**: You need specific papers for research or coursework.
 
@@ -68,7 +68,7 @@
 
 **Access**: PDF viewers, downloads, and links to external sources.
 
-[**→ Browse Research Library**](research/index.md)
+[**-> Browse Research Library**](research/index.md)
 
 ---
 

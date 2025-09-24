@@ -6,15 +6,15 @@
     <h4>{{ include.title | default: "Research Paper" }}</h4>
     <div class="pdf-actions">
       <button onclick="toggleFullscreen('pdf-frame-{{ include.file | slugify }}')" class="btn-fullscreen">
-        🔍 Fullscreen
+        [FULL] Fullscreen
       </button>
       <a href="https://github.com/{{ site.github.owner_name }}/{{ site.github.repository_name }}/raw/main/papers/{{ include.file }}"
          download class="btn-download">
-        💾 Download PDF
+        [SAVE] Download PDF
       </a>
       <button onclick="openInNewTab('https://github.com/{{ site.github.owner_name }}/{{ site.github.repository_name }}/raw/main/papers/{{ include.file }}')"
               class="btn-external">
-        🔗 Open in New Tab
+        [OPEN] Open in New Tab
       </button>
     </div>
   </div>
@@ -36,7 +36,7 @@
 
   <div class="pdf-fallback">
     <details>
-      <summary>📱 Mobile users: PDF not loading?</summary>
+      <summary>[MOBILE] Mobile users: PDF not loading?</summary>
       <p>Some mobile browsers have issues with embedded PDFs. Try:</p>
       <ul>
         <li><a href="https://github.com/{{ site.github.owner_name }}/{{ site.github.repository_name }}/raw/main/papers/{{ include.file }}">Direct download link</a></li>

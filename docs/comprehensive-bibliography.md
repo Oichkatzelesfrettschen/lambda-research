@@ -21,11 +21,11 @@ This repository contains **708+ academic paper citations** across 31 lambda calc
 - **23-advanced-lambda-variants**: 43+ papers on modern developments
 
 ### Link Quality
-- **arXiv papers**: ✅ Reliable (most recent research)
-- **ACM Digital Library**: ✅ Stable DOI links
-- **Springer**: ✅ DOI-based access
-- **Author pages**: ⚠️ May change over time
-- **Institutional repos**: ⚠️ May relocate
+- **arXiv papers**: [GOOD] Reliable (most recent research)
+- **ACM Digital Library**: [GOOD] Stable DOI links
+- **Springer**: [GOOD] DOI-based access
+- **Author pages**: [WARN] May change over time
+- **Institutional repos**: [WARN] May relocate
 
 ## External Link Validation
 

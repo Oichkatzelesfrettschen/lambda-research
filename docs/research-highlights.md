@@ -4,14 +4,14 @@
 
 This repository contains **real academic content** on lambda calculus research. Here's an honest assessment of what you'll find:
 
-### ✅ **Available Content**
+### [AVAILABLE] **Available Content**
 - **23 lambda calculus categories** with comprehensive documentation
 - **Academic bibliographies** with hundreds of properly cited papers
 - **10 accessible PDFs** of foundational papers (Church, Girard, Martin-Löf, etc.)
 - **Working implementations** in Python and Haskell
 - **Professional documentation** with MathJax support
 
-### 🏆 **Foundational Breakthroughs**
+### [HISTORY] **Foundational Breakthroughs**
 
 #### **Church's Lambda Calculus (1936)**
 - **Impact**: Foundation of modern computational theory
@@ -28,7 +28,7 @@ This repository contains **real academic content** on lambda calculus research. 
 - **Theoretical Impact**: Strong normalization and parametricity theorems
 - **Practical Impact**: Generic programming in Haskell, ML, and modern languages
 
-### 🔬 **Contemporary Research Frontiers**
+### [RESEARCH] **Contemporary Research Frontiers**
 
 #### **Homotopy Type Theory (2013)**
 - **Paradigm Shift**: Types as topological spaces, programs as paths
@@ -45,7 +45,7 @@ This repository contains **real academic content** on lambda calculus research. 
 - **Key Challenges**: Superposition, entanglement, measurement in functional programming
 - **Future Applications**: Quantum algorithms, quantum programming languages
 
-### 📊 **What's in the PDF Library**
+### [LIBRARY] **What's in the PDF Library**
 
 #### **Accessible Papers (10 PDFs)**
 1. **Church (1936)** - An Unsolvable Problem (original lambda calculus)
@@ -59,7 +59,7 @@ This repository contains **real academic content** on lambda calculus research. 
 9. **Linear Logic Subexponentials (2025)** - Current categorical semantics research
 10. **Type-Driven Prompt Programming (2025)** - AI applications
 
-### 🗂️ **Repository Organization**
+### [STRUCTURE] **Repository Organization**
 
 This research collection provides:
 
@@ -69,7 +69,7 @@ This research collection provides:
 - **Cross-references** linking related theoretical concepts
 - **Professional documentation** with mathematical notation support
 
-### 🎯 **Research Applications**
+### [APPLICATIONS] **Research Applications**
 
 #### **Theoretical Computer Science**
 - Proof theory and categorical semantics
@@ -92,7 +92,7 @@ This research collection provides:
 - AI safety through dependent types
 - Distributed systems with session types
 
-### 🔍 **Notable Research Clusters**
+### [CLUSTERS] **Notable Research Clusters**
 
 #### **Linear Logic Ecosystem**
 - **Core Papers**: Girard (1987), Wadler (1990), Abramsky (1993)
@@ -109,7 +109,7 @@ This research collection provides:
 - **Community**: HoTT Book collaborative project (2013)
 - **Impact**: New foundations for mathematics, computational higher category theory
 
-### 🎓 **Learning Paths**
+### [LEARNING] **Learning Paths**
 
 For systematic learning, this repository provides:
 
@@ -121,14 +121,14 @@ For systematic learning, this repository provides:
 ### 💡 **Honest Assessment**
 
 This repository contains:
-- ✅ **Real documentation** for 23 lambda calculus variants
-- ✅ **Working code** you can run and learn from
-- ✅ **Accessible academic papers** (10 foundational PDFs)
-- ✅ **Professional presentation** with mathematical notation
-- ❌ **Not a complete paper archive** - many citations link to external sources
-- ❌ **Not all categories have implementations** - some are documentation-only
+- [YES] **Real documentation** for 23 lambda calculus variants
+- [YES] **Working code** you can run and learn from
+- [YES] **Accessible academic papers** (10 foundational PDFs)
+- [YES] **Professional presentation** with mathematical notation
+- [NO] **Not a complete paper archive** - many citations link to external sources
+- [NO] **Not all categories have implementations** - some are documentation-only
 
-### 🔗 **What You Can Do**
+### [ACTIONS] **What You Can Do**
 
 - **Learn**: Start with the implementations and theory documentation
 - **Research**: Use the bibliographies to find additional papers

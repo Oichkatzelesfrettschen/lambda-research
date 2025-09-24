@@ -16,45 +16,45 @@ If you're here, you've probably heard the term "lambda calculus" and wondered wh
 
 We'll take you through three essential papers, each building on the previous one:
 
-### 📄 Paper 1: Where It All Began
+### [PAPER] Paper 1: Where It All Began
 **Church (1936) - "An Unsolvable Problem of Elementary Number Theory"**
 
 - **Why start here**: This is where lambda calculus was invented
-- **Difficulty**: 🟡 Intermediate (written in 1936, so the language is formal)
+- **Difficulty**: [MEDIUM] Intermediate (written in 1936, so the language is formal)
 - **Time needed**: 2-3 hours
 - **Prerequisites**: Basic understanding of functions and logic
 
 **What you'll learn**: The original motivation for lambda calculus, basic lambda notation, and why undecidability matters.
 
-[📖 Read the Paper](church-1936.md) | [📄 View PDF](../papers/essential/1936_church_unsolvable_problem_oa.pdf)
+[Read the Paper](church-1936.md) | [View PDF](../papers/essential/1936_church_unsolvable_problem_oa.pdf)
 
 ---
 
-### 📄 Paper 2: Making It Practical
+### [PAPER] Paper 2: Making It Practical
 **Girard (1989) - "Proofs and Types"**
 
 - **Why next**: Most readable introduction to the connection between proofs and programs
-- **Difficulty**: 🟢 Beginner-friendly (written as a tutorial)
+- **Difficulty**: [EASY] Beginner-friendly (written as a tutorial)
 - **Time needed**: 3-4 hours
 - **Prerequisites**: Church (1936) or basic lambda calculus
 
 **What you'll learn**: How types prevent errors, the Curry-Howard correspondence, and why functional programming works.
 
-[📖 Read the Paper](girard-1989.md) | [📄 View PDF](../papers/essential/1989_girard_proofs_types_oa.pdf)
+[Read the Paper](girard-1989.md) | [View PDF](../papers/essential/1989_girard_proofs_types_oa.pdf)
 
 ---
 
-### 📄 Paper 3: Understanding the Theory
+### [PAPER] Paper 3: Understanding the Theory
 **Barendregt (1984) - "The Lambda Calculus: Its Syntax and Semantics" (Chapter 1)**
 
 - **Why last**: Comprehensive but technical treatment of the fundamentals
-- **Difficulty**: 🟡 Intermediate (mathematical)
+- **Difficulty**: [MEDIUM] Intermediate (mathematical)
 - **Time needed**: 4-5 hours
 - **Prerequisites**: Church (1936) and basic comfort with lambda notation
 
 **What you'll learn**: Formal syntax, reduction rules, and the mathematical foundations.
 
-[📖 External Link](https://www.amazon.com/Lambda-Calculus-Its-Syntax-Semantics/dp/0444875085) | [📚 Library Access](https://scholar.google.com/scholar?q=barendregt+lambda+calculus+syntax+semantics)
+[External Link](https://www.amazon.com/Lambda-Calculus-Its-Syntax-Semantics/dp/0444875085) | [Library Access](https://scholar.google.com/scholar?q=barendregt+lambda+calculus+syntax+semantics)
 
 ---
 
