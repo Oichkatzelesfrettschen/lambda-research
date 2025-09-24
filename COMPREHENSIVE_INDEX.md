@@ -2,7 +2,7 @@
 
 ## Repository Structure Overview
 
-This repository contains comprehensive academic research on lambda calculus variants, organized into systematic categories with bibliographies, implementations, and educational resources.
+This repository organizes academic citations on lambda calculus variants into systematic categories with bibliographies, external implementations, and educational resources.
 
 ## Core Lambda Calculi
 
@@ -14,12 +14,11 @@ This repository contains comprehensive academic research on lambda calculus vari
 
 ### 02-simply-typed-lambda-calculus/
 **Typed lambda calculus with function types only**
-- **papers/bibliography.md**: 40 papers covering type inference, decidability, and performance analysis
-- **implementations/rust-tapl-benchmarks.md**: Production Rust implementation with comprehensive performance benchmarking
-- **sources/rust-implementations/tapl-rust/02_lambda/**: Five evaluation strategies with statistical performance analysis
+- **papers/bibliography.md**: 40 citations covering type inference, decidability, and performance analysis
+- Implementations: see external projects referenced in the Implementations Catalog
 - Key topics: Hindley-Milner inference, Curry-Howard correspondence, complexity, evaluation strategies
 - Notable papers: Church (1940), Hindley (1969), Milner (1978), Plotkin (1975), Ariola & Felleisen (1997)
-- **Performance Data**: Empirical validation of theoretical complexity bounds with 95% confidence intervals
+  
 
 ### 03-system-f-polymorphic/
 **Second-order polymorphic lambda calculus**
@@ -203,7 +202,7 @@ This repository contains comprehensive academic research on lambda calculus vari
 ## Bibliography Statistics
 
 ### Total Academic Coverage
-- **708+ influential papers** across all categories
+- **700+ citations** across all categories
 - **Time span**: 1918-2025 (107 years of research)
 - **Venues**: POPL, ICFP, TLCA, TCS, Journal of ACM, ACM Computing Surveys, LICS, ESOP, PLDI, and more
 - **Contributors**: Church, Curry, Martin-Löf, Girard, Reynolds, Coquand, Coppo, Dezani, Tobin-Hochstadt, Lewis, Kripke, Davies, Pfenning, Plotkin, Abramsky, Voevodsky, and hundreds more
@@ -313,7 +312,7 @@ Relevant Logic    Ordered Logic
 *This index represents the most comprehensive academic resource on lambda calculus variants available, suitable for research, education, and practical application across the full spectrum of type theory and programming language design.*
 
 **Last Updated**: September 2025
-**Total Academic Papers**: 708+
+**Total Citations**: 700+
 **Implementation Projects**: 75+
 **Research Institutions**: 35+
 **Type System Categories**: 23+

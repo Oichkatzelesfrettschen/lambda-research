@@ -44,7 +44,8 @@ jobs:
         name: validation-report
         path: validation_report.json
 
-  build-rust:
+build-rust:
+    if: ${{ hashFiles('sources/rust-implementations/tapl-rust/Cargo.toml') != '' }}
     runs-on: ubuntu-latest
     name: Build Rust Implementations
 

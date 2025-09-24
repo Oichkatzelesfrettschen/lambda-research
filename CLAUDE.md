@@ -7,14 +7,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This is a comprehensive lambda calculus research repository focused on building production-ready implementations with world-class academic foundations. The repository contains:
 
 **CORE STRENGTHS:**
-- 31 numbered categories with 708+ research papers (world-class academic organization)
-- Functional TAPL-based Rust implementations (our implementation foundation)
+- 31 numbered categories with 700+ citations (world-class academic organization)
+- Implementations catalog referencing external projects (not in-repo TAPL tree)
 - Modern documentation infrastructure with MkDocs
 - Automated validation and quality assurance systems
 - Comprehensive cross-reference system and bibliography management
 
 **CURRENT FOCUS:**
-- Building from existing TAPL Rust implementations in `sources/rust-implementations/tapl-rust/`
+- Using external TAPL Rust implementations as references
 - Progressive development: Untyped λ-calculus → Simply Typed → System F → Dependent Types
 - Academic rigor with practical implementation emphasis
 - Quality over quantity: deep implementation rather than superficial coverage
@@ -22,19 +22,12 @@ This is a comprehensive lambda calculus research repository focused on building 
 ## Repository Structure
 
 ### Primary Implementation Core
-- **`sources/rust-implementations/tapl-rust/`** - PRODUCTION IMPLEMENTATIONS (our development focus)
-  - `01_arith/` - Arithmetic expressions (working)
-  - `02_lambda/` - Untyped lambda calculus (working)
-  - `03_typedarith/` - Typed arithmetic (working)
-  - `04_stlc/` - Simply typed lambda calculus (working)
-  - `05_recon/` - Type reconstruction (working)
-  - `06_system_f/` - System F polymorphism (working)
-  - Plus advanced variants (bidirectional typing, dependent types)
+- External implementations guide development; see Implementations Catalog in docs
 
 ### Academic Reference Structure (01-31)
 The numbered directories provide comprehensive academic foundations:
 - **01-XX-name/** - Academic organization: `papers/`, `implementations/`, `tutorials/`, `historical/`
-- **Current State**: Excellent bibliographies (708+ papers), minimal implementations
+- **Current State**: Excellent bibliographies (700+ citations), minimal in-repo implementations
 - **Strategy**: Use as reference while building implementations in `sources/`
 
 ### Supporting Infrastructure
@@ -44,7 +37,7 @@ The numbered directories provide comprehensive academic foundations:
 - **Build System** - Unified Makefile targeting actual implementations
 
 ### Key Files
-- **`sources/rust-implementations/tapl-rust/Cargo.toml`** - Main build configuration
+- External Rust implementations: see referenced repositories in the catalog
 - **`Makefile`** - Master build system (updated for actual implementations)
 - **`validate-repository.py`** - Quality assurance and validation
 - **`mkdocs-simplified.yml`** - Documentation generation
@@ -52,32 +45,16 @@ The numbered directories provide comprehensive academic foundations:
 
 ## Build Systems and Development
 
-### PRIORITY BUILD SYSTEM: Rust TAPL Implementations
+### PRIORITY BUILD SYSTEM: External Rust TAPL Implementations (reference)
 
-**PRIMARY DEVELOPMENT TARGET:**
-```bash
-cd sources/rust-implementations/tapl-rust/
-cargo build --release                 # Build all TAPL implementations
-cargo test                            # Run comprehensive test suite
-cargo fmt                             # Format code (required before commits)
-cargo clippy                          # Lint and quality checks
-cargo doc --open                      # Generate and view documentation
-```
-
-**WORKING IMPLEMENTATIONS:**
-- Untyped Lambda Calculus (`02_lambda/`)
-- Simply Typed Lambda Calculus (`04_stlc/`)
-- System F Polymorphism (`06_system_f/`)
-- Type Reconstruction (`05_recon/`)
-- Bidirectional Typing (`x1_bidir/`)
-- Dependent Types prototype (`x2_dependent/`)
+Use the external repos’ own instructions to build and test.
 
 ### Essential Commands
 
 #### Repository Health & Quality Assurance
 ```bash
 # ALWAYS RUN THESE FIRST
-./validate-repository.py                 # Full validation (49k files, 708+ papers)
+./validate-repository.py                 # Full validation of structure and links
 ./standardize_bibliography.py           # Bibliography consistency check
 make status                             # Repository health status
 make verify                            # Academic integrity verification
@@ -85,17 +62,15 @@ make verify                            # Academic integrity verification
 
 #### Core Development Workflow
 ```bash
-# Primary development cycle
-cd sources/rust-implementations/tapl-rust/
-cargo build && cargo test && cargo fmt && cargo clippy
+# Primary development cycle (follow external repos when working with code)
 
 # Documentation development
 source venv/bin/activate               # ALWAYS activate before docs work
 mkdocs serve --config-file mkdocs-simplified.yml  # Live server (127.0.0.1:8000)
 mkdocs build --config-file mkdocs-simplified.yml  # Production build
 
-# Master build system (targets actual implementations)
-make build                             # Build working Rust implementations + docs
+# Master build system (targets available implementations)
+make build                             # Build available implementations + docs
 make test                              # Run all available tests
 make clean                             # Clean all build artifacts
 make ci                               # Full CI pipeline
@@ -133,13 +108,13 @@ This repository balances academic rigor with production-quality implementations:
 3. **Quality Focus**: Deep implementation of core concepts vs shallow coverage of everything
 4. **Progressive Complexity**: Build understanding through working implementations
 
-### RUST-CENTERED ARCHITECTURE
+### RUST-CENTERED ARCHITECTURE (REFERENCE)
 
-**PRIMARY IMPLEMENTATIONS** (`sources/rust-implementations/tapl-rust/`):
+**IMPLEMENTATION THEMES** (via external repos):
 - **Type-Safe Design**: Rust's type system enforces correctness
 - **Performance Focus**: Zero-cost abstractions for lambda calculus operations
-- **Memory Safety**: No garbage collector overhead, deterministic performance
-- **Academic Validation**: All algorithms reference original papers (TAPL, Pierce)
+- **Memory Safety**: Deterministic performance
+- **Academic Validation**: Algorithms reference original papers (TAPL, Pierce)
 
 **IMPLEMENTATION PATTERNS:**
 ```rust
@@ -165,10 +140,10 @@ pub fn substitute(term: Term, var: &str, replacement: Term) -> Term
 
 ## Development Workflow
 
-### PRIORITY: Extending Core Implementations
+### PRIORITY: Extending Core Implementations (externally)
 
 **IMPLEMENTATION-FIRST APPROACH:**
-1. **Start in Rust**: Extend `sources/rust-implementations/tapl-rust/`
+1. **Start in Rust**: Contribute to external TAPL-style implementations
 2. **Build Core Functionality**: Focus on working, tested, documented code
 3. **Academic Integration**: Reference papers, add to bibliography after implementation
 4. **Quality Gate**: `cargo test && cargo fmt && cargo clippy` before any commit
@@ -176,9 +151,7 @@ pub fn substitute(term: Term, var: &str, replacement: Term) -> Term
 **NEW VARIANT DEVELOPMENT:**
 ```bash
 # 1. Implement in Rust first
-cd sources/rust-implementations/tapl-rust/
-cargo new 07_new_variant --lib
-# Implement, test, document
+# Implement, test, document (in external repos)
 
 # 2. Update academic structure
 mkdir 32-new-variant/

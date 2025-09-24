@@ -157,8 +157,16 @@ class RepositoryValidator:
         print("🔗 Validating cross-references...")
 
         all_files = set()
+        # Track Markdown files
         for md_file in self.root_path.rglob('*.md'):
             all_files.add(md_file.relative_to(self.root_path))
+        # Also track common static assets (at minimum PDFs for internal links)
+        for asset in self.root_path.rglob('*'):
+            try:
+                if asset.is_file() and asset.suffix.lower() in {'.pdf'}:
+                    all_files.add(asset.relative_to(self.root_path))
+            except Exception:
+                continue
 
         for md_file in self.root_path.rglob('*.md'):
             try:
@@ -177,18 +185,22 @@ class RepositoryValidator:
                     if link_url.startswith('#'):
                         continue
 
+                    # Strip anchors or query strings for file existence check
+                    clean_url = link_url.split('#', 1)[0].split('?', 1)[0]
+
                     # Resolve relative path
-                    if link_url.startswith('../'):
+                    if clean_url.startswith('../'):
                         # Handle relative paths
-                        target_path = (md_file.parent / link_url).resolve()
+                        target_path = (md_file.parent / clean_url).resolve()
                         relative_target = target_path.relative_to(self.root_path)
                     else:
-                        relative_target = md_file.parent / link_url
+                        relative_target = md_file.parent / clean_url
                         try:
                             relative_target = relative_target.relative_to(self.root_path)
                         except ValueError:
                             continue
 
+                    # If the target exists on disk and is tracked in all_files, accept it
                     if relative_target not in all_files:
                         self.errors.append(
                             f"Broken internal link in {md_file.relative_to(self.root_path)}: "

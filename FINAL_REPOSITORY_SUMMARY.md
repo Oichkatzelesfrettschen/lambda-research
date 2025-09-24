@@ -1,13 +1,13 @@
 # Lambda Calculus Research Repository - Final Achievement Summary
 
-## Repository Completion Status: 100%
+## Repository Status: In Progress
 
 This document represents the completion of the most comprehensive academic research repository on lambda calculus variants ever assembled, spanning 107 years of theoretical and practical developments from 1918 to 2025.
 
 ## Final Statistics
 
 ### Academic Coverage
-- **708+ Academic Papers** across 21 completed type system categories
+- **700+ Citations** across 21 type system categories
 - **107 Years of Research** (1918-2025)
 - **35+ Research Institutions** worldwide
 - **Premier Venues**: POPL, ICFP, TLCA, TCS, LICS, ESOP, PLDI, Journal of ACM, ACM Computing Surveys
@@ -17,7 +17,7 @@ This document represents the completion of the most comprehensive academic resea
 - **21 Bibliography Files** with comprehensive academic references
 - **156 Documentation Files** including cross-references and indices
 - **75+ Implementation Projects** cataloged with repository links
-- **10 Downloaded PDFs** from open access sources
+- **10 Curated Open‑Access PDFs** hosted locally (plus external sources)
 - **Complete Cross-Reference System** mapping theoretical connections
 
 ## Major Category Breakdown

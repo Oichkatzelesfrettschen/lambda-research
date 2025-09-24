@@ -304,12 +304,22 @@ async def main():
 
     args = parser.parse_args()
 
-    # Convert relative paths to absolute
+    # Determine configuration file path
+    # Prefer user-provided path relative to current working directory; fall back to script-relative paths
+    candidate_paths = []
+    cfg = Path(args.config)
+    candidate_paths.append(cfg)
     script_dir = Path(__file__).parent
-    config_path = script_dir / args.config
+    candidate_paths.append(script_dir / args.config)
+    candidate_paths.append(script_dir.parent / args.config)
 
-    if not config_path.exists():
-        logger.error(f"Configuration file not found: {config_path}")
+    config_path = None
+    for p in candidate_paths:
+        if p.exists():
+            config_path = p
+            break
+    if not config_path:
+        logger.error(f"Configuration file not found. Tried: {[str(p) for p in candidate_paths]}")
         return
 
     verifier = AccessVerifier(config_path, args.concurrent)

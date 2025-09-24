@@ -84,9 +84,8 @@ Theoretical Complexity ↔ Empirical Validation ↔ Implementation Optimization
 ```
 
 **Category Connections:**
-- `02-simply-typed-lambda-calculus/` → **Performance benchmarking foundation**
+- `02-simply-typed-lambda-calculus/` → Evaluation strategies (theoretical references)
   - **Evaluation Strategies**: CallByValue, CallByName, CallByNeed, ParallelApplicative, NormalOrder
-  - **Empirical Validation**: 95% confidence intervals validating theoretical complexity bounds
   - **Abstract Machine Correlation**: SECD (CallByValue), Krivine (CallByName), CEK (Environment-based)
 - `28-abstract-machines/` → Theoretical execution models for performance comparison
 - `03-system-f-polymorphic/` → Polymorphic extension performance baseline

@@ -5,11 +5,11 @@
 site_name: Lambda Calculus Research Repository
 site_description: Comprehensive research documentation covering 31 lambda calculus variants, implementations, and theoretical foundations
 site_author: Lambda Calculus Research Team
-site_url: https://lambda-research.readthedocs.io/
+site_url: https://oichkatzelesfrettschen.github.io/lambda-research/
 
 # Repository information
 repo_name: lambda-research
-repo_url: https://github.com/yourusername/lambda-research
+repo_url: https://github.com/Oichkatzelesfrettschen/lambda-research
 edit_uri: edit/main/docs/
 
 # Copyright

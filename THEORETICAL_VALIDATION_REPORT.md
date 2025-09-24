@@ -194,7 +194,7 @@ The repository correctly identifies the key papers and contributions:
 ## 7. Bibliography Quality Assessment
 
 ### Strengths:
-- **Comprehensive coverage**: 708+ papers spanning 1918-2025
+- **Comprehensive coverage**: 700+ citations spanning 1918-2025
 - **Primary sources**: Focus on original, foundational works
 - **Recent developments**: Includes contemporary research (2020-2025)
 - **Proper attribution**: Full bibliographic information
