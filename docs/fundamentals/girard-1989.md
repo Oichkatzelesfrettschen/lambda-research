@@ -41,7 +41,7 @@ Written in 1989, this paper explains how:
   <div class="pdf-controls">
     <h4>[PDF] Girard (1989) - Proofs and Types</h4>
     <div class="pdf-actions">
-      <a href="../papers/essential/1989_girard_proofs_types_oa.pdf"
+      <a href="/lambda-research/papers/essential/1989_girard_proofs_types_oa.pdf"
          target="_blank" class="btn-download">
         Download PDF
       </a>
@@ -58,7 +58,7 @@ Written in 1989, this paper explains how:
             height="600px"
             frameborder="0">
       <p>Your browser doesn't support embedded PDFs.
-         <a href="../papers/essential/1989_girard_proofs_types_oa.pdf">Download the PDF</a> instead.
+         <a href="/lambda-research/papers/essential/1989_girard_proofs_types_oa.pdf">Download the PDF</a> instead.
       </p>
     </iframe>
   </div>
@@ -68,7 +68,7 @@ Written in 1989, this paper explains how:
       <summary>[MOBILE] PDF not loading?</summary>
       <p>Some mobile browsers have issues with embedded PDFs. Try:</p>
       <ul>
-        <li><a href="../papers/essential/1989_girard_proofs_types_oa.pdf">Direct download link</a></li>
+        <li><a href="/lambda-research/papers/essential/1989_girard_proofs_types_oa.pdf">Direct download link</a></li>
         <li>Opening in your device's PDF app</li>
         <li>Using a desktop browser</li>
       </ul>
@@ -254,7 +254,7 @@ After reading this paper, you should:
 
 Having trouble with the paper? Want to discuss the philosophical implications?
 
-[Open a discussion on GitHub](https://github.com/oichkatzelesfrettschen/lambda-research/discussions) - we're here to help!
+[Open the repository](https://github.com/Oichkatzelesfrettschen/lambda-research) - we're here to help!
 
 ---
 

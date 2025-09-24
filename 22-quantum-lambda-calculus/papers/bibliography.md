@@ -170,7 +170,7 @@
 29. **Schuld, M., Petruccione, F.** (2018). *Supervised Learning with Quantum Computers*. Springer.
     - **Significance**: Quantum machine learning foundations
     - **Impact**: Type-safe quantum machine learning algorithms
-    - **Repository**: https://github.com/XanaduAI/quantum-machine-learning
+    - **Repository**: https://pennylane.ai/qml/
 
 30. **Lloyd, S., Weedbrook, C.** (2018). *Quantum generative adversarial learning*. In Physical Review Letters 121(4), page 040502.
     - **Significance**: Quantum generative models

@@ -1,12 +1,12 @@
-# Comprehensive Bibliography - All 700+ Papers
+# Comprehensive Bibliography - All 700+ Citations
 
 ## Overview
 
-This repository contains **708+ academic paper citations** across 31 lambda calculus categories. Most citations include DOI or URL links to original sources.
+This repository contains **700+ academic paper citations** across 31 lambda calculus categories. Most citations include DOI or URL links to original sources.
 
 ## Statistics
 
-- **Total papers**: 708+ citations
+- **Total citations**: 700+
 - **External links**: 212 verified
 - **DOI references**: 142 papers
 - **Accessible PDFs**: 10 foundational papers

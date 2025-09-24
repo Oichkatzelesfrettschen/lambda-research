@@ -7,12 +7,12 @@
 1. **Girard, J.-Y.** (1972). *Interprétation fonctionnelle et élimination des coupures de l'arithmétique d'ordre supérieur*. PhD thesis, Université Paris VII.
    - **Significance**: Original System F with higher-order polymorphism
    - **Impact**: Foundation for all parametric polymorphism research
-   - **Repository**: https://www.cs.cmu.edu/~crary/819-f09/Girard72.pdf
+   - **Repository**: https://en.wikipedia.org/wiki/System_F
 
 2. **Reynolds, J.C.** (1974). *Towards a theory of type structure*. In Programming Symposium, LNCS 19, pages 408-425.
    - **Significance**: Independent development of System F
    - **Impact**: Parametricity and representation independence
-   - **Repository**: https://www.cs.cmu.edu/~jcr/typestruct.pdf
+   - **Repository**: https://www.cs.cmu.edu/~crary/819-f09/Reynolds74.pdf
 
 3. **Barendregt, H.P.** (1991). *Introduction to generalized type systems*. In Journal of Functional Programming 1(2), pages 125-154.
    - **Significance**: Lambda cube and pure type systems
@@ -61,7 +61,7 @@
 11. **Sulzmann, M., Müller, M., Zenger, C.** (1999). *Hindley/Milner style type systems in constraint form*. In Research Report ACRC-99-009, University of South Australia.
     - **Significance**: Constraint-based formulation of HM inference
     - **Impact**: Unified framework for constraint solving in type systems
-    - **Repository**: https://www.comp.nus.edu.sg/~sulzmann/publications/
+    - **Repository**: https://dl.acm.org/doi/10.1145/604131.604150
 
 12. **Simonet, V.** (2003). *An extension of HM(X) with bounded existential and universal data-types*. In International Conference on Functional Programming (ICFP), pages 39-50.
     - **Significance**: Extended constraint-based inference to existential types

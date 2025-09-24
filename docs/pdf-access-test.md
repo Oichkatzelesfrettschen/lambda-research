@@ -2,10 +2,10 @@
 
 ## Test Links
 
-Direct GitHub Pages URLs:
-- [Church 1936](https://oichkatzelesfrettschen.github.io/lambda-research/historical/church-lambda-calculus/1936_church_unsolvable_problem_oa.pdf)
-- [Church 1941](https://oichkatzelesfrettschen.github.io/lambda-research/historical/church-lambda-calculus/1941_church_calculi_lambda_conversion_pd.pdf)
-- [Girard 1987](https://oichkatzelesfrettschen.github.io/lambda-research/classical/girard-system-f/1987_girard_linear_logic_oa.pdf)
+Site-Relative PDF Paths (for deploy testing):
+- [Church 1936](historical/church-lambda-calculus/1936_church_unsolvable_problem_oa.pdf)
+- [Church 1941](historical/church-lambda-calculus/1941_church_calculi_lambda_conversion_pd.pdf)
+- [Girard 1987](classical/girard-system-f/1987_girard_linear_logic_oa.pdf)
 
 ## Alternative Access
 

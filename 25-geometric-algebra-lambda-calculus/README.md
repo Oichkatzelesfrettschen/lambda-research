@@ -222,7 +222,7 @@ A comprehensive catalog of implementations, libraries, and systems that incorpor
 
 #### Gaigen (Code Generator)
 - **Language**: Multi-language code generator
-- **Repository**: https://github.com/billsix/gaigen
+- **Repository**: https://sourceforge.net/projects/gaigen/
 - **Features**: Generates optimized GA code for C++, Java, C#
 - **Optimization**: Specialized code for specific algebras
 - **Target**: High-performance geometric computation

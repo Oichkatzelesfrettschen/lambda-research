@@ -1,6 +1,10 @@
 # MkDocs
 site/
+# PDFs are generally ignored unless in curated areas
 *.pdf
+!docs/**/*.pdf
+!papers/**/*.pdf
+!papers-archive/**/*.pdf
 
 # Python
 venv/

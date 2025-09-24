@@ -23,7 +23,7 @@ This section contains our **honest assessment** of lambda calculus research reso
 **The big picture** - All 31 lambda calculus categories with paper citations.
 
 **What you'll find**:
-- 708+ paper citations spanning 1936-2025
+- 700+ paper citations spanning 1936-2025
 - Coverage from untyped lambda calculus to quantum computing
 - Educational pathways for different skill levels
 - Research institution connections

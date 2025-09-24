@@ -26,7 +26,7 @@ We'll take you through three essential papers, each building on the previous one
 
 **What you'll learn**: The original motivation for lambda calculus, basic lambda notation, and why undecidability matters.
 
-[Read the Paper](church-1936.md) | [View PDF](../papers/essential/1936_church_unsolvable_problem_oa.pdf)
+[Read the Paper](church-1936.md) | [View PDF](/lambda-research/papers/essential/1936_church_unsolvable_problem_oa.pdf)
 
 ---
 
@@ -40,7 +40,7 @@ We'll take you through three essential papers, each building on the previous one
 
 **What you'll learn**: How types prevent errors, the Curry-Howard correspondence, and why functional programming works.
 
-[Read the Paper](girard-1989.md) | [View PDF](../papers/essential/1989_girard_proofs_types_oa.pdf)
+[Read the Paper](girard-1989.md) | [View PDF](/lambda-research/papers/essential/1989_girard_proofs_types_oa.pdf)
 
 ---
 
@@ -82,7 +82,7 @@ That's it! Everything else in computation can be built from these three concepts
 1. **Don't rush**: These are dense papers. Take breaks.
 2. **Take notes**: Write down unfamiliar terms and look them up
 3. **Try examples**: Work through the mathematical examples by hand
-4. **Ask questions**: Use the [GitHub issues](https://github.com/username/lambda-research/issues) if you're stuck
+4. **Ask questions**: Visit the [repository](https://github.com/Oichkatzelesfrettschen/lambda-research) if you're stuck
 5. **Join communities**: r/ProgrammingLanguageTheory, Lambda the Ultimate forums
 
 ---

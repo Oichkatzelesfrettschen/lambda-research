@@ -258,6 +258,9 @@ class RepositoryValidator:
                 return url, status_code == 200, f"HTTP {status_code}"
 
         except urllib.error.HTTPError as e:
+            # Treat 401/403 as access-restricted (not broken)
+            if e.code in (401, 403):
+                return url, True, f"HTTP {e.code} (restricted)"
             return url, False, f"HTTP {e.code}"
         except urllib.error.URLError as e:
             return url, False, f"URL Error: {e.reason}"
@@ -297,6 +300,7 @@ class RepositoryValidator:
 
         # Validate URLs in parallel (but be respectful)
         broken_urls = []
+        restricted_urls = []
 
         with ThreadPoolExecutor(max_workers=5) as executor:
             # Submit URL validation jobs
@@ -316,8 +320,11 @@ class RepositoryValidator:
                         print(f"  Progress: {completed}/{min(20, len(all_urls))} URLs checked")
 
                     if not is_valid:
-                        broken_urls.append((url, message, url_sources[url]))
-                        self.stats['broken_urls'] += 1
+                        if 'restricted' in message or 'HTTP 401' in message or 'HTTP 403' in message:
+                            restricted_urls.append((url, message, url_sources[url]))
+                        else:
+                            broken_urls.append((url, message, url_sources[url]))
+                            self.stats['broken_urls'] += 1
 
                 except Exception as e:
                     self.warnings.append(f"Error checking URL {url}: {e}")
@@ -332,6 +339,13 @@ class RepositoryValidator:
                 source_list += f" (and {len(sources)-3} more)"
 
             self.errors.append(f"Broken URL: {url} ({error}) in {source_list}")
+
+        # Report restricted URLs as warnings
+        for url, error, sources in restricted_urls:
+            source_list = ', '.join(str(s) for s in sources[:3])
+            if len(sources) > 3:
+                source_list += f" (and {len(sources)-3} more)"
+            self.warnings.append(f"Access-restricted URL: {url} ({error}) in {source_list}")
 
     def _generate_report(self):
         """Generate validation report"""
@@ -364,6 +378,18 @@ class RepositoryValidator:
         else:
             print("\n✅ No warnings!")
 
+        # Also write JSON report
+        report = {
+            'stats': self.stats,
+            'errors': self.errors,
+            'warnings': self.warnings,
+        }
+        try:
+            with open('validation_report.json', 'w', encoding='utf-8') as f:
+                json.dump(report, f, indent=2)
+        except Exception:
+            pass
+
         # Overall status
         print(f"\n📈 Overall Status:")
         if len(self.errors) == 0:
@@ -378,6 +404,8 @@ def main():
     """Main validation entry point"""
     validator = RepositoryValidator('.')
     success = validator.validate_all()
+    # Exit code for CI compatibility
+    sys.exit(0 if success else 1)
 
     # Return appropriate exit code
     sys.exit(0 if success else 1)

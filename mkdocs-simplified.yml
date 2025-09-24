@@ -96,6 +96,7 @@ nav:
     - All Lambda Calculi: lambda-calculi/
   - "[TOOLS] Site Info":
     - PDF Access Test: pdf-access-test.md
+    - PDF Index: tools/pdf-index.md
 
 # Extra JavaScript for Math
 extra_javascript:
@@ -105,3 +106,6 @@ extra_javascript:
 dev_addr: 127.0.0.1:8000
 docs_dir: docs
 site_dir: site
+
+# Include all files in docs directory (including PDFs)
+# This is handled by MkDocs automatically for files in docs_dir

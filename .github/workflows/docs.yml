@@ -40,9 +40,29 @@ jobs:
         pip install mkdocs-macros-plugin pymdown-extensions markdown-katex
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+    - name: Debug - List PDFs in docs before build
+      run: |
+        echo "PDFs in docs directory before build:"
+        find docs -name "*.pdf" | head -10
+        echo "Total PDFs in docs: $(find docs -name "*.pdf" | wc -l)"
+
     - name: Build documentation
       run: |
-        mkdocs build --config-file mkdocs-simplified.yml
+        mkdocs build --config-file mkdocs-simplified.yml --verbose
+
+    - name: Copy papers directory to site
+      run: |
+        echo "Copying papers directory from root to site/papers/"
+        cp -r papers site/papers/
+        echo "Papers directory copied successfully"
+        echo "Contents of site/papers/:"
+        find site/papers -type f | head -10
+
+    - name: Debug - List all files in site after build
+      run: |
+        echo "All files in site directory after build:"
+        find site -type f | head -20
+        echo "Total files in site: $(find site -type f | wc -l)"
 
     - name: Verify PDFs present in site
       run: |

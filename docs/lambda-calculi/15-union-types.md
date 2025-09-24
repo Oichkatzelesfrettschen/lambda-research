@@ -57,7 +57,7 @@ Comprehensive academic bibliography covering:
   - Option and Result standard types
 - **Type Checker**: rustc compiler
 - **Performance**: Zero-cost runtime representation
-- **Documentation**: https://doc.rust-lang.org/book/ch06-00-enums-and-pattern-matching.html
+- **Documentation**: https://doc.rust-lang.org/book/ch06-00-enums.html
 
 #### Scala 3
 - **Repository**: https://github.com/lampepfl/dotty

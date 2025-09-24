@@ -81,30 +81,38 @@ build-sml: ## Build Standard ML implementations
 		echo -e "$(YELLOW)SML compiler not found, skipping$(NC)"; \
 	fi
 
-build-rust: ## Build Rust implementations with zero warnings
-	@echo -e "$(BLUE)Building Rust implementations with zero warnings...$(NC)"
-	@if command -v $(CARGO) &> /dev/null; then \
-		cd $(SRC_DIR)/rust-implementations/tapl-rust && \
-		$(CARGO) fmt --check && \
-		$(CARGO) clippy -- -D warnings && \
-		$(CARGO) build --release && \
-		$(CARGO) test; \
-		echo -e "$(GREEN)Rust build successful with zero warnings$(NC)"; \
-	else \
-		echo -e "$(YELLOW)Cargo not found, skipping$(NC)"; \
-	fi
+build-rust: ## Build Rust implementations when sources exist
+    @echo -e "$(BLUE)Building Rust implementations...$(NC)"
+    @if [ -d $(SRC_DIR)/rust-implementations/tapl-rust ]; then \
+        if command -v $(CARGO) &> /dev/null; then \
+            cd $(SRC_DIR)/rust-implementations/tapl-rust && \
+            $(CARGO) fmt --check && \
+            $(CARGO) clippy -- -D warnings && \
+            $(CARGO) build --release && \
+            $(CARGO) test; \
+            echo -e "$(GREEN)Rust build successful$(NC)"; \
+        else \
+            echo -e "$(YELLOW)Cargo not found, skipping Rust build$(NC)"; \
+        fi; \
+    else \
+        echo -e "$(YELLOW)Rust sources not present (skipping): $(SRC_DIR)/rust-implementations/tapl-rust$(NC)"; \
+    fi
 
 # Test targets
 test: test-rust test-validation test-docs ## Run all available tests
 
 test-rust: ## Run Rust implementation tests
-	@echo -e "$(BLUE)Running Rust tests...$(NC)"
-	@if command -v $(CARGO) &> /dev/null; then \
-		cd $(SRC_DIR)/rust-implementations/tapl-rust && $(CARGO) test --release; \
-		echo -e "$(GREEN)Rust tests passed$(NC)"; \
-	else \
-		echo -e "$(YELLOW)Cargo not found, skipping Rust tests$(NC)"; \
-	fi
+    @echo -e "$(BLUE)Running Rust tests...$(NC)"
+    @if [ -d $(SRC_DIR)/rust-implementations/tapl-rust ]; then \
+        if command -v $(CARGO) &> /dev/null; then \
+            cd $(SRC_DIR)/rust-implementations/tapl-rust && $(CARGO) test --release; \
+            echo -e "$(GREEN)Rust tests passed$(NC)"; \
+        else \
+            echo -e "$(YELLOW)Cargo not found, skipping Rust tests$(NC)"; \
+        fi; \
+    else \
+        echo -e "$(YELLOW)Rust sources not present (skipping): $(SRC_DIR)/rust-implementations/tapl-rust$(NC)"; \
+    fi
 
 test-validation: ## Run repository validation tests
 	@echo -e "$(BLUE)Running repository validation tests...$(NC)"
@@ -186,9 +194,9 @@ clean: ## Clean build artifacts
 	@rm -rf $(TEST_DIR)/results
 	@rm -rf $(BENCH_DIR)/results
 	@rm -rf $(DOC_DIR)
-	@if [ -d $(SRC_DIR)/rust-implementations/tapl-rust ]; then \
-		cd $(SRC_DIR)/rust-implementations/tapl-rust && $(CARGO) clean 2>/dev/null || true; \
-	fi
+    @if [ -d $(SRC_DIR)/rust-implementations/tapl-rust ] && command -v $(CARGO) &> /dev/null; then \
+        cd $(SRC_DIR)/rust-implementations/tapl-rust && $(CARGO) clean 2>/dev/null || true; \
+    fi
 	@echo -e "$(GREEN)Clean complete$(NC)"
 
 init: ## Initialize development environment

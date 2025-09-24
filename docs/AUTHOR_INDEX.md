@@ -115,7 +115,7 @@ Comprehensive index of authors in the lambda calculus papers archive.
 - **1984**: [Intuitionistic Type Theory](/classical/martin-lof-type-theory/1984_martin_lof_intuitionistic_type_theory_oa.pdf)
   - *Definitive exposition of dependent type theory*
 **External Resources**:
-- [Archive](https://archive-pml.github.io/martin-lof/)
+- [Archive PDF (1984 ITT)](https://archive-pml.github.io/martin-lof/pdfs/Bibliopolis-Book-retypeset-1984.pdf)
 - [Wikipedia](https://en.wikipedia.org/wiki/Per_Martin-L%C3%B6f)
 
 ## S

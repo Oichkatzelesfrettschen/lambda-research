@@ -12,12 +12,12 @@
 2. **Martin-Löf, P.** (1975). *An intuitionistic theory of types: predicative part*. In Logic Colloquium '73, pages 73-118.
    - **Significance**: Intuitionistic type theory foundations
    - **Impact**: Established constructive foundation for dependent types
-   - **Repository**: https://archive-pml.github.io/martin-lof/pdfs/Martin-Lof-An-Intuitionistic-Theory-of-Types-Predicative-Part.pdf
+   - **Repository**: https://plato.stanford.edu/entries/type-theory-intuitionistic/
 
 3. **Girard, J.-Y.** (1972). *Interprétation fonctionnelle et élimination des coupures de l'arithmétique d'ordre supérieur*. PhD thesis, Université Paris VII.
    - **Significance**: System F and higher-order polymorphism
    - **Impact**: Foundation for impredicative polymorphic type systems
-   - **Repository**: https://www.cs.cmu.edu/~crary/819-f09/Girard72.pdf
+   - **Repository**: https://en.wikipedia.org/wiki/System_F
 
 4. **Coquand, T., Huet, G.** (1988). *The calculus of constructions*. In Information and Computation 76(2-3), pages 95-120.
    - **Significance**: Calculus of Constructions combining dependent and polymorphic types
@@ -211,7 +211,7 @@
 | LEGO | Edinburgh | - | Extended Calculus of Constructions |
 | AUTOMATH | Eindhoven | - | First dependent type system |
 | ALF | Chalmers | - | Martin-Löf type theory |
-| NuPRL | Cornell | https://github.com/NuprlInc/NuprlLight | Computational type theory |
+| NuPRL | Cornell | https://nuprl.org/ | Computational type theory |
 
 ## Theoretical Significance
 

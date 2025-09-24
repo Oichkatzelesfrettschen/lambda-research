@@ -123,9 +123,9 @@ Successfully implemented a comprehensive papers archive system for the lambda ca
 
 ### URLs Verified ✅
 - Church (1936): https://ics.uci.edu/~lopes/teaching/inf212W12/readings/church.pdf
-- Church (1941): https://archive.org/details/AnnalsOfMathematicalStudies6...
+- Church (1941): https://archive.org/details/AnnalsOfMathematicalStudies6ChurchAlonzoTheCalculiOfLambdaConversionPrincetonUniversityPress1941
 - Girard Linear Logic: https://girard.perso.math.cnrs.fr/Synsem.pdf
-- Martin-Löf ITT: https://archive-pml.github.io/martin-lof/pdfs/...
+- Martin-Löf ITT: https://archive-pml.github.io/martin-lof/pdfs/Bibliopolis-Book-retypeset-1984.pdf
 - HoTT Book: https://homotopytypetheory.org/book/
 
 ## Technical Implementation

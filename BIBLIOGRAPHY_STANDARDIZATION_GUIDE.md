@@ -34,7 +34,7 @@
 
 ### DOIs and URLs
 - **DOI**: 10.xxxx/xxxxx (when available)
-- **URL**: https://... (for accessible papers without DOI)
+- **URL**: provide an accessible link (when DOI is unavailable)
 
 ## Section Organization
 

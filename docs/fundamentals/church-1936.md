@@ -38,7 +38,7 @@ Church's answer was revolutionary: **No, such an algorithm cannot exist.** To pr
   <div class="pdf-controls">
     <h4>[PDF] Church (1936) - An Unsolvable Problem</h4>
     <div class="pdf-actions">
-      <a href="../papers/essential/1936_church_unsolvable_problem_oa.pdf"
+      <a href="/lambda-research/papers/essential/1936_church_unsolvable_problem_oa.pdf"
          target="_blank" class="btn-download">
         Download PDF
       </a>
@@ -55,7 +55,7 @@ Church's answer was revolutionary: **No, such an algorithm cannot exist.** To pr
             height="600px"
             frameborder="0">
       <p>Your browser doesn't support embedded PDFs.
-         <a href="../papers/essential/1936_church_unsolvable_problem_oa.pdf">Download the PDF</a> instead.
+         <a href="/lambda-research/papers/essential/1936_church_unsolvable_problem_oa.pdf">Download the PDF</a> instead.
       </p>
     </iframe>
   </div>
@@ -65,7 +65,7 @@ Church's answer was revolutionary: **No, such an algorithm cannot exist.** To pr
       <summary>[MOBILE] PDF not loading?</summary>
       <p>Some mobile browsers have issues with embedded PDFs. Try:</p>
       <ul>
-        <li><a href="../papers/essential/1936_church_unsolvable_problem_oa.pdf">Direct download link</a></li>
+        <li><a href="/lambda-research/papers/essential/1936_church_unsolvable_problem_oa.pdf">Direct download link</a></li>
         <li>Opening in your device's PDF app</li>
         <li>Using a desktop browser</li>
       </ul>
@@ -227,7 +227,7 @@ After reading this paper, you should:
 
 Having trouble with the paper? Found an error? Want to discuss concepts?
 
-[Open a discussion on GitHub](https://github.com/oichkatzelesfrettschen/lambda-research/discussions) - we're here to help!
+[Open the repository](https://github.com/Oichkatzelesfrettschen/lambda-research) - we're here to help!
 
 ---
 
