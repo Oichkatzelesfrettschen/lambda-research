@@ -1,0 +1,165 @@
+<!-- PDF Viewer Component for GitHub Pages -->
+<!-- Usage: {% include pdf-viewer.html file="filename.pdf" title="Paper Title" %} -->
+
+<div class="pdf-viewer-container">
+  <div class="pdf-controls">
+    <h4>{{ include.title | default: "Research Paper" }}</h4>
+    <div class="pdf-actions">
+      <button onclick="toggleFullscreen('pdf-frame-{{ include.file | slugify }}')" class="btn-fullscreen">
+        🔍 Fullscreen
+      </button>
+      <a href="https://github.com/{{ site.github.owner_name }}/{{ site.github.repository_name }}/raw/main/papers/{{ include.file }}"
+         download class="btn-download">
+        💾 Download PDF
+      </a>
+      <button onclick="openInNewTab('https://github.com/{{ site.github.owner_name }}/{{ site.github.repository_name }}/raw/main/papers/{{ include.file }}')"
+              class="btn-external">
+        🔗 Open in New Tab
+      </button>
+    </div>
+  </div>
+
+  <div class="pdf-viewer-wrapper">
+    <iframe id="pdf-frame-{{ include.file | slugify }}"
+            src="https://mozilla.github.io/pdf.js/web/viewer.html?file={{ site.url }}{{ site.baseurl }}/papers/{{ include.file | url_encode }}"
+            width="100%"
+            height="600px"
+            frameborder="0"
+            allowfullscreen>
+      <p>Your browser doesn't support PDF viewing.
+         <a href="https://github.com/{{ site.github.owner_name }}/{{ site.github.repository_name }}/raw/main/papers/{{ include.file }}">
+           Download the PDF
+         </a> instead.
+      </p>
+    </iframe>
+  </div>
+
+  <div class="pdf-fallback">
+    <details>
+      <summary>📱 Mobile users: PDF not loading?</summary>
+      <p>Some mobile browsers have issues with embedded PDFs. Try:</p>
+      <ul>
+        <li><a href="https://github.com/{{ site.github.owner_name }}/{{ site.github.repository_name }}/raw/main/papers/{{ include.file }}">Direct download link</a></li>
+        <li>Opening in your device's PDF app</li>
+        <li>Using a desktop browser</li>
+      </ul>
+    </details>
+  </div>
+</div>
+
+<style>
+.pdf-viewer-container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1rem 0;
+  background: #f9f9f9;
+}
+
+.pdf-controls {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pdf-controls h4 {
+  margin: 0;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.pdf-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pdf-actions button,
+.pdf-actions a {
+  background: #007acc;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background 0.2s;
+}
+
+.pdf-actions button:hover,
+.pdf-actions a:hover {
+  background: #005999;
+}
+
+.pdf-viewer-wrapper {
+  position: relative;
+}
+
+.pdf-fallback {
+  padding: 1rem;
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.pdf-fallback summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #666;
+}
+
+.pdf-fallback ul {
+  margin: 0.5rem 0 0 1rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .pdf-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .pdf-actions {
+    justify-content: center;
+  }
+
+  .pdf-viewer-wrapper iframe {
+    height: 400px;
+  }
+}
+</style>
+
+<script>
+function toggleFullscreen(elementId) {
+  const element = document.getElementById(elementId);
+  if (!document.fullscreenElement) {
+    element.requestFullscreen().catch(err => {
+      console.log('Error attempting to enable fullscreen:', err.message);
+      // Fallback: open in new tab
+      openInNewTab(element.src);
+    });
+  } else {
+    document.exitFullscreen();
+  }
+}
+
+function openInNewTab(url) {
+  window.open(url, '_blank');
+}
+
+// Add keyboard shortcuts
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'f' && e.ctrlKey) {
+    e.preventDefault();
+    const activeFrame = document.querySelector('.pdf-viewer-wrapper iframe:hover');
+    if (activeFrame) {
+      toggleFullscreen(activeFrame.id);
+    }
+  }
+});
+</script>

@@ -1,46 +1,94 @@
-# Lambda Calculus Research Repository
+# Lambda Calculus Learning Journey
 
-Welcome to the comprehensive Lambda Calculus Research Repository, a modern documentation system covering 31 lambda calculus variants, implementations, and theoretical foundations.
+**Your guided path through the mathematics of computation**
 
-## Overview
+---
 
-This repository serves as a comprehensive resource for researchers, educators, and practitioners interested in lambda calculus and type theory. It provides:
+## What You'll Find Here
 
-- **Systematic Coverage**: Documentation of 31 lambda calculus variants
-- **Implementation Analysis**: Detailed implementation comparisons and catalogs
-- **Academic Resources**: Extensive bibliographies and paper collections
-- **Cross-Reference System**: Interconnected theoretical relationships
-- **Modern Tooling**: Searchable, accessible, and publication-ready documentation
+**🎯 Our Purpose**: Help you learn lambda calculus through carefully curated, accessible papers and clear explanations.
 
-## Repository Structure
+**📚 What We Actually Provide**:
+- **10 essential research papers** you can read immediately
+- **Guided learning paths** from beginner to advanced
+- **Working PDF viewers** on all devices
+- **Contextual explanations** for each paper
+- **Links to 200+ external papers** for deeper research
 
-### Foundation
-Core lambda calculus systems that form the theoretical foundation:
-- [Untyped Lambda Calculus](/foundation/01-untyped.md)
-- [Simply Typed Lambda Calculus](/foundation/02-simply-typed.md)
-- [System F (Polymorphic Lambda Calculus)](/foundation/03-system-f.md)
-- [Calculus of Constructions](/foundation/04-coc.md)
-- [Martin-Löf Type Theory](/foundation/05-mltt.md)
+**❌ What We Don't Claim**:
+- We're not a comprehensive research database
+- We don't host hundreds of papers (we focus on the essentials)
+- We're not trying to replace formal education
 
-### Type Systems
-Advanced type systems and extensions:
-- [Linear Lambda Calculus](/type-systems/06-linear.md)
-- [Session Types](/type-systems/07-session.md)
-- [Dependent Types](/type-systems/08-dependent.md)
-- And many more...
+---
 
-### Bibliography
-Comprehensive academic references:
-- [Core Bibliography](/bibliography/core.md)
-- [Recent Advances](/bibliography/recent.md)
+## Choose Your Starting Point
 
-## Features
+### 🌱 New to Lambda Calculus?
 
-- **Searchable Content**: Full-text search across all documentation
-- **Mathematics Support**: Proper rendering of lambda calculus notation using MathJax
-- **Cross-References**: Linked theoretical relationships
-- **Mobile Friendly**: Responsive design for all devices
-- **Academic Focus**: Optimized for research and educational use
+**Start here if**: You've heard of lambda calculus but don't know what it is.
+
+**You'll learn**: What lambda calculus is, why it matters, and how to read lambda expressions.
+
+**Essential papers**: 3 foundational papers with beginner-friendly explanations.
+
+[**→ Start Your Journey**](fundamentals/index.md)
+
+---
+
+### 🧠 Ready for Advanced Topics?
+
+**Start here if**: You understand basic lambda calculus and simple types.
+
+**You'll learn**: Dependent types, linear logic, concurrent calculi, and modern type theory.
+
+**Research papers**: 5 advanced papers that shaped modern programming languages.
+
+[**→ Explore Advanced Topics**](advanced/index.md)
+
+---
+
+### 💻 Want to Build Something?
+
+**Start here if**: You learn best by implementing and experimenting.
+
+**You'll find**: Interpreters, compilers, and working code examples you can run and modify.
+
+**Programming languages**: Examples in Haskell, OCaml, Python, and JavaScript.
+
+[**→ See Implementations**](implementations/index.md)
+
+---
+
+### 📖 Looking for Research Papers?
+
+**Start here if**: You need specific papers for research or coursework.
+
+**Browse by**: Topic, difficulty, or chronological order.
+
+**Access**: PDF viewers, downloads, and links to external sources.
+
+[**→ Browse Research Library**](research/index.md)
+
+---
+
+## Recent Updates
+
+- **September 2025**: Redesigned for clarity and honest scope
+- **Focus**: 10 essential papers instead of 708 inaccessible citations
+- **New**: Mobile-friendly PDF viewers that actually work
+- **Improved**: Clear learning paths instead of overwhelming navigation
+
+---
+
+## About This Resource
+
+This site grew out of frustration with lambda calculus resources that either:
+- Promise comprehensive coverage but deliver broken links
+- Assume too much background knowledge
+- Focus on citations instead of actual reading
+
+We believe in **quality over quantity** and **accessibility over comprehensiveness**.
 
 ## Mathematical Notation
 
