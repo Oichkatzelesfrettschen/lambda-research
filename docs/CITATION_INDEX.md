@@ -82,15 +82,15 @@
 **URL**: https://www.paultaylor.eu/stable/prot.pdf
 **Significance**: Comprehensive introduction to proof theory and type systems
 
-### Martin-Löf Type Theory
+### Martin-lof Type Theory
 
-**Martin-Löf, Per (1982)**
+**Martin-lof, Per (1982)**
 *Constructive Mathematics and Computer Programming*
 **Access**: Open Access | **Type**: Core
 **Path**: `classical/martin-lof-type-theory/1982_martin_lof_constructive_mathematics_oa.pdf`
 **Significance**: Connects constructive mathematics with programming through type theory
 
-**Martin-Löf, Per (1984)**
+**Martin-lof, Per (1984)**
 *Intuitionistic Type Theory*
 **Access**: Open Access | **Type**: Core
 **Path**: `classical/martin-lof-type-theory/1984_martin_lof_intuitionistic_type_theory_oa.pdf`
@@ -187,7 +187,7 @@
 - **Hindley, J. Roger**: [2008](#educational-materials)
 
 ### M
-- **Martin-Löf, Per**: [1982](#martin-löf-type-theory), [1984](#martin-löf-type-theory)
+- **Martin-lof, Per**: [1982](#martin-lof-type-theory), [1984](#martin-lof-type-theory)
 
 ### S
 - **Scott, Dana S.**: [1970](#domain-theory-and-denotational-semantics), [1971](#domain-theory-and-denotational-semantics)
@@ -207,12 +207,12 @@
 ### Core Concepts
 - **Lambda Calculus**: Church [1936, 1941], Barendregt [1992], Hindley & Seldin [2008]
 - **Combinatory Logic**: Curry & Feys [1958]
-- **Type Theory**: Martin-Löf [1982, 1984], Girard [1989], Barendregt [1992]
+- **Type Theory**: Martin-lof [1982, 1984], Girard [1989], Barendregt [1992]
 
 ### Advanced Systems
 - **System F**: Girard [1986]
 - **Linear Logic**: Girard [1987], arXiv:2507.12360 [2025]
-- **Dependent Types**: Martin-Löf [1984], arXiv:2508.12475 [2025]
+- **Dependent Types**: Martin-lof [1984], arXiv:2508.12475 [2025]
 - **Homotopy Type Theory**: Univalent Foundations [2013]
 
 ### Semantics

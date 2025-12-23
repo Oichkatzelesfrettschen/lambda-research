@@ -1,0 +1,161 @@
+{
+  "last_updated": "2025-12-23T13:32:46.753284",
+  "tasks": [
+    {
+      "id": "1.1",
+      "name": "Complete Git Migration",
+      "phase": 1,
+      "owner": "manual",
+      "priority": "\ud83d\udd34",
+      "estimated_hours": 0.5,
+      "status": "in_progress",
+      "dependencies": [],
+      "success_criteria": [
+        "git status --short | wc -l returns 0",
+        "All untracked files committed",
+        "Remote repository updated"
+      ],
+      "commands": [
+        "git add docs/ admin/ *.md scripts/",
+        "git commit -m 'feat: complete thematic restructuring'",
+        "git push origin master"
+      ],
+      "validation": [
+        "git status --short",
+        "git log -1 --oneline"
+      ]
+    },
+    {
+      "id": "1.2.1",
+      "name": "Delete Abandoned Virtual Environment",
+      "phase": 1,
+      "owner": "manual",
+      "priority": "\ud83d\udfe1",
+      "estimated_hours": 0.17,
+      "status": "pending",
+      "dependencies": [
+        "1.1"
+      ],
+      "success_criteria": [
+        ".audit-venv/ directory removed",
+        "Repository size reduced"
+      ],
+      "commands": [
+        "rm -rf .audit-venv",
+        "du -sh venv/ uss-venv/"
+      ],
+      "validation": [
+        "test ! -d .audit-venv",
+        "du -sh ."
+      ]
+    },
+    {
+      "id": "1.2.2",
+      "name": "USS Decision - Extract or Make Optional",
+      "phase": 1,
+      "owner": "consolidation-architect",
+      "priority": "\ud83d\udfe1",
+      "estimated_hours": 1.5,
+      "status": "pending",
+      "dependencies": [
+        "1.2.1"
+      ],
+      "success_criteria": [
+        "USS extracted to separate repo OR made optional",
+        "Repository size < 2GB",
+        "Decision documented"
+      ],
+      "commands": [],
+      "validation": [
+        "du -sh . | awk '{print $1}'",
+        "test -f experiments/README.md || test -f requirements-science-optional.txt"
+      ]
+    },
+    {
+      "id": "1.3.1",
+      "name": "Update CLAUDE.md Implementation Strategy",
+      "phase": 1,
+      "owner": "documentation-architect",
+      "priority": "\ud83d\udfe1",
+      "estimated_hours": 1.0,
+      "status": "pending",
+      "dependencies": [
+        "1.1"
+      ],
+      "success_criteria": [
+        "No references to 'external implementations'",
+        "Internal Rust workspace documented",
+        "Build instructions accurate"
+      ],
+      "commands": [],
+      "validation": [
+        "grep -L 'external implementations' CLAUDE.md",
+        "grep 'tapl-rust' CLAUDE.md"
+      ]
+    },
+    {
+      "id": "1.3.2",
+      "name": "Create Rust Implementation Guide",
+      "phase": 1,
+      "owner": "documentation-architect",
+      "priority": "\ud83d\udfe1",
+      "estimated_hours": 1.0,
+      "status": "pending",
+      "dependencies": [
+        "1.3.1"
+      ],
+      "success_criteria": [
+        "docs/implementations/rust/README.md exists",
+        "Guide explains workspace structure",
+        "Build instructions tested"
+      ],
+      "commands": [],
+      "validation": [
+        "test -f docs/implementations/rust/README.md",
+        "cd sources/rust-implementations/tapl-rust && cargo build"
+      ]
+    },
+    {
+      "id": "1.4",
+      "name": "Fix or Remove Broken MkDocs Config",
+      "phase": 1,
+      "owner": "documentation-architect",
+      "priority": "\ud83d\udfe2",
+      "estimated_hours": 1.0,
+      "status": "pending",
+      "dependencies": [
+        "1.1"
+      ],
+      "success_criteria": [
+        "Either simplified config deleted OR both configs work",
+        "No broken links in navigation"
+      ],
+      "commands": [],
+      "validation": [
+        "mkdocs build --strict"
+      ]
+    },
+    {
+      "id": "1.5",
+      "name": "Restore and Run Validation",
+      "phase": 1,
+      "owner": "integration-test",
+      "priority": "\ud83d\udfe2",
+      "estimated_hours": 0.5,
+      "status": "pending",
+      "dependencies": [
+        "1.1",
+        "1.3.1"
+      ],
+      "success_criteria": [
+        "Validation script runs without errors",
+        "Baseline report generated"
+      ],
+      "commands": [],
+      "validation": [
+        "python3 scripts/validate-repository.py",
+        "test -f validation_report.json"
+      ]
+    }
+  ]
+}

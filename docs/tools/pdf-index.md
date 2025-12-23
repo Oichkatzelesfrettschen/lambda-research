@@ -10,13 +10,13 @@
 **Path**: `/lambda-research/papers/essential/1936_church_unsolvable_problem_oa.pdf`
 **Status**: Should be accessible
 **Size**: ~500KB
-[Direct Link](/lambda-research/papers/essential/1936_church_unsolvable_problem_oa.pdf)
+[Direct Link](../papers/essential/1936_church_unsolvable_problem_oa.pdf)
 
 ### [PDF] Girard (1989) - Proofs and Types
 **Path**: `/lambda-research/papers/essential/1989_girard_proofs_types_oa.pdf`
 **Status**: Should be accessible
 **Size**: ~950KB
-[Direct Link](/lambda-research/papers/essential/1989_girard_proofs_types_oa.pdf)
+[Direct Link](../papers/essential/1989_girard_proofs_types_oa.pdf)
 
 ---
 
@@ -26,7 +26,7 @@
 **Path**: `/lambda-research/papers/historical/1941_church_calculi_lambda_conversion_pd.pdf`
 **Status**: Should be accessible
 **Size**: ~2MB
-[Direct Link](/lambda-research/papers/historical/1941_church_calculi_lambda_conversion_pd.pdf)
+[Direct Link](../historical/church-lambda-calculus/1941_church_calculi_lambda_conversion_pd.pdf)
 
 ---
 
@@ -45,12 +45,12 @@ Our embedded viewers use Mozilla PDF.js. If embeds aren't working, try:
 
 ### Step 3: Alternative Access
 If GitHub Pages links fail:
-- Check the [GitHub repository directly](https://github.com/Oichkatzelesfrettschen/lambda-research/tree/master/papers)
+- Check the [GitHub repository directly](https://github.com/Oichkatzelesfrettschen/lambda-research/tree/main/papers)
 - Use the raw GitHub URLs for direct download
 
 ### Step 4: Report Issues
 If PDFs are consistently inaccessible, please:
-- [Open an issue](https://github.com/Oichkatzelesfrettschen/lambda-research/issues) with details
+- [Open an issue](#) with details
 - Include your browser and operating system
 - Specify which PDFs are affected
 
@@ -68,7 +68,7 @@ If PDFs are consistently inaccessible, please:
 ```
 Repository:   /papers/essential/file.pdf
 GitHub Pages: /lambda-research/papers/essential/file.pdf
-Direct URL:   https://oichkatzelesfrettschen.github.io/lambda-research/papers/essential/file.pdf
+Direct URL:   https://oichkatzelesfrettschen.github.io/lambda-research/papers/essential/1936_church_unsolvable_problem_oa.pdf
 ```
 
 ---

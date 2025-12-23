@@ -26,7 +26,7 @@ We'll take you through three essential papers, each building on the previous one
 
 **What you'll learn**: The original motivation for lambda calculus, basic lambda notation, and why undecidability matters.
 
-[Read the Paper](church-1936.md) | [View PDF](/lambda-research/papers/essential/1936_church_unsolvable_problem_oa.pdf)
+[Read the Paper](church-1936.md) | [View PDF](../papers/essential/1936_church_unsolvable_problem_oa.pdf)
 
 ---
 
@@ -40,7 +40,7 @@ We'll take you through three essential papers, each building on the previous one
 
 **What you'll learn**: How types prevent errors, the Curry-Howard correspondence, and why functional programming works.
 
-[Read the Paper](girard-1989.md) | [View PDF](/lambda-research/papers/essential/1989_girard_proofs_types_oa.pdf)
+[Read the Paper](girard-1989.md) | [View PDF](../papers/essential/1989_girard_proofs_types_oa.pdf)
 
 ---
 

@@ -19,7 +19,7 @@ This section contains our **honest assessment** of lambda calculus research reso
 
 ## Browse By Topic
 
-### [INDEX] [Comprehensive Index](COMPREHENSIVE_INDEX.md)
+### [INDEX] [Comprehensive Index](../comprehensive-index.md)
 **The big picture** - All 31 lambda calculus categories with paper citations.
 
 **What you'll find**:
@@ -32,7 +32,7 @@ This section contains our **honest assessment** of lambda calculus research reso
 
 ---
 
-### [LINKS] [Cross-Reference System](CROSS_REFERENCE_SYSTEM.md)
+### [LINKS] [Cross-Reference System](../introduction/cross-reference-system.md)
 **Theoretical connections** - How different lambda calculus variants relate to each other.
 
 **What you'll find**:
@@ -45,7 +45,7 @@ This section contains our **honest assessment** of lambda calculus research reso
 
 ---
 
-### [CODE] [Implementation Catalog](lambda-calculus-implementations-catalog.md)
+### [CODE] [Implementation Catalog](../introduction/implementation-catalog.md)
 **Code and systems** - Real implementations you can study or use.
 
 **What you'll find**:
@@ -61,15 +61,15 @@ This section contains our **honest assessment** of lambda calculus research reso
 ## How to Use This Library
 
 ### [SEARCH] If You're Looking for a Specific Paper
-1. **Try the [Comprehensive Index](COMPREHENSIVE_INDEX.md)** first
+1. **Try the [Comprehensive Index](../comprehensive-index.md)** first
 2. **Search by author, year, or keyword**
 3. **Check access status** (Open Access, DOI, institutional)
 4. **Use fallback sources** if primary links are broken
 
 ### [EXPLORE] If You're Exploring a Topic
-1. **Start with [Cross-References](CROSS_REFERENCE_SYSTEM.md)** to understand context
+1. **Start with [Cross-References](../introduction/cross-reference-system.md)** to understand context
 2. **Find related systems** that might have better paper coverage
-3. **Check [Implementation Catalog](lambda-calculus-implementations-catalog.md)** for working examples
+3. **Check [Implementation Catalog](../introduction/implementation-catalog.md)** for working examples
 4. **Return to fundamentals** if papers seem too advanced
 
 ### [RESEARCH] If You're Doing Research

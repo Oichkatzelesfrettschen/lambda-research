@@ -1,3 +1,5 @@
+# Abbreviations Index
+
 <!-- Abbreviations for Lambda Calculus Research Repository -->
 <!-- This file is automatically included in all pages via pymdownx.snippets -->
 

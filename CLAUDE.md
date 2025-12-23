@@ -8,13 +8,13 @@ This is a comprehensive lambda calculus research repository focused on building 
 
 **CORE STRENGTHS:**
 - 31 numbered categories with 700+ citations (world-class academic organization)
-- Implementations catalog referencing external projects (not in-repo TAPL tree)
+- Internal Rust workspace with modular lambda calculus implementations
 - Modern documentation infrastructure with MkDocs
 - Automated validation and quality assurance systems
 - Comprehensive cross-reference system and bibliography management
 
 **CURRENT FOCUS:**
-- Using external TAPL Rust implementations as references
+- Production-quality Rust implementations in `sources/rust-implementations/`
 - Progressive development: Untyped λ-calculus → Simply Typed → System F → Dependent Types
 - Academic rigor with practical implementation emphasis
 - Quality over quantity: deep implementation rather than superficial coverage
@@ -22,7 +22,12 @@ This is a comprehensive lambda calculus research repository focused on building 
 ## Repository Structure
 
 ### Primary Implementation Core
-- External implementations guide development; see Implementations Catalog in docs
+Internal Rust workspace at `sources/rust-implementations/tapl-rust/` with modular crates:
+- **lambda-core**: Term representation, substitution, alpha-equivalence
+- **lambda-eval**: Evaluation strategies (call-by-value, call-by-name, normal order)
+- **lambda-types**: Type checking and inference (STLC, System F)
+- **lambda-parser**: Parsing lambda expressions, pretty-printing
+- **lambda-examples**: Working examples and demonstrations
 
 ### Academic Reference Structure (01-31)
 The numbered directories provide comprehensive academic foundations:
@@ -37,17 +42,31 @@ The numbered directories provide comprehensive academic foundations:
 - **Build System** - Unified Makefile targeting actual implementations
 
 ### Key Files
-- External Rust implementations: see referenced repositories in the catalog
-- **`Makefile`** - Master build system (updated for actual implementations)
+- **`sources/rust-implementations/tapl-rust/`** - Primary Rust workspace (482 LOC)
+- **`sources/rust-implementations/church-unsolvable-1936/`** - Experimental quantum extensions (929 LOC)
+- **`Makefile`** - Master build system targeting internal implementations
 - **`validate-repository.py`** - Quality assurance and validation
 - **`mkdocs-simplified.yml`** - Documentation generation
 - **`COMPREHENSIVE_INDEX.md`** - Academic reference index
 
 ## Build Systems and Development
 
-### PRIORITY BUILD SYSTEM: External Rust TAPL Implementations (reference)
+### PRIMARY: Internal Rust Workspace
 
-Use the external repos’ own instructions to build and test.
+```bash
+# Build internal Rust implementations
+cd sources/rust-implementations/tapl-rust
+cargo build --all                    # Build all crates
+cargo test --all                     # Run all tests
+cargo clippy --all -- -D warnings    # Zero warnings policy
+cargo fmt --all --check              # Formatting compliance
+cargo bench --all                    # Performance benchmarks
+
+# Build experimental implementations
+cd sources/rust-implementations/church-unsolvable-1936
+cargo build --release
+cargo test
+```
 
 ### Essential Commands
 
@@ -62,7 +81,9 @@ make verify                            # Academic integrity verification
 
 #### Core Development Workflow
 ```bash
-# Primary development cycle (follow external repos when working with code)
+# Primary development cycle
+cd sources/rust-implementations/tapl-rust
+cargo build && cargo test && cargo clippy && cargo fmt
 
 # Documentation development
 source venv/bin/activate               # ALWAYS activate before docs work
@@ -108,12 +129,13 @@ This repository balances academic rigor with production-quality implementations:
 3. **Quality Focus**: Deep implementation of core concepts vs shallow coverage of everything
 4. **Progressive Complexity**: Build understanding through working implementations
 
-### RUST-CENTERED ARCHITECTURE (REFERENCE)
+### RUST-CENTERED ARCHITECTURE
 
-**IMPLEMENTATION THEMES** (via external repos):
+**IMPLEMENTATION THEMES:**
 - **Type-Safe Design**: Rust's type system enforces correctness
 - **Performance Focus**: Zero-cost abstractions for lambda calculus operations
-- **Memory Safety**: Deterministic performance
+- **Memory Safety**: Deterministic performance with zero compiler warnings
+- **Modular Design**: Workspace crates for separation of concerns
 - **Academic Validation**: Algorithms reference original papers (TAPL, Pierce)
 
 **IMPLEMENTATION PATTERNS:**
@@ -133,25 +155,30 @@ pub fn substitute(term: Term, var: &str, replacement: Term) -> Term
 ```
 
 ### SUPPORTING MULTI-LANGUAGE ECOSYSTEM
-- **Haskell**: Academic prototyping and research validation
+- **Rust**: Primary production implementations (tapl-rust workspace)
+- **Haskell**: Academic prototyping in `implementations/haskell/`
 - **OCaml**: Formal verification links (Coq integration)
-- **Scala**: JVM-based implementations for industry integration
-- **Academic Sources**: Agda/Coq for formal proofs and verification
+- **Scala**: JVM-based implementations in `implementations/scala/`
+- **Scheme/SML/Idris**: Educational examples in `implementations/`
+- **Academic Sources**: Agda/Coq compiler sources for formal proofs
 
 ## Development Workflow
 
-### PRIORITY: Extending Core Implementations (externally)
+### PRIORITY: Extending Core Implementations
 
 **IMPLEMENTATION-FIRST APPROACH:**
-1. **Start in Rust**: Contribute to external TAPL-style implementations
+1. **Start in Rust**: Implement in `sources/rust-implementations/tapl-rust/`
 2. **Build Core Functionality**: Focus on working, tested, documented code
 3. **Academic Integration**: Reference papers, add to bibliography after implementation
 4. **Quality Gate**: `cargo test && cargo fmt && cargo clippy` before any commit
 
 **NEW VARIANT DEVELOPMENT:**
 ```bash
-# 1. Implement in Rust first
-# Implement, test, document (in external repos)
+# 1. Implement in Rust workspace
+cd sources/rust-implementations/tapl-rust/
+# Create new crate or extend existing ones
+cargo new lambda-<feature>
+# Implement, test, document with paper references
 
 # 2. Update academic structure
 mkdir 32-new-variant/
@@ -161,6 +188,74 @@ cd 32-new-variant/ && mkdir papers implementations tutorials historical
 # 3. Cross-reference integration
 ./validate-repository.py    # Ensure quality
 ./standardize_bibliography.py    # Bibliography consistency
+```
+
+## Rust Implementation Strategy
+
+This repository contains production-quality Rust implementations in `sources/rust-implementations/`:
+
+### Primary Workspace: tapl-rust (482 LOC)
+
+A modular workspace following Types and Programming Languages (TAPL) textbook structure:
+
+**Crate Structure:**
+- **lambda-core**: Core term representation, substitution, alpha-equivalence
+- **lambda-eval**: Evaluation strategies (call-by-value, call-by-name, normal order)
+- **lambda-types**: Type checking and inference (STLC, System F)
+- **lambda-parser**: Parsing lambda expressions, pretty-printing
+- **lambda-examples**: Working examples and demonstrations
+
+**Build Instructions:**
+```bash
+cd sources/rust-implementations/tapl-rust
+cargo build --release       # Build all crates
+cargo test --all            # Run all tests (target: 80% coverage)
+cargo clippy --all -- -D warnings  # Zero warnings required
+cargo fmt --all             # Code formatting
+cargo doc --all --open      # Generate and view documentation
+```
+
+**Development Workflow:**
+1. Implement new calculus variant in appropriate crate
+2. Add comprehensive tests with property-based testing where applicable
+3. Document in code comments with paper references
+4. Update `docs/implementations/rust/` with high-level documentation
+5. Link to papers in relevant `XX-*/bibliography.md` files
+6. Run full validation before commit
+
+### Secondary Project: church-unsolvable-1936 (929 LOC)
+
+Experimental implementation exploring Church's original 1936 paper with quantum extensions.
+
+**Build Instructions:**
+```bash
+cd sources/rust-implementations/church-unsolvable-1936
+cargo build --release
+cargo test
+cargo bench  # Performance benchmarks
+```
+
+## Implementation-Paper Integration
+
+Every Rust implementation must:
+1. **Reference Original Papers**: Include citations in code comments
+2. **Document Implementation Status**: Add status to relevant `bibliography.md`
+3. **Provide Working Examples**: Demonstrate paper's algorithms in `lambda-examples/`
+4. **Validate Correctness**: Tests that validate against formal specifications
+
+Example code structure:
+```rust
+//! Beta Reduction Implementation
+//!
+//! Based on Alonzo Church's lambda calculus (1936).
+//! 
+//! References:
+//! - Church, A. (1936). "An unsolvable problem of elementary number theory"
+//! - Pierce, B. (2002). "Types and Programming Languages", Chapter 5
+
+pub fn beta_reduce(term: Term) -> Term {
+    // Implementation with paper-referenced algorithm
+}
 ```
 
 ### REALISTIC BIBLIOGRAPHY MANAGEMENT

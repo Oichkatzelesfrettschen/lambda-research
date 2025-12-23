@@ -137,7 +137,7 @@ Written in 1989, this paper explains how:
   margin: 0.5rem 0 0 1rem;
 }
 
-@media (max-width: 768px) {
+<span>@</span>media (max-width: 768px) {
   .pdf-controls {
     flex-direction: column;
     align-items: stretch;
