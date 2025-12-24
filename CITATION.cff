@@ -8,7 +8,8 @@ authors:
     given-names: ""
 repository-code: "https://github.com/Oichkatzelesfrettschen/lambda-research"
 url: "https://oichkatzelesfrettschen.github.io/lambda-research/"
-license: MIT
+license: GPL-3.0-or-later
+license-url: "https://www.gnu.org/licenses/gpl-3.0.html"
 keywords:
   - lambda-calculus
   - type-theory

@@ -95,3 +95,17 @@ See [papers-archive/README.md](/papers-archive/README.md) for detailed documenta
 ## Contributing
 
 This repository aims to be a comprehensive academic resource. Sources are organized by theoretical importance, practical impact, and educational value.
+
+By contributing to this project, you agree to license your contributions under GPL-3.0 (or LGPL-3.0 for library components). See [COPYING](COPYING) for details.
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0) for all synthesized research content, implementations, and documentation. Library components may use GNU Lesser General Public License v3.0 (LGPL-3.0) where appropriate.
+
+Academic papers retain their original copyrights and are included under fair use for research and educational purposes.
+
+For complete licensing information, see:
+- [LICENSE](LICENSE) - GNU GPL v3.0 (primary license)
+- [LICENSE.LGPL](LICENSE.LGPL) - GNU LGPL v3.0 (library license)
+- [COPYING](COPYING) - Detailed licensing information
+- [docs/appendices/license.md](docs/appendices/license.md) - User-friendly license guide

@@ -1,0 +1,62 @@
+Lambda Calculus Research Repository - License Information
+============================================================
+
+Copyright (C) 2025 Lambda Research Collective
+
+This repository contains multiple types of content with different licensing:
+
+1. SYNTHESIZED RESEARCH CONTENT (GPL-3.0)
+==========================================
+All original content created for this repository, including:
+- Implementation code (Scala, Scheme, SML, Idris)
+- Python scripts and automation tools
+- Shell scripts
+- Documentation and tutorials (Markdown files)
+- Repository structure and organization
+- Makefile and build systems
+
+These are licensed under the GNU General Public License v3.0 (GPL-3.0).
+See the LICENSE file for the full text.
+
+How to apply GPL-3.0 to your contributions:
+- Add copyright notice and GPL header to source files
+- See existing files for examples
+- Full license text in LICENSE file
+
+2. LIBRARY COMPONENTS (LGPL-3.0)
+=================================
+Certain reusable library components that may be linked by other software:
+- Reusable lambda calculus implementation libraries
+- Standalone utility modules designed for linking
+
+These are licensed under the GNU Lesser General Public License v3.0 (LGPL-3.0).
+See the LICENSE.LGPL file for the full text.
+
+3. ACADEMIC PAPERS AND EXTERNAL CONTENT (Various)
+==================================================
+PDF files and academic papers retain their original copyrights:
+- Papers in docs/ and papers-archive/ directories
+- External citations and bibliographies
+- These are NOT relicensed and remain under their original terms
+- Included under fair use for research and educational purposes
+- See individual papers for their specific copyright information
+
+4. THIRD-PARTY CONTENT
+======================
+Any third-party libraries or tools maintain their original licenses.
+See individual files or directories for specific attribution.
+
+USAGE GUIDELINES
+================
+- When using synthesized research code: Follow GPL-3.0 terms
+- When linking library components: Follow LGPL-3.0 terms
+- When citing papers: Respect original academic copyrights
+- When contributing: Agree to license under GPL-3.0/LGPL-3.0
+
+For more information:
+- GPL-3.0: https://www.gnu.org/licenses/gpl-3.0.html
+- LGPL-3.0: https://www.gnu.org/licenses/lgpl-3.0.html
+- Questions: See README.md for contact information
+
+This repository aims to advance lambda calculus research and education
+while respecting both academic freedom and open source principles.
