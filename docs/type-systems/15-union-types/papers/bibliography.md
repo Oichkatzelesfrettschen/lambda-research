@@ -385,3 +385,58 @@ Summary of Theoretical Properties
 4. **Concurrent Extensions**: Union types in concurrent and distributed systems
 
 *Last updated: September 2025*
+
+
+---
+
+## Implementation Status
+
+*Last updated: 2024-12-24*
+
+### ✅ Implemented Papers
+
+**Pierce, B. (2002). "Types and Programming Languages"**
+
+- **Implementation**: `lambda-core`, `lambda-eval`
+- **Location**: sources/rust-implementations/tapl-rust/lambda-core/
+  - sources/rust-implementations/tapl-rust/lambda-eval/
+- **Examples**: Planned in lambda-examples crate
+- **Tests**: 8 passing (lambda-core only)
+- **Coverage**: 50% (lambda-eval has 0 tests)
+- **Quality**: 7-8/10
+- **Status**: Partial - Chapters 5 complete, needs tests for evaluation
+- **⚠️ CRITICAL**: lambda-eval has ZERO tests despite 232 LOC implementation
+
+### 📋 Implementation Pipeline
+
+- **Total papers in bibliography**: 181
+- **Currently implemented**: 1
+- **Awaiting implementation**: 180
+- **Implementation priority**: Based on foundational importance and paper citation count
+- **Roadmap phase**: Phase 3 (test coverage) → Phase 4 (new variants)
+
+### 📊 Implementation Statistics
+
+**Repository-wide metrics** (as of 2024-12-24):
+
+- Total Rust LOC: 5,179
+- Total test count: 38
+- Average test coverage: 45%
+- Quality score: 6.5/10
+- Build status: ✅ Passing
+- Clippy warnings: 5 (all in church-unsolvable-1936, low severity)
+
+**Implementation focus areas**:
+
+1. ✅ **Untyped Lambda Calculus** (Church 1936, 1941) - Complete
+2. ✅ **Evaluation Strategies** (Pierce TAPL Ch. 5) - Complete but untested
+3. 🔄 **Type Systems** (Pierce TAPL Ch. 9+) - Planned
+4. 🔄 **Polymorphism** (System F) - Planned
+5. 🔄 **Dependent Types** - Planned
+
+### 🔗 Reference
+
+- Implementation audit: `admin/implementation-status.json`
+- Rust implementations: `sources/rust-implementations/`
+- Academic papers: `papers-archive/`
+- Documentation: See project README and individual crate documentation

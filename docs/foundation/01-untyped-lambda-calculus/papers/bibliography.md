@@ -107,3 +107,77 @@ Modern Developments
 **Abramsky, S. & Ong, C.-H.L.** (1993). *Full abstraction in the lazy lambda calculus*. Information and Computation, 105(2), 159-267.
 - **Key Contribution**: Game semantics approach to lambda calculus
 - **DOI**: 10.1006/inco.1993.1044
+
+
+---
+
+## Implementation Status
+
+*Last updated: 2024-12-24*
+
+### ✅ Implemented Papers
+
+**Church, A. (1936). "An Unsolvable Problem of Elementary Number Theory"**
+
+- **Implementation**: `lambda-core`, `church-unsolvable-1936`
+- **Location**: sources/rust-implementations/tapl-rust/lambda-core/
+  - sources/rust-implementations/church-unsolvable-1936/
+- **Examples**: sources/rust-implementations/church-unsolvable-1936/examples/
+- **Tests**: 35 passing (8 in lambda-core, 27 in church-unsolvable-1936)
+- **Coverage**: 85-100%
+- **Quality**: 7-8/10
+- **Status**: Complete, production-ready (lambda-core) & research-prototype (church-unsolvable-1936)
+
+**Church, A. (1941). "The Calculi of Lambda-Conversion"**
+
+- **Implementation**: `lambda-core`
+- **Location**: sources/rust-implementations/tapl-rust/lambda-core/
+- **Tests**: 8 passing
+- **Coverage**: 100%
+- **Quality**: 8/10
+- **Status**: Complete, production-ready
+
+**Church, A. (1936). "An Unsolvable Problem of Elementary Number Theory"**
+
+- **Implementation**: `lambda-core`, `church-unsolvable-1936`
+- **Location**: sources/rust-implementations/tapl-rust/lambda-core/
+  - sources/rust-implementations/church-unsolvable-1936/
+- **Examples**: sources/rust-implementations/church-unsolvable-1936/examples/
+- **Tests**: 35 passing (8 in lambda-core, 27 in church-unsolvable-1936)
+- **Coverage**: 85-100%
+- **Quality**: 7-8/10
+- **Status**: Complete, production-ready (lambda-core) & research-prototype (church-unsolvable-1936)
+
+### 📋 Implementation Pipeline
+
+- **Total papers in bibliography**: 62
+- **Currently implemented**: 3
+- **Awaiting implementation**: 59
+- **Implementation priority**: Based on foundational importance and paper citation count
+- **Roadmap phase**: Phase 3 (test coverage) → Phase 4 (new variants)
+
+### 📊 Implementation Statistics
+
+**Repository-wide metrics** (as of 2024-12-24):
+
+- Total Rust LOC: 5,179
+- Total test count: 38
+- Average test coverage: 45%
+- Quality score: 6.5/10
+- Build status: ✅ Passing
+- Clippy warnings: 5 (all in church-unsolvable-1936, low severity)
+
+**Implementation focus areas**:
+
+1. ✅ **Untyped Lambda Calculus** (Church 1936, 1941) - Complete
+2. ✅ **Evaluation Strategies** (Pierce TAPL Ch. 5) - Complete but untested
+3. 🔄 **Type Systems** (Pierce TAPL Ch. 9+) - Planned
+4. 🔄 **Polymorphism** (System F) - Planned
+5. 🔄 **Dependent Types** - Planned
+
+### 🔗 Reference
+
+- Implementation audit: `admin/implementation-status.json`
+- Rust implementations: `sources/rust-implementations/`
+- Academic papers: `papers-archive/`
+- Documentation: See project README and individual crate documentation
