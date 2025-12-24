@@ -1,0 +1,18 @@
+{
+  "last_updated": "2024-12-23T21:50:00",
+  "tasks": [
+    {
+      "id": "1.1",
+      "name": "Complete Git Migration",
+      "phase": 1,
+      "owner": "manual",
+      "priority": "🔴",
+      "estimated_hours": 0.5,
+      "status": "complete",
+      "dependencies": [],
+      "success_criteria": ["git status returns 0", "All files committed", "Remote updated"],
+      "commands": ["git add docs/ admin/ *.md scripts/", "git commit", "git push"],
+      "validation": ["git status --short", "git log -1"]
+    }
+  ]
+}

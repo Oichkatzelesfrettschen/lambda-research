@@ -1,0 +1,14 @@
+{
+  "stats": {
+    "total_files": 4710,
+    "markdown_files": 152,
+    "urls_found": 300,
+    "broken_urls": 1,
+    "missing_files": 0,
+    "bibliography_files": 65
+  },
+  "errors": [
+    "Broken URL: https://github.com/lambda-research/lambda-calculus (HTTP 404) in docs/implementations/rust/QUICK_REFERENCE.md"
+  ],
+  "warnings": []
+}
