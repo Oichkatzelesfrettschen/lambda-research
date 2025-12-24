@@ -8,6 +8,8 @@ This script performs automated quality assurance checks on the repository:
 3. Cross-reference verification
 4. Bibliography format checking
 5. Documentation completeness audit
+
+Consolidated from validate-repository.py and link-validator.py (2024-12-24)
 """
 
 import os
@@ -17,48 +19,83 @@ import json
 import urllib.request
 import urllib.error
 from pathlib import Path
-from typing import List, Dict, Set, Tuple
+from typing import List, Dict, Set, Tuple, Optional
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime
 import time
 
+# Try to import requests for better URL validation
+try:
+    import requests
+    HAS_REQUESTS = True
+except ImportError:
+    HAS_REQUESTS = False
+
 class RepositoryValidator:
-    def __init__(self, root_path: str, strict: bool = False):
+    def __init__(self, root_path: str, strict: bool = False, verbose: bool = False, 
+                 check_mode: str = 'all', report_format: str = 'text'):
         self.root_path = Path(root_path).resolve()
         self.strict = strict
+        self.verbose = verbose
+        self.check_mode = check_mode
+        self.report_format = report_format
         self.errors = []
         self.warnings = []
+        self.url_details = {}  # Track detailed URL validation results
         self.stats = {
             'total_files': 0,
             'markdown_files': 0,
             'urls_found': 0,
             'broken_urls': 0,
+            'working_urls': 0,
+            'redirected_urls': 0,
             'missing_files': 0,
             'bibliography_files': 0
         }
         self.IGNORED_DIRS = {'site', 'build', 'venv', '.audit-venv', 'uss-venv', 'papers-archive', '.git', '__pycache__', '.claude', '.gemini'}
+        self.timestamp = datetime.now().isoformat()
 
     def _is_ignored(self, path: Path) -> bool:
         return any(part in self.IGNORED_DIRS for part in path.parts)
 
     def validate_all(self) -> bool:
         """Run all validation checks"""
-        print(f" Starting comprehensive repository validation{' (STRICT MODE)' if self.strict else ''}...")
-        print("=" * 60)
+        if self.report_format == 'text':
+            print(f" Starting comprehensive repository validation{' (STRICT MODE)' if self.strict else ''}...")
+            print("=" * 60)
 
-        # Core validation checks
-        self._scan_repository()
-        self._validate_directory_structure()
-        self._validate_markdown_files()
-        self._validate_cross_references()
-        self._validate_bibliography_format()
-        self._validate_urls()
+        # Core validation checks based on check_mode
+        if self.check_mode in ('all', 'structure'):
+            self._scan_repository()
+            self._validate_directory_structure()
+        
+        if self.check_mode in ('all', 'structure', 'markdown'):
+            if self.check_mode != 'all':
+                self._scan_repository()  # Need file scan for markdown
+            self._validate_markdown_files()
+        
+        if self.check_mode in ('all', 'cross-references'):
+            if self.check_mode != 'all':
+                self._scan_repository()  # Need file scan
+            self._validate_cross_references()
+        
+        if self.check_mode in ('all', 'bibliography'):
+            if self.check_mode != 'all':
+                self._scan_repository()  # Need file scan
+            self._validate_bibliography_format()
+        
+        if self.check_mode in ('all', 'links', 'urls'):
+            if self.check_mode not in ('all',):
+                self._scan_repository()  # Need file scan
+            self._validate_urls()
 
         # Generate report
         return self._generate_report()
 
     def _scan_repository(self):
         """Scan repository for files and basic statistics"""
-        print("[METRICS] Scanning repository structure...")
+        if self.report_format == 'text':
+            print("[METRICS] Scanning repository structure...")
 
         for file_path in self.root_path.rglob('*'):
             if self._is_ignored(file_path):
@@ -75,7 +112,8 @@ class RepositoryValidator:
 
     def _validate_directory_structure(self):
         """Validate expected directory structure"""
-        print(" Validating directory structure...")
+        if self.report_format == 'text':
+            print(" Validating directory structure...")
 
         # Find all numbered directories recursively
         numbered_dirs = [d for d in self.root_path.rglob('*') 
@@ -103,7 +141,8 @@ class RepositoryValidator:
 
     def _validate_markdown_files(self):
         """Validate markdown file structure and content"""
-        print(" Validating markdown files...")
+        if self.report_format == 'text':
+            print(" Validating markdown files...")
 
         for md_file in self.root_path.rglob('*.md'):
             if self._is_ignored(md_file):
@@ -168,7 +207,8 @@ class RepositoryValidator:
 
     def _validate_cross_references(self):
         """Validate internal cross-references and links"""
-        print(" Validating cross-references...")
+        if self.report_format == 'text':
+            print(" Validating cross-references...")
 
         all_files = set()
         # Track Markdown files
@@ -236,7 +276,8 @@ class RepositoryValidator:
 
     def _validate_bibliography_format(self):
         """Validate bibliography file formatting"""
-        print("[DOCS] Validating bibliography formatting...")
+        if self.report_format == 'text':
+            print("[DOCS] Validating bibliography formatting...")
 
         bibliography_files = list(self.root_path.rglob('*bibliography*.md'))
 
@@ -268,34 +309,59 @@ class RepositoryValidator:
             except Exception as e:
                 self.errors.append(f"Error validating {bib_file.relative_to(self.root_path)}: {e}")
 
-    def _check_url(self, url: str, timeout: int = 10) -> Tuple[str, bool, str]:
-        """Check if a URL is accessible"""
+    def _check_url(self, url: str, timeout: int = 10) -> Tuple[str, bool, str, Optional[str]]:
+        """Check if a URL is accessible. Returns (url, is_valid, message, final_url)"""
+        # Try requests library first if available (better handling)
+        if HAS_REQUESTS:
+            try:
+                response = requests.head(url, timeout=timeout, allow_redirects=True)
+                is_redirected = response.url != url
+                final_url = response.url if is_redirected else None
+                
+                if 200 <= response.status_code < 400:
+                    if is_redirected:
+                        self.stats['redirected_urls'] += 1
+                    return url, True, f"HTTP {response.status_code}", final_url
+                elif response.status_code in (401, 403):
+                    return url, True, f"HTTP {response.status_code} (restricted)", None
+                else:
+                    return url, False, f"HTTP {response.status_code}", None
+                    
+            except requests.exceptions.Timeout:
+                return url, False, "Request timeout", None
+            except requests.exceptions.ConnectionError:
+                return url, False, "Connection failed", None
+            except requests.exceptions.RequestException as e:
+                return url, False, f"Request error: {str(e)}", None
+            except Exception as e:
+                return url, False, f"Error: {str(e)}", None
+        
+        # Fallback to urllib
         try:
-            # Create request with proper headers
             req = urllib.request.Request(
                 url,
                 headers={
-                    'User-Agent': 'Mozilla/5.0 (compatible; Repository-Validator/1.0)'
+                    'User-Agent': 'Mozilla/5.0 (compatible; Repository-Validator/2.0)'
                 }
             )
 
             with urllib.request.urlopen(req, timeout=timeout) as response:
                 status_code = response.getcode()
-                return url, status_code == 200, f"HTTP {status_code}"
+                return url, status_code == 200, f"HTTP {status_code}", None
 
         except urllib.error.HTTPError as e:
-            # Treat 401/403 as access-restricted (not broken)
             if e.code in (401, 403):
-                return url, True, f"HTTP {e.code} (restricted)"
-            return url, False, f"HTTP {e.code}"
+                return url, True, f"HTTP {e.code} (restricted)", None
+            return url, False, f"HTTP {e.code}", None
         except urllib.error.URLError as e:
-            return url, False, f"URL Error: {e.reason}"
+            return url, False, f"URL Error: {e.reason}", None
         except Exception as e:
-            return url, False, f"Error: {str(e)}"
+            return url, False, f"Error: {str(e)}", None
 
     def _validate_urls(self):
         """Validate all URLs in the repository"""
-        print(" Validating URLs (this may take a while)...")
+        if self.report_format == 'text':
+            print(" Validating URLs (this may take a while)...")
 
         all_urls = set()
         url_sources = {}
@@ -321,10 +387,12 @@ class RepositoryValidator:
         self.stats['urls_found'] = len(all_urls)
 
         if not all_urls:
-            print("  No URLs found to validate")
+            if self.report_format == 'text':
+                print("  No URLs found to validate")
             return
 
-        print(f"  Found {len(all_urls)} unique URLs to validate...")
+        if self.report_format == 'text':
+            print(f"  Found {len(all_urls)} unique URLs to validate...")
 
         # Validate URLs in parallel (but be respectful)
         broken_urls = []
@@ -342,13 +410,27 @@ class RepositoryValidator:
             for future in as_completed(future_to_url):
                 url = future_to_url[future]
                 try:
-                    url, is_valid, message = future.result()
+                    url, is_valid, message, final_url = future.result()
                     completed += 1
 
-                    if completed % 10 == 0:
+                    # Store detailed result
+                    self.url_details[url] = {
+                        'status': 'OK' if is_valid else 'FAILED',
+                        'message': message,
+                        'final_url': final_url,
+                        'redirected': final_url is not None,
+                        'sources': [str(s) for s in url_sources[url]]
+                    }
+
+                    if self.verbose and self.report_format == 'text':
+                        status = "[OK]" if is_valid else "[FAIL]"
+                        print(f"  [{completed}/{total_urls}] {status} {url[:60]}... - {message}")
+                    elif self.report_format == 'text' and completed % 10 == 0:
                         print(f"  Progress: {completed}/{total_urls} URLs checked")
 
-                    if not is_valid:
+                    if is_valid:
+                        self.stats['working_urls'] += 1
+                    elif not is_valid:
                         if 'restricted' in message or 'HTTP 401' in message or 'HTTP 403' in message:
                             restricted_urls.append((url, message, url_sources[url]))
                         else:
@@ -376,73 +458,223 @@ class RepositoryValidator:
                 source_list += f" (and {len(sources)-3} more)"
             self.warnings.append(f"Access-restricted URL: {url} ({error}) in {source_list}")
 
-    def _generate_report(self):
-        """Generate validation report"""
+    def _generate_report(self) -> bool:
+        """Generate validation report in requested format"""
+        success = len(self.errors) == 0
+        if self.strict and len(self.warnings) > 0:
+            success = False
+        
+        # Calculate success rate for URLs if checked
+        success_rate = 0.0
+        if self.stats['urls_found'] > 0:
+            success_rate = (self.stats['working_urls'] / self.stats['urls_found']) * 100
+        
+        # Build report data structure
+        report_data = {
+            'timestamp': self.timestamp,
+            'check_mode': self.check_mode,
+            'strict_mode': self.strict,
+            'stats': self.stats,
+            'success_rate': success_rate,
+            'errors': self.errors,
+            'warnings': self.warnings,
+            'url_details': self.url_details if self.verbose else {},
+            'success': success
+        }
+        
+        if self.report_format == 'json':
+            return self._report_json(report_data)
+        elif self.report_format == 'markdown':
+            return self._report_markdown(report_data)
+        else:  # text
+            return self._report_text(report_data)
+    
+    def _report_text(self, data: dict) -> bool:
+        """Generate text report"""
         print("\n" + "=" * 60)
         print("[TASKS] VALIDATION REPORT")
         print("=" * 60)
+        print(f"Timestamp: {data['timestamp']}")
+        print(f"Check Mode: {data['check_mode']}")
 
         # Statistics
         print("\n[METRICS] Repository Statistics:")
-        for key, value in self.stats.items():
+        for key, value in data['stats'].items():
             print(f"  {key.replace('_', ' ').title()}: {value}")
+        
+        if data['stats']['urls_found'] > 0:
+            print(f"  URL Success Rate: {data['success_rate']:.1f}%")
 
         # Errors
-        if self.errors:
-            print(f"\n[FAIL] Errors ({len(self.errors)}):")
-            for i, error in enumerate(self.errors[:10], 1):
+        if data['errors']:
+            print(f"\n[FAIL] Errors ({len(data['errors'])}):")
+            for i, error in enumerate(data['errors'][:10], 1):
                 print(f"  {i}. {error}")
-            if len(self.errors) > 10:
-                print(f"  ... and {len(self.errors) - 10} more errors")
+            if len(data['errors']) > 10:
+                print(f"  ... and {len(data['errors']) - 10} more errors")
         else:
             print("\n[OK] No errors found!")
 
         # Warnings
-        if self.warnings:
-            print(f"\n[WARNING]  Warnings ({len(self.warnings)}):")
-            for i, warning in enumerate(self.warnings[:10], 1):
+        if data['warnings']:
+            print(f"\n[WARNING]  Warnings ({len(data['warnings'])}):")
+            for i, warning in enumerate(data['warnings'][:10], 1):
                 print(f"  {i}. {warning}")
-            if len(self.warnings) > 10:
-                print(f"  ... and {len(self.warnings) - 10} more warnings")
+            if len(data['warnings']) > 10:
+                print(f"  ... and {len(data['warnings']) - 10} more warnings")
         else:
             print("\n[OK] No warnings!")
 
-        # Also write JSON report
-        report = {
-            'stats': self.stats,
-            'errors': self.errors,
-            'warnings': self.warnings,
-        }
-        try:
-            with open('validation_report.json', 'w', encoding='utf-8') as f:
-                json.dump(report, f, indent=2)
-        except Exception:
-            pass
-
         # Overall status
         print(f"\n[PROGRESS] Overall Status:")
-        if len(self.errors) == 0:
-            if self.strict and len(self.warnings) > 0:
-                print(f"  [FAIL] FAILED: Found {len(self.warnings)} warnings in strict mode.")
-                return False
+        if data['success']:
             print("  [SUCCESS] Repository validation PASSED!")
-            return True
         else:
-            print("  [FAIL] Repository validation FAILED!")
-            print(f"  Please fix {len(self.errors)} errors before proceeding.")
-            return False
+            if self.strict and len(data['warnings']) > 0:
+                print(f"  [FAIL] FAILED: Found {len(data['warnings'])} warnings in strict mode.")
+            else:
+                print("  [FAIL] Repository validation FAILED!")
+                print(f"  Please fix {len(data['errors'])} errors before proceeding.")
 
         print("\n" + "=" * 60)
+        return data['success']
+    
+    def _report_json(self, data: dict) -> bool:
+        """Generate JSON report"""
+        print(json.dumps(data, indent=2))
+        return data['success']
+    
+    def _report_markdown(self, data: dict) -> bool:
+        """Generate Markdown report"""
+        md = f"""# Repository Validation Report
+
+**Timestamp**: {data['timestamp']}  
+**Check Mode**: {data['check_mode']}  
+**Strict Mode**: {data['strict_mode']}  
+**Overall Status**: {'✅ PASSED' if data['success'] else '❌ FAILED'}
+
+## Statistics
+
+| Metric | Value |
+|--------|-------|
+"""
+        for key, value in data['stats'].items():
+            md += f"| {key.replace('_', ' ').title()} | {value} |\n"
+        
+        if data['stats']['urls_found'] > 0:
+            md += f"| URL Success Rate | {data['success_rate']:.1f}% |\n"
+        
+        md += "\n"
+        
+        # Errors
+        if data['errors']:
+            md += f"## ❌ Errors ({len(data['errors'])})\n\n"
+            for i, error in enumerate(data['errors'], 1):
+                md += f"{i}. {error}\n"
+            md += "\n"
+        else:
+            md += "## ✅ No Errors\n\n"
+        
+        # Warnings
+        if data['warnings']:
+            md += f"## ⚠️ Warnings ({len(data['warnings'])})\n\n"
+            for i, warning in enumerate(data['warnings'], 1):
+                md += f"{i}. {warning}\n"
+            md += "\n"
+        else:
+            md += "## ✅ No Warnings\n\n"
+        
+        print(md)
+        return data['success']
 
 def main():
     """Main validation entry point"""
     import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--strict', action='store_true', help='Treat warnings as errors')
+    
+    parser = argparse.ArgumentParser(
+        description='Lambda Research Repository Validation Tool',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  %(prog)s                                    # Full validation (default)
+  %(prog)s --check=links                      # Validate URLs only
+  %(prog)s --check=structure                  # Validate directory structure only
+  %(prog)s --report=json                      # Output as JSON
+  %(prog)s --report=markdown --output=report.md  # Save Markdown report
+  %(prog)s --strict --verbose                 # Strict mode with detailed output
+  
+Check modes: all, links, urls, structure, markdown, cross-references, bibliography
+Report formats: text, json, markdown
+        """
+    )
+    
+    parser.add_argument(
+        '--strict',
+        action='store_true',
+        help='Treat warnings as errors (fail on warnings)'
+    )
+    
+    parser.add_argument(
+        '--verbose',
+        action='store_true',
+        help='Show detailed validation output'
+    )
+    
+    parser.add_argument(
+        '--check',
+        type=str,
+        default='all',
+        choices=['all', 'links', 'urls', 'structure', 'markdown', 'cross-references', 'bibliography'],
+        help='Validation check to perform (default: all)'
+    )
+    
+    parser.add_argument(
+        '--report',
+        type=str,
+        default='text',
+        choices=['text', 'json', 'markdown'],
+        help='Report output format (default: text)'
+    )
+    
+    parser.add_argument(
+        '--output',
+        type=str,
+        help='Write report to file instead of stdout'
+    )
+    
     args = parser.parse_args()
-
-    validator = RepositoryValidator('.', strict=args.strict)
-    success = validator.validate_all()
+    
+    # Normalize check mode (links == urls)
+    check_mode = 'urls' if args.check == 'links' else args.check
+    
+    # Create validator
+    validator = RepositoryValidator(
+        '.',
+        strict=args.strict,
+        verbose=args.verbose,
+        check_mode=check_mode,
+        report_format=args.report
+    )
+    
+    # Redirect output if requested
+    original_stdout = sys.stdout
+    if args.output:
+        try:
+            sys.stdout = open(args.output, 'w', encoding='utf-8')
+        except Exception as e:
+            sys.stdout = original_stdout
+            print(f"Error: Could not write to {args.output}: {e}", file=sys.stderr)
+            sys.exit(1)
+    
+    # Run validation
+    try:
+        success = validator.validate_all()
+    finally:
+        if args.output:
+            sys.stdout.close()
+            sys.stdout = original_stdout
+            print(f"Report written to: {args.output}")
+    
     # Exit code for CI compatibility
     sys.exit(0 if success else 1)
 

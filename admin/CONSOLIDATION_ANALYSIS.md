@@ -544,7 +544,7 @@ class RepositoryValidator:
 **Design**:
 ```bash
 # Current (duplicated):
-papers-archive/AUTHOR_INDEX.md      # Archive-specific paths
+docs/indices/by-author.md      # Archive-specific paths
 docs/AUTHOR_INDEX.md                # Docs-specific paths
 
 # Consolidated:

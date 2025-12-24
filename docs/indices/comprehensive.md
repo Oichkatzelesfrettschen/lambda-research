@@ -1,5 +1,9 @@
 # Lambda Calculus Research Repository - Comprehensive Index
 
+**[← Back to Indices](README.md)** | **Other Views**: [By Author](by-author.md) · [Chronological](chronological.md) · [By Topic](by-topic.md) · [By Citation](by-citation.md) · [Access Type](access-type.md) · [Statistics](statistics.md)
+
+---
+
 ## Repository Structure Overview
 
 This repository organizes academic citations on lambda calculus variants into systematic categories with bibliographies, external implementations, and educational resources.

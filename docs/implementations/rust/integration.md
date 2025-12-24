@@ -357,7 +357,7 @@ Plotkin, G.D. (1975). "Call-by-name, call-by-value and the λ-calculus".
 See also:
 - `09-simply-typed-lambda-calculus/bibliography.md` - Type systems
 - `23-system-f/bibliography.md` - Polymorphism
-- `COMPREHENSIVE_INDEX.md` - Complete paper index
+- `docs/indices/comprehensive.md` - Complete paper index
 ```
 
 ### Code to Bibliography Links

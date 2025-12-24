@@ -1,5 +1,9 @@
 # Topic Index
 
+**[← Back to Indices](README.md)** | **Other Views**: [Comprehensive](comprehensive.md) · [By Author](by-author.md) · [Chronological](chronological.md) · [By Citation](by-citation.md) · [Access Type](access-type.md) · [Statistics](statistics.md)
+
+---
+
 Comprehensive topic classification for lambda calculus research.
 
 ## Foundations

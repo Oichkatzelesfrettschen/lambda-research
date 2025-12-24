@@ -1,5 +1,9 @@
 # Lambda Calculus Papers Archive - Citation Index
 
+**[← Back to Indices](README.md)** | **Other Views**: [Comprehensive](comprehensive.md) · [By Author](by-author.md) · [Chronological](chronological.md) · [By Topic](by-topic.md) · [Access Type](access-type.md) · [Statistics](statistics.md)
+
+---
+
 ## Master Index of Papers by Category and Chronological Development
 
 ### Quick Navigation

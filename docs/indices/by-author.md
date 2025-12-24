@@ -1,5 +1,9 @@
 # Author Index
 
+**[← Back to Indices](README.md)** | **Other Views**: [Comprehensive](comprehensive.md) · [Chronological](chronological.md) · [By Topic](by-topic.md) · [By Citation](by-citation.md) · [Access Type](access-type.md) · [Statistics](statistics.md)
+
+---
+
 Comprehensive index of authors in the lambda calculus papers archive.
 
 ## Quick Navigation
@@ -16,7 +20,7 @@ Comprehensive index of authors in the lambda calculus papers archive.
 - Type systems
 - Pure type systems
 **Papers in Archive**:
-- **1992**: [Lambda Calculi with Types](historical/church-lambda-calculus/1936_church_unsolvable_problem_oa.pdf)
+- **1992**: [Lambda Calculi with Types](../../papers-archive/historical/church-lambda-calculus/1936_church_unsolvable_problem_oa.pdf)
   - *Definitive survey of typed lambda calculi*
 **External Resources**:
 - [Wikipedia](https://en.wikipedia.org/wiki/Henk_Barendregt)
@@ -32,9 +36,9 @@ Comprehensive index of authors in the lambda calculus papers archive.
 - Church thesis
 - Type theory
 **Papers in Archive**:
-- **1936**: [An Unsolvable Problem of Elementary Number Theory](historical/church-lambda-calculus/1936_church_unsolvable_problem_oa.pdf)
+- **1936**: [An Unsolvable Problem of Elementary Number Theory](../../papers-archive/historical/church-lambda-calculus/1936_church_unsolvable_problem_oa.pdf)
   - *Introduces lambda calculus and proves undecidability*
-- **1941**: [The Calculi of Lambda-Conversion](historical/church-lambda-calculus/1941_church_calculi_lambda_conversion_pd.pdf)
+- **1941**: [The Calculi of Lambda-Conversion](../../papers-archive/historical/church-lambda-calculus/1941_church_calculi_lambda_conversion_pd.pdf)
   - *Comprehensive treatment after consistency resolution*
 **External Resources**:
 - [Wikipedia](https://en.wikipedia.org/wiki/Alonzo_Church)
@@ -49,7 +53,7 @@ Comprehensive index of authors in the lambda calculus papers archive.
 - Curry-Howard correspondence
 - Type theory
 **Papers in Archive**:
-- **1958**: [Combinatory Logic, Volume I](historical/church-lambda-calculus/1936_church_unsolvable_problem_oa.pdf) (with Robert Feys)
+- **1958**: [Combinatory Logic, Volume I](../../papers-archive/historical/church-lambda-calculus/1936_church_unsolvable_problem_oa.pdf) (with Robert Feys)
   - *Foundational work on combinatory logic*
 **External Resources**:
 - [Wikipedia](https://en.wikipedia.org/wiki/Haskell_Curry)
@@ -64,7 +68,7 @@ Comprehensive index of authors in the lambda calculus papers archive.
 - Combinatory logic
 - Modal logic
 **Papers in Archive**:
-- **1958**: [Combinatory Logic, Volume I](historical/church-lambda-calculus/1936_church_unsolvable_problem_oa.pdf) (with Haskell B. Curry)
+- **1958**: [Combinatory Logic, Volume I](../../papers-archive/historical/church-lambda-calculus/1936_church_unsolvable_problem_oa.pdf) (with Haskell B. Curry)
   - *Collaboration on foundational combinatory logic*
 
 ## G
@@ -77,11 +81,11 @@ Comprehensive index of authors in the lambda calculus papers archive.
 - System F
 - Proof theory
 **Papers in Archive**:
-- **1986**: [The System F of Variable Types, Fifteen Years Later](classical/girard-system-f/1987_girard_linear_logic_oa.pdf)
+- **1986**: [The System F of Variable Types, Fifteen Years Later](../../papers-archive/classical/girard-system-f/1987_girard_linear_logic_oa.pdf)
   - *Retrospective on System F and polymorphism*
-- **1987**: [Linear Logic](classical/girard-system-f/1987_girard_linear_logic_oa.pdf)
+- **1987**: [Linear Logic](../../papers-archive/classical/girard-system-f/1987_girard_linear_logic_oa.pdf)
   - *Introduces linear logic as resource-aware system*
-- **1989**: [Proofs and Types](classical/girard-system-f/1989_girard_proofs_types_oa.pdf)
+- **1989**: [Proofs and Types](../../papers-archive/classical/girard-system-f/1989_girard_proofs_types_oa.pdf)
   - *Comprehensive introduction to proof theory*
 **External Resources**:
 - [Homepage](https://girard.perso.math.cnrs.fr/)
@@ -97,7 +101,7 @@ Comprehensive index of authors in the lambda calculus papers archive.
 - Principal types
 - Combinatory logic
 **Papers in Archive**:
-- **2008**: [Lambda-Calculus and Combinators: An Introduction (2nd edition)](classical/girard-system-f/1989_girard_proofs_types_oa.pdf) (with Jonathan P. Seldin)
+- **2008**: [Lambda-Calculus and Combinators: An Introduction (2nd edition)](../../papers-archive/classical/girard-system-f/1989_girard_proofs_types_oa.pdf) (with Jonathan P. Seldin)
   - *Comprehensive textbook for learning lambda calculus*
 
 ## M
@@ -110,9 +114,9 @@ Comprehensive index of authors in the lambda calculus papers archive.
 - Constructive mathematics
 - Intuitionistic type theory
 **Papers in Archive**:
-- **1982**: [Constructive Mathematics and Computer Programming](classical/martin-lof-type-theory/1984_martin_lof_intuitionistic_type_theory_oa.pdf)
+- **1982**: [Constructive Mathematics and Computer Programming](../../papers-archive/classical/martin-lof-type-theory/1984_martin_lof_intuitionistic_type_theory_oa.pdf)
   - *Connects constructive mathematics with programming*
-- **1984**: [Intuitionistic Type Theory](classical/martin-lof-type-theory/1984_martin_lof_intuitionistic_type_theory_oa.pdf)
+- **1984**: [Intuitionistic Type Theory](../../papers-archive/classical/martin-lof-type-theory/1984_martin_lof_intuitionistic_type_theory_oa.pdf)
   - *Definitive exposition of dependent type theory*
 External Resources:
 - [Archive](https://github.com/michaelt/martin-lof)
@@ -128,9 +132,9 @@ External Resources:
 - Denotational semantics
 - Modal logic
 **Papers in Archive**:
-- **1970**: [Outline of a Mathematical Theory of Computation](historical/scott-domain-theory/1970_scott_mathematical_theory_computation_oa.pdf)
+- **1970**: [Outline of a Mathematical Theory of Computation](../../papers-archive/historical/scott-domain-theory/1970_scott_mathematical_theory_computation_oa.pdf)
   - *Introduces domain theory for lambda calculus*
-- **1971**: [Toward a Mathematical Semantics for Computer Languages](historical/scott-domain-theory/1970_scott_mathematical_theory_computation_oa.pdf) (with Christopher Strachey)
+- **1971**: [Toward a Mathematical Semantics for Computer Languages](../../papers-archive/historical/scott-domain-theory/1970_scott_mathematical_theory_computation_oa.pdf) (with Christopher Strachey)
   - *Establishes denotational semantics methodology*
 **External Resources**:
 - [Wikipedia](https://en.wikipedia.org/wiki/Dana_Scott)
@@ -143,7 +147,7 @@ External Resources:
 - Type theory
 - Curry's work preservation
 **Papers in Archive**:
-- **2008**: [Lambda-Calculus and Combinators: An Introduction (2nd edition)](classical/girard-system-f/1989_girard_proofs_types_oa.pdf) (with J. Roger Hindley)
+- **2008**: [Lambda-Calculus and Combinators: An Introduction (2nd edition)](../../papers-archive/classical/girard-system-f/1989_girard_proofs_types_oa.pdf) (with J. Roger Hindley)
   - *Authoritative introduction to the field*
 **External Resources**:
 - [Uleth Page](https://people.uleth.ca/~jonathan.seldin/)
@@ -155,7 +159,7 @@ External Resources:
 - Denotational semantics
 - Programming language theory
 **Papers in Archive**:
-- **1971**: [Toward a Mathematical Semantics for Computer Languages](historical/scott-domain-theory/1970_scott_mathematical_theory_computation_oa.pdf) (with Dana S. Scott)
+- **1971**: [Toward a Mathematical Semantics for Computer Languages](../../papers-archive/historical/scott-domain-theory/1970_scott_mathematical_theory_computation_oa.pdf) (with Dana S. Scott)
   - *Co-develops denotational semantics*
 
 ## T
@@ -167,7 +171,7 @@ External Resources:
 - Locale theory
 - Type theory translation
 **Papers in Archive**:
-- **1989**: [Proofs and Types](classical/girard-system-f/1989_girard_proofs_types_oa.pdf)
+- **1989**: [Proofs and Types](../../papers-archive/classical/girard-system-f/1989_girard_proofs_types_oa.pdf)
   - *English translation of Girard's work*
 **External Resources**:
 - [Homepage](https://www.paultaylor.eu/)
@@ -179,7 +183,7 @@ External Resources:
 - Homotopy type theory
 - Univalent foundations
 **Papers in Archive**:
-- **2013**: [Homotopy Type Theory: Univalent Foundations of Mathematics](modern/homotopy-type-theory/2013_univalent_foundations_hott_book_oa.pdf)
+- **2013**: [Homotopy Type Theory: Univalent Foundations of Mathematics](../../papers-archive/modern/homotopy-type-theory/2013_univalent_foundations_hott_book_oa.pdf)
   - *Revolutionary approach connecting type theory with homotopy theory*
 **External Resources**:
 - [Project Page](https://homotopytypetheory.org/)
@@ -195,7 +199,7 @@ External Resources:
 - Monads in programming
 - Parametricity
 **Papers in Archive**:
-- **1990**: [Linear Types Can Change the World!](recent/categorical-semantics/2025_linear_logic_subexponentials_ar.pdf)
+- **1990**: [Linear Types Can Change the World!](../../papers-archive/recent/categorical-semantics/2025_linear_logic_subexponentials_ar.pdf)
   - *Influential paper on linear types for resource management*
 **External Resources**:
 - [Homepage](https://homepages.inf.ed.ac.uk/wadler/)

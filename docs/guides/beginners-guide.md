@@ -170,7 +170,7 @@ That's it! Everything else is built from these three forms.
 4. Contribute your own materials
 
 ### For Research
-1. Check [Research Index](../research/COMPREHENSIVE_INDEX.md)
+1. Check [Research Index](../indices/comprehensive.md)
 2. Browse [Cross-Reference System](../introduction/cross-reference-system.md)
 3. Explore [Implementation Catalog](../introduction/implementation-catalog.md)
 4. Use papers-archive/ for citations
@@ -178,7 +178,7 @@ That's it! Everything else is built from these three forms.
 ## Getting Help
 
 ### Stuck on a Concept?
-- Check [Topic Index](../TOPIC_INDEX.md)
+- Check [Topic Index](../indices/by-topic.md)
 - Search the comprehensive bibliography
 - Read multiple papers on the same topic
 

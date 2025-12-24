@@ -33,7 +33,7 @@ This document provides structured learning pathways for different audiences and 
 ### For Researchers
 **Goal**: Understand current state of the field and identify research opportunities
 
-1. **Survey the Field**: Read [Comprehensive Index](../research/COMPREHENSIVE_INDEX.md)
+1. **Survey the Field**: Read [Comprehensive Index](../indices/comprehensive.md)
 2. **Theoretical Foundations**: Study [Cross-Reference System](../research/CROSS_REFERENCE_SYSTEM.md)
 3. **Current Research**: Explore advanced variants like [Homotopy Type Theory](../theory/29-homotopy-type-theory/index.md)
 4. **Open Problems**: Review recent papers in each subdomain

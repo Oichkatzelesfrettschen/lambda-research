@@ -245,7 +245,17 @@ nav:
     - Research Impact: research/RESEARCH_IMPACT_REPORT.md
     - Breakthrough Analysis: research/BREAKTHROUGH_ANALYSIS.md
     - Experiment Protocols: research/EXPERIMENT_PROTOCOLS.md
-    - Comprehensive Index: research/COMPREHENSIVE_INDEX.md
+  
+  # Indices - Unified Navigation Hub
+  - Indices:
+    - indices/README.md
+    - Comprehensive Index: indices/comprehensive.md
+    - By Author: indices/by-author.md
+    - Chronological: indices/chronological.md
+    - By Topic: indices/by-topic.md
+    - By Citation: indices/by-citation.md
+    - Access Type: indices/access-type.md
+    - Statistics: indices/statistics.md
   
   # Bibliography
   - Bibliography:
@@ -256,8 +266,6 @@ nav:
   # Tools
   - PDF Library: pdf-library.md
   - PDF Access Test: pdf-access-test.md
-  - Topic Index: TOPIC_INDEX.md
-  - CITATION_INDEX: CITATION_INDEX.md
 
 # Extra JavaScript for Math Rendering
 extra_javascript:

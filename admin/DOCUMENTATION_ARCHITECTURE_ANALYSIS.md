@@ -230,10 +230,10 @@ From `admin/TODO_AUDIT.md`:
 
 1. `docs/index.md` - Main landing page
 2. `docs/comprehensive-index.md` - All topics chronologically
-3. `docs/TOPIC_INDEX.md` - Organized by subject
-4. `docs/AUTHOR_INDEX.md` - Organized by researcher
-5. `docs/CITATION_INDEX.md` - Papers by citation count
-6. `docs/CHRONOLOGICAL_INDEX.md` - Historical timeline
+3. `docs/indices/by-topic.md` - Organized by subject
+4. `docs/indices/by-author.md` - Organized by researcher
+5. `docs/indices/by-citation.md` - Papers by citation count
+6. `docs/indices/chronological.md` - Historical timeline
 7. `docs/research/COMPREHENSIVE_INDEX.md` - Another comprehensive index?
 
 **Problem**: Duplication and confusion. Users don't know which index serves which purpose.
