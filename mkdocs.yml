@@ -93,36 +93,8 @@ plugins:
       csl_file: "https://raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl"
 
   # PDF generation for academic publishing
-  - with-pdf:
-      author: Lambda Calculus Research Team
-      copyright: Copyright 2025
-      cover_title: Lambda Calculus Research Repository
-      cover_subtitle: Comprehensive Documentation of Lambda Calculus Variants
-      heading_shift: false
-      toc_level: 3
-      ordered_chapter_level: 2
-      excludes_children:
-        - 'release-notes/:upgrading'
-        - 'release-notes/:changelog'
-      exclude_pages:
-        - 'bugs/'
-        - 'appendix/contribute/'
-      convert_iframe:
-        - src: IFRAME SRC
-          img: POSTER IMAGE URL
-          text: ALTERNATE TEXT
-      two_columns_level: 3
-      render_js: true
-      headless_chrome_path: chromium-browser
-      output_path: lambda-calculus-research.pdf
-      enabled_if_env: ENABLE_PDF_EXPORT
-      debug_html: true
-      show_anchors: true
-      verbose: true
-
   # Tags for content organization
-  - tags:
-      tags_file: tags.md
+  - tags
 
   # Meta plugin for enhanced control
   - meta
@@ -131,6 +103,7 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       type: timeago
+      enable_git_follow: false
 
   # Minification for performance
   - minify:
@@ -196,94 +169,95 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Introduction:
-    - Overview: introduction/overview.md
+    - introduction/index.md
+    - Beginner's Guide: guides/beginners-guide.md
     - Cross-Reference System: introduction/cross-reference-system.md
     - Implementation Catalog: introduction/implementation-catalog.md
-    - Research Methodology: introduction/methodology.md
+    - Educational Pathways: introduction/educational-pathways.md
+  
+  - Fundamentals:
+    - fundamentals/index.md
+    - Church (1936): fundamentals/church-1936.md
+    - Girard (1989): fundamentals/girard-1989.md
 
   # Core Lambda Calculus Foundation
   - Foundation:
     - foundation/index.md
-    - Untyped Lambda Calculus: foundation/01-untyped-lambda-calculus.md
-    - Simply Typed Lambda Calculus: foundation/02-simply-typed-lambda-calculus.md
-    - System F (Polymorphic): foundation/03-system-f-polymorphic.md
-    - Calculus of Constructions: foundation/04-calculus-of-constructions.md
-    - Martin-Löf Type Theory: foundation/05-martin-lof-type-theory.md
+    - Untyped Lambda Calculus: foundation/01-untyped-lambda-calculus/index.md
+    - Simply Typed Lambda Calculus: foundation/02-simply-typed-lambda-calculus/index.md
+    - System F (Polymorphic): foundation/03-system-f-polymorphic/index.md
+    - Calculus of Constructions: foundation/04-calculus-of-constructions/index.md
+    - Martin-Löf Type Theory: foundation/05-martin-lof-type-theory/index.md
 
   # Type Systems and Extensions
   - Type Systems:
-    - type-systems/index.md
-    - Linear Lambda Calculus: type-systems/06-linear-lambda-calculus.md
-    - Session Types: type-systems/07-session-types.md
-    - Dependent Types: type-systems/08-dependent-types.md
-    - Substructural Types: type-systems/09-substructural-types.md
-    - Pure Type Systems: type-systems/12-pure-type-systems.md
-    - Intersection Types: type-systems/14-intersection-types.md
-    - Union Types: type-systems/15-union-types.md
-    - Gradual Typing: type-systems/16-gradual-typing.md
-    - Effect Systems: type-systems/17-effect-systems.md
-    - Modal Types: type-systems/19-modal-types.md
-    - Refinement Types: type-systems/20-refinement-types.md
-    - Probabilistic Types: type-systems/21-probabilistic-types.md
+    - Linear Lambda Calculus: type-systems/06-linear-lambda-calculus/index.md
+    - Session Types: type-systems/07-session-types/index.md
+    - Dependent Types: type-systems/08-dependent-types/index.md
+    - Substructural Types: type-systems/09-substructural-types/index.md
+    - Pure Type Systems: type-systems/12-pure-type-systems/index.md
+    - Intersection Types: type-systems/14-intersection-types/index.md
+    - Union Types: type-systems/15-union-types/index.md
+    - Gradual Typing: type-systems/16-gradual-typing/index.md
+    - Effect Systems: type-systems/17-effect-systems/index.md
+    - Modal Types: type-systems/19-modal-types/index.md
+    - Refinement Types: type-systems/20-refinement-types/index.md
+    - Probabilistic Types: type-systems/21-probabilistic-types/index.md
 
   # Advanced and Specialized Variants
   - Advanced Variants:
     - advanced/index.md
-    - Concurrent Variants: advanced/10-concurrent-variants.md
-    - Quantum Variants: advanced/11-quantum-variants.md
-    - Combinatory Logic: advanced/13-combinatory-logic.md
-    - Categorical Semantics: advanced/18-categorical-semantics.md
-    - Quantum Lambda Calculus: advanced/22-quantum-lambda-calculus.md
-    - Advanced Lambda Variants: advanced/23-advanced-lambda-variants.md
-    - Tensor Lambda Calculus: advanced/24-tensor-lambda-calculus.md
-    - Geometric Algebra Lambda Calculus: advanced/25-geometric-algebra-lambda-calculus.md
+    - Concurrent Variants: advanced/10-concurrent-variants/index.md
+    - Quantum Variants: advanced/11-quantum-variants/index.md
+    - Combinatory Logic: advanced/13-combinatory-logic/index.md
+    - Categorical Semantics: advanced/18-categorical-semantics/index.md
+    - Quantum Lambda Calculus: advanced/22-quantum-lambda-calculus/index.md
+    - Advanced Lambda Variants: advanced/23-advanced-lambda-variants/index.md
+    - Tensor Lambda Calculus: advanced/24-tensor-lambda-calculus/index.md
+    - Geometric Algebra Lambda Calculus: advanced/25-geometric-algebra-lambda-calculus/index.md
 
   # Theoretical Foundations
   - Theory:
-    - theory/index.md
-    - Proof Theory: theory/26-proof-theory.md
-    - Domain Theory: theory/27-domain-theory.md
-    - Abstract Machines: theory/28-abstract-machines.md
-    - Homotopy Type Theory: theory/29-homotopy-type-theory.md
-    - Cubical Type Theory: theory/30-cubical-type-theory.md
-    - Directed Type Theory: theory/31-directed-type-theory.md
+    - Proof Theory: theory/26-proof-theory/index.md
+    - Domain Theory: theory/27-domain-theory/index.md
+    - Abstract Machines: theory/28-abstract-machines/index.md
+    - Homotopy Type Theory: theory/29-homotopy-type-theory/index.md
+    - Cubical Type Theory: theory/30-cubical-type-theory/index.md
+    - Directed Type Theory: theory/31-directed-type-theory/index.md
 
-  # Implementations and Practice
-  - Implementations:
+  # Practice
+  - Implementations: 
     - implementations/index.md
-    - Language Implementations: implementations/languages.md
-    - Proof Assistants: implementations/proof-assistants.md
-    - Research Prototypes: implementations/prototypes.md
-    - Performance Analysis: implementations/performance.md
-    - Comparison Matrix: implementations/comparison.md
+    - Rust Implementation (tapl-rust):
+      - Overview: implementations/rust/README.md
+      - Architecture: implementations/rust/architecture.md
+      - Development: implementations/rust/development.md
+      - Extending: implementations/rust/extending.md
+      - Examples: implementations/rust/examples.md
+      - Testing: implementations/rust/testing.md
+      - Performance: implementations/rust/performance.md
+      - Integration: implementations/rust/integration.md
 
-  # Bibliography and References
+  # Advanced Research and Experiments
+  - Research:
+    - research/index.md
+    - Synergy Map: research/SYNERGY_MAP.md
+    - Research Impact: research/RESEARCH_IMPACT_REPORT.md
+    - Breakthrough Analysis: research/BREAKTHROUGH_ANALYSIS.md
+    - Experiment Protocols: research/EXPERIMENT_PROTOCOLS.md
+    - Comprehensive Index: research/COMPREHENSIVE_INDEX.md
+  
+  # Bibliography
   - Bibliography:
-    - bibliography/index.md
-    - Core Bibliography: bibliography/core.md
-    - Historical Papers: bibliography/historical.md
-    - Recent Advances: bibliography/recent.md
-    - Implementation Papers: bibliography/implementations.md
-    - Survey Papers: bibliography/surveys.md
-    - Thesis Collection: bibliography/theses.md
+    - comprehensive-bibliography.md
+    - comprehensive-index.md
+    - bibliography/core.md
 
-  # Research Resources
-  - Resources:
-    - resources/index.md
-    - Paper Archive: resources/papers.md
-    - Source Code: resources/sources.md
-    - Educational Materials: resources/education.md
-    - Research Tools: resources/tools.md
-    - Conference Proceedings: resources/conferences.md
-
-  # Appendices
-  - Appendices:
-    - appendices/index.md
-    - Notation Guide: appendices/notation.md
-    - Glossary: appendices/glossary.md
-    - Historical Timeline: appendices/timeline.md
-    - Contributors: appendices/contributors.md
-    - License: appendices/license.md
+  # Tools
+  - PDF Library: pdf-library.md
+  - PDF Access Test: pdf-access-test.md
+  - Topic Index: TOPIC_INDEX.md
+  - CITATION_INDEX: CITATION_INDEX.md
 
 # Extra JavaScript for Math Rendering
 extra_javascript:
@@ -328,12 +302,6 @@ extra:
     Historical: historical
     Advanced: advanced
     Practical: practical
-
-# Hook for custom functionality
-hooks:
-  - hooks/bibliography.py
-  - hooks/cross_references.py
-  - hooks/search_enhancement.py
 
 # Development server configuration
 dev_addr: 127.0.0.1:8000

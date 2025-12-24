@@ -46,7 +46,7 @@ The numbered directories provide comprehensive academic foundations:
 - **`sources/rust-implementations/church-unsolvable-1936/`** - Experimental quantum extensions (929 LOC)
 - **`Makefile`** - Master build system targeting internal implementations
 - **`validate-repository.py`** - Quality assurance and validation
-- **`mkdocs-simplified.yml`** - Documentation generation
+- **`mkdocs.yml`** - Documentation generation
 - **`COMPREHENSIVE_INDEX.md`** - Academic reference index
 
 ## Build Systems and Development
@@ -87,8 +87,8 @@ cargo build && cargo test && cargo clippy && cargo fmt
 
 # Documentation development
 source venv/bin/activate               # ALWAYS activate before docs work
-mkdocs serve --config-file mkdocs-simplified.yml  # Live server (127.0.0.1:8000)
-mkdocs build --config-file mkdocs-simplified.yml  # Production build
+mkdocs serve  # Live server (127.0.0.1:8000)
+mkdocs build  # Production build
 
 # Master build system (targets available implementations)
 make build                             # Build available implementations + docs
@@ -406,7 +406,7 @@ cargo build && cargo test && cargo fmt && cargo clippy
 
 # 3. Documentation updates
 source venv/bin/activate
-mkdocs serve --config-file mkdocs-simplified.yml  # Live preview
+mkdocs serve  # Live preview
 
 # 4. Quality assurance
 make ci  # Full build and test cycle
