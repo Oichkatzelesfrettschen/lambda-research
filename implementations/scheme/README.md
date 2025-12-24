@@ -40,3 +40,8 @@ To use this implementation, save the `lambda-racket.rkt` file and run it with Ra
 ```
 
 This implementation serves as a clear example of how to model and execute lambda calculus within a Lisp-like environment, highlighting the elegance of symbolic manipulation in Racket.
+
+## License
+
+This implementation is licensed under the GNU General Public License v3.0 (GPL-3.0).
+See the repository's [LICENSE](../../LICENSE) and [COPYING](../../COPYING) files for details.

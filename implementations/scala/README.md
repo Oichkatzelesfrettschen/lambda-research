@@ -30,3 +30,8 @@ println(s"(λx.x)y normalizes to: ${appId.normalize}") // Expected: y
 ```
 
 This implementation showcases how Scala 3's expressive syntax and functional programming features can be used to elegantly model and evaluate lambda calculus expressions.
+
+## License
+
+This implementation is licensed under the GNU General Public License v3.0 (GPL-3.0).
+See the repository's [LICENSE](../../LICENSE) and [COPYING](../../COPYING) files for details.

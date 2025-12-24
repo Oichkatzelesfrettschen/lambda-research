@@ -112,6 +112,17 @@ Examples:
 4. **Open Access Journals**: PLOS, ACM Open Access, etc.
 5. **Historical Archives**: Internet Archive, Google Books
 
+### Repository Licensing Note
+
+**IMPORTANT**: The papers in this archive retain their **original copyrights**. This repository's GPL-3.0 license applies to:
+- The organizational structure and scripts in this directory
+- Automation tools (Python scripts in `scripts/`)
+- Metadata files and indices
+
+The GPL-3.0 license does **NOT** apply to the academic papers themselves. Papers are included under fair use for research and educational purposes only.
+
+See the repository's [LICENSE](../LICENSE), [LICENSE.LGPL](../LICENSE.LGPL), and [COPYING](../COPYING) files for complete licensing information.
+
 ## Usage Guidelines
 
 ### Research Use

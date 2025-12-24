@@ -19,6 +19,33 @@ This is a comprehensive lambda calculus research repository focused on building 
 - Academic rigor with practical implementation emphasis
 - Quality over quantity: deep implementation rather than superficial coverage
 
+## Licensing
+
+**IMPORTANT**: This repository uses **dual licensing** for different content types:
+
+### GPL-3.0 (Primary License)
+All synthesized research content, implementations, scripts, and documentation are licensed under **GNU General Public License v3.0**:
+- All implementation code (Scala, Scheme, SML, Idris, Rust)
+- All Python scripts and automation tools
+- All shell scripts  
+- Documentation markdown files
+- Repository structure and organization
+
+### LGPL-3.0 (Library Components)
+Reusable library components designed for linking are licensed under **GNU Lesser General Public License v3.0**:
+- Lambda calculus implementation libraries
+- Standalone utility modules
+
+### Academic Papers (Original Copyrights)
+PDF files and academic papers retain their **original copyrights**:
+- Papers in `docs/` and `papers-archive/` directories
+- Included under fair use for research and educational purposes
+- NOT relicensed under GPL
+
+**Files**: See `LICENSE` (GPL-3.0), `LICENSE.LGPL` (LGPL-3.0), `COPYING` (detailed info)
+
+When contributing code, you agree to license it under GPL-3.0 (or LGPL-3.0 for libraries).
+
 ## Repository Structure
 
 ### Primary Implementation Core

@@ -35,3 +35,8 @@ testId = normalize appId -- Should be Var "y"
 ```
 
 This implementation serves as a clear example of how to model and execute lambda calculus within a dependently typed setting, leveraging Idris's features for correctness and clarity.
+
+## License
+
+This implementation is licensed under the GNU General Public License v3.0 (GPL-3.0).
+See the repository's [LICENSE](../../LICENSE) and [COPYING](../../COPYING) files for details.

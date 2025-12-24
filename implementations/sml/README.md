@@ -31,3 +31,8 @@ val _ = print ("Result: " ^ term_to_string (eval app_id_y) ^ "\n\n");
 
 This implementation serves as a clear example of how to model and execute lambda calculus within a statically typed functional language, showcasing SML's features for defining algebraic data types and pattern matching.
 
+## License
+
+This implementation is licensed under the GNU General Public License v3.0 (GPL-3.0).
+See the repository's [LICENSE](../../LICENSE) and [COPYING](../../COPYING) files for details.
+
