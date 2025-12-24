@@ -151,22 +151,22 @@ Advanced search features:
 Hierarchical organization optimized for 31 lambda calculus categories:
 
 ```
-├── Foundation (Core systems)
-│   ├── Untyped Lambda Calculus
-│   ├── Simply Typed Lambda Calculus
-│   └── System F, CoC, MLTT
-├── Type Systems (Extensions)
-│   ├── Linear Types
-│   ├── Session Types
-│   └── Effect Systems, etc.
-├── Advanced Variants
-│   ├── Quantum Lambda Calculus
-│   ├── Homotopy Type Theory
-│   └── Cutting-edge research
-└── Resources
-    ├── Bibliography
-    ├── Implementations
-    └── Cross-references
+ Foundation (Core systems)
+    Untyped Lambda Calculus
+    Simply Typed Lambda Calculus
+    System F, CoC, MLTT
+ Type Systems (Extensions)
+    Linear Types
+    Session Types
+    Effect Systems, etc.
+ Advanced Variants
+    Quantum Lambda Calculus
+    Homotopy Type Theory
+    Cutting-edge research
+ Resources
+     Bibliography
+     Implementations
+     Cross-references
 ```
 
 ## Content Organization
@@ -175,20 +175,20 @@ Hierarchical organization optimized for 31 lambda calculus categories:
 
 ```
 docs/
-├── index.md                    # Main landing page
-├── introduction/               # Repository overview
-├── foundation/                # Core lambda calculus systems
-├── type-systems/              # Type system extensions
-├── advanced/                  # Specialized variants
-├── theory/                    # Theoretical foundations
-├── implementations/           # Practical implementations
-├── bibliography/              # Academic references
-├── resources/                 # Additional materials
-├── appendices/                # Supporting content
-├── javascripts/              # Custom JavaScript (MathJax)
-├── stylesheets/              # Custom CSS
-├── images/                   # Documentation images
-└── includes/                 # Shared content (abbreviations)
+ index.md                    # Main landing page
+ introduction/               # Repository overview
+ foundation/                # Core lambda calculus systems
+ type-systems/              # Type system extensions
+ advanced/                  # Specialized variants
+ theory/                    # Theoretical foundations
+ implementations/           # Practical implementations
+ bibliography/              # Academic references
+ resources/                 # Additional materials
+ appendices/                # Supporting content
+ javascripts/              # Custom JavaScript (MathJax)
+ stylesheets/              # Custom CSS
+ images/                   # Documentation images
+ includes/                 # Shared content (abbreviations)
 ```
 
 ### Content Types
@@ -338,8 +338,8 @@ Feature comparison tables:
 ```markdown
 | Feature | Haskell | OCaml | Rust | Agda |
 |---------|---------|-------|------|------|
-| Higher-rank types | ✓ | ✓ | Partial | ✓ |
-| Linear types | Extensions | ✓ | ✓ | ✓ |
+| Higher-rank types | [x] | [x] | Partial | [x] |
+| Linear types | Extensions | [x] | [x] | [x] |
 ```
 
 ### 3. Timeline Visualization

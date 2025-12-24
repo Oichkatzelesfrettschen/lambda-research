@@ -42,7 +42,7 @@ class RepositoryValidator:
 
     def validate_all(self) -> bool:
         """Run all validation checks"""
-        print(f"🔍 Starting comprehensive repository validation{' (STRICT MODE)' if self.strict else ''}...")
+        print(f" Starting comprehensive repository validation{' (STRICT MODE)' if self.strict else ''}...")
         print("=" * 60)
 
         # Core validation checks
@@ -58,7 +58,7 @@ class RepositoryValidator:
 
     def _scan_repository(self):
         """Scan repository for files and basic statistics"""
-        print("📊 Scanning repository structure...")
+        print("[METRICS] Scanning repository structure...")
 
         for file_path in self.root_path.rglob('*'):
             if self._is_ignored(file_path):
@@ -75,7 +75,7 @@ class RepositoryValidator:
 
     def _validate_directory_structure(self):
         """Validate expected directory structure"""
-        print("📁 Validating directory structure...")
+        print(" Validating directory structure...")
 
         # Find all numbered directories recursively
         numbered_dirs = [d for d in self.root_path.rglob('*') 
@@ -103,7 +103,7 @@ class RepositoryValidator:
 
     def _validate_markdown_files(self):
         """Validate markdown file structure and content"""
-        print("📝 Validating markdown files...")
+        print(" Validating markdown files...")
 
         for md_file in self.root_path.rglob('*.md'):
             if self._is_ignored(md_file):
@@ -168,7 +168,7 @@ class RepositoryValidator:
 
     def _validate_cross_references(self):
         """Validate internal cross-references and links"""
-        print("🔗 Validating cross-references...")
+        print(" Validating cross-references...")
 
         all_files = set()
         # Track Markdown files
@@ -236,7 +236,7 @@ class RepositoryValidator:
 
     def _validate_bibliography_format(self):
         """Validate bibliography file formatting"""
-        print("📚 Validating bibliography formatting...")
+        print("[DOCS] Validating bibliography formatting...")
 
         bibliography_files = list(self.root_path.rglob('*bibliography*.md'))
 
@@ -295,7 +295,7 @@ class RepositoryValidator:
 
     def _validate_urls(self):
         """Validate all URLs in the repository"""
-        print("🌐 Validating URLs (this may take a while)...")
+        print(" Validating URLs (this may take a while)...")
 
         all_urls = set()
         url_sources = {}
@@ -379,33 +379,33 @@ class RepositoryValidator:
     def _generate_report(self):
         """Generate validation report"""
         print("\n" + "=" * 60)
-        print("📋 VALIDATION REPORT")
+        print("[TASKS] VALIDATION REPORT")
         print("=" * 60)
 
         # Statistics
-        print("\n📊 Repository Statistics:")
+        print("\n[METRICS] Repository Statistics:")
         for key, value in self.stats.items():
             print(f"  {key.replace('_', ' ').title()}: {value}")
 
         # Errors
         if self.errors:
-            print(f"\n❌ Errors ({len(self.errors)}):")
+            print(f"\n[FAIL] Errors ({len(self.errors)}):")
             for i, error in enumerate(self.errors[:10], 1):
                 print(f"  {i}. {error}")
             if len(self.errors) > 10:
                 print(f"  ... and {len(self.errors) - 10} more errors")
         else:
-            print("\n✅ No errors found!")
+            print("\n[OK] No errors found!")
 
         # Warnings
         if self.warnings:
-            print(f"\n⚠️  Warnings ({len(self.warnings)}):")
+            print(f"\n[WARNING]  Warnings ({len(self.warnings)}):")
             for i, warning in enumerate(self.warnings[:10], 1):
                 print(f"  {i}. {warning}")
             if len(self.warnings) > 10:
                 print(f"  ... and {len(self.warnings) - 10} more warnings")
         else:
-            print("\n✅ No warnings!")
+            print("\n[OK] No warnings!")
 
         # Also write JSON report
         report = {
@@ -420,15 +420,15 @@ class RepositoryValidator:
             pass
 
         # Overall status
-        print(f"\n📈 Overall Status:")
+        print(f"\n[PROGRESS] Overall Status:")
         if len(self.errors) == 0:
             if self.strict and len(self.warnings) > 0:
-                print(f"  ❌ FAILED: Found {len(self.warnings)} warnings in strict mode.")
+                print(f"  [FAIL] FAILED: Found {len(self.warnings)} warnings in strict mode.")
                 return False
-            print("  🎉 Repository validation PASSED!")
+            print("  [SUCCESS] Repository validation PASSED!")
             return True
         else:
-            print("  ❌ Repository validation FAILED!")
+            print("  [FAIL] Repository validation FAILED!")
             print(f"  Please fix {len(self.errors)} errors before proceeding.")
             return False
 

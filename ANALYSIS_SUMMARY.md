@@ -10,11 +10,11 @@
 
 This is a **world-class lambda calculus research repository** with:
 
-- ✅ **700+ academic paper citations** spanning 107 years (1918-2025)
-- ✅ **30 comprehensive bibliographies** across 21 type system categories
-- ✅ **1,411 lines of clean Rust code** (zero warnings, modular workspace)
-- ✅ **170 documentation files** (25,000+ lines) with modern MkDocs infrastructure
-- ✅ **10 curated PDFs** with automated paper archive system
+- [OK] **700+ academic paper citations** spanning 107 years (1918-2025)
+- [OK] **30 comprehensive bibliographies** across 21 type system categories
+- [OK] **1,411 lines of clean Rust code** (zero warnings, modular workspace)
+- [OK] **170 documentation files** (25,000+ lines) with modern MkDocs infrastructure
+- [OK] **10 curated PDFs** with automated paper archive system
 
 **BUT** it has critical integration issues preventing it from reaching its potential.
 
@@ -22,19 +22,19 @@ This is a **world-class lambda calculus research repository** with:
 
 ## Critical Issues (Must Fix)
 
-### 🔴 CRITICAL 1: Uncommitted Restructuring (30 minutes to fix)
+### [CRITICAL] CRITICAL 1: Uncommitted Restructuring (30 minutes to fix)
 **178 files are untracked** - major reorganization exists but isn't in git.
 ```bash
 git add docs/ admin/ && git commit -m "Complete restructuring" && git push
 ```
 
-### 🔴 CRITICAL 2: 97% Repository Bloat (2 hours to fix)
+### [CRITICAL] CRITICAL 2: 97% Repository Bloat (2 hours to fix)
 **9.5GB USS experimental system** dominates the repository (only 264MB is core content).
 ```bash
 # Extract USS to separate repo OR delete .audit-venv and make USS optional
 ```
 
-### 🔴 CRITICAL 3: Documentation Lies (2 hours to fix)
+### [CRITICAL] CRITICAL 3: Documentation Lies (2 hours to fix)
 **CLAUDE.md claims "external implementations"** but repo has internal 1,411 LOC Rust workspace.
 ```bash
 # Update CLAUDE.md to reflect reality
@@ -143,29 +143,29 @@ git push
 ## Key Recommendations
 
 ### Architecture
-- ✅ Keep thematic docs/ structure (foundation → types → theory → advanced)
-- 🔴 Commit 178 untracked files immediately
-- 🔴 Extract or delete USS experimental system (9.5GB bloat)
-- 🔴 Update CLAUDE.md to match reality (internal Rust workspace)
-- 🟡 Consolidate from 3 virtual environments to 1-2
+- [OK] Keep thematic docs/ structure (foundation → types → theory → advanced)
+- [CRITICAL] Commit 178 untracked files immediately
+- [CRITICAL] Extract or delete USS experimental system (9.5GB bloat)
+- [CRITICAL] Update CLAUDE.md to match reality (internal Rust workspace)
+- [HIGH] Consolidate from 3 virtual environments to 1-2
 
 ### Documentation
-- 🟡 Delete broken mkdocs-simplified.yml (or fix it properly)
-- 🟡 Consolidate 7 scattered index files to docs/indices/
-- 🟡 Add implementation status to bibliographies (✅/🚧/❌)
-- 🟢 Create Rust implementation documentation in docs/implementations/rust/
+- [HIGH] Delete broken mkdocs-simplified.yml (or fix it properly)
+- [HIGH] Consolidate 7 scattered index files to docs/indices/
+- [HIGH] Add implementation status to bibliographies ([OK]//[FAIL])
+- [MEDIUM] Create Rust implementation documentation in docs/implementations/rust/
 
 ### Implementation
-- 🟡 Increase test coverage from 20% to 80%
-- 🟡 Create implementation catalog (resolve "external implementations" confusion)
-- 🟡 Cross-reference papers with code
-- 🟢 Add property-based testing with proptest
+- [HIGH] Increase test coverage from 20% to 80%
+- [HIGH] Create implementation catalog (resolve "external implementations" confusion)
+- [HIGH] Cross-reference papers with code
+- [MEDIUM] Add property-based testing with proptest
 
 ### Integration
-- 🟡 Link papers to implementations
-- 🟡 Link implementations to papers
-- 🟡 Add working examples for each major calculus variant
-- 🟢 Create beginner's learning path through content
+- [HIGH] Link papers to implementations
+- [HIGH] Link implementations to papers
+- [HIGH] Add working examples for each major calculus variant
+- [MEDIUM] Create beginner's learning path through content
 
 ---
 

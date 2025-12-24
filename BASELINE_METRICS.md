@@ -30,7 +30,7 @@ This baseline establishes objective measurements of current repository state acr
 Total Rust Files:        25 files
 Source LOC:              482 lines (src/ only, excluding build artifacts)
 Total LOC with builds:   5,234 lines (includes generated code)
-Workspace Structure:     5 crates (modular design ✓)
+Workspace Structure:     5 crates (modular design [x])
 ```
 
 **Crate Breakdown:**
@@ -42,34 +42,34 @@ Workspace Structure:     5 crates (modular design ✓)
 
 **Build Quality:**
 ```
-✓ Debug Build:    6.14s (PASS)
-✓ Release Build:  4.20s (PASS)
-✓ Test Suite:     8 tests, 100% pass rate
-✓ Clippy Lint:    CLEAN (0 warnings with -D warnings)
-✓ Compilation:    CLEAN (0 errors, 0 warnings)
+[x] Debug Build:    6.14s (PASS)
+[x] Release Build:  4.20s (PASS)
+[x] Test Suite:     8 tests, 100% pass rate
+[x] Clippy Lint:    CLEAN (0 warnings with -D warnings)
+[x] Compilation:    CLEAN (0 errors, 0 warnings)
 ```
 
 **Test Coverage:**
 ```
 Tests Written:          8 unit tests
 Test Distribution:      
-  - lambda-core:        8 tests ✓
-  - lambda-eval:        0 tests ✗
-  - lambda-types:       0 tests ✗
-  - lambda-parser:      0 tests ✗
-  - lambda-examples:    0 tests ✗
+  - lambda-core:        8 tests [x]
+  - lambda-eval:        0 tests 
+  - lambda-types:       0 tests 
+  - lambda-parser:      0 tests 
+  - lambda-examples:    0 tests 
 
 Coverage Estimate:      ~20% (8 tests for 482 LOC)
 Missing Coverage:       80% of workspace untested
 ```
 
 **Code Quality Score: 65/100**
-- ✓ Clean compilation (no warnings)
-- ✓ Modular architecture (5 crates)
-- ✓ Core functionality tested
-- ✗ 80% of crates have zero tests
-- ✗ No benchmark suite
-- ✗ No integration tests
+- [x] Clean compilation (no warnings)
+- [x] Modular architecture (5 crates)
+- [x] Core functionality tested
+-  80% of crates have zero tests
+-  No benchmark suite
+-  No integration tests
 
 **Actionable Targets:**
 - Add 32+ tests (reach 50% coverage: 40 total tests for 482 LOC)
@@ -112,10 +112,10 @@ Integration:            None with Rust implementations
 - **Recommendation**: QUARANTINE or REMOVE (technical debt burden)
 
 **Secondary Implementation Score: 15/100**
-- ✗ USS system creates massive bloat
-- ✗ Educational implementations incomplete
-- ✗ church-unsolvable untested
-- ✓ Historical value (church-unsolvable)
+-  USS system creates massive bloat
+-  Educational implementations incomplete
+-  church-unsolvable untested
+- [x] Historical value (church-unsolvable)
 
 ---
 
@@ -133,7 +133,7 @@ Structured docs:        110 files with section headers (66%)
 
 **Documentation Structure:**
 ```
-docs/ hierarchy:        Well-organized MkDocs structure ✓
+docs/ hierarchy:        Well-organized MkDocs structure [x]
 Bibliography files:     30 files
 Bibliography LOC:       5,348 lines
 Academic categories:    0 numbered directories at root (!)
@@ -181,20 +181,20 @@ Broken links:           Not measured (validation script missing)
 
 **MkDocs Build Status:**
 ```
-Primary config:         mkdocs.yml - BUILDS with warnings ✓
+Primary config:         mkdocs.yml - BUILDS with warnings [x]
 Simplified config:      mkdocs-simplified.yml - FAILS (missing plugin)
 Build warnings:         50+ warnings (git revision plugin, missing logs)
 Strict mode:            Cannot build with --strict flag
 ```
 
 **Documentation Completeness Score: 55/100**
-- ✓ Good volume (167 files, 25K lines)
-- ✓ Organized structure (MkDocs)
-- ✓ Bibliography infrastructure exists
-- ✗ 11% incomplete (TODO markers)
-- ✗ Cannot verify citation count
-- ✗ Build warnings (50+)
-- ✗ Architectural contradiction (numbered dirs deleted)
+- [x] Good volume (167 files, 25K lines)
+- [x] Organized structure (MkDocs)
+- [x] Bibliography infrastructure exists
+-  11% incomplete (TODO markers)
+-  Cannot verify citation count
+-  Build warnings (50+)
+-  Architectural contradiction (numbered dirs deleted)
 
 ---
 
@@ -230,10 +230,10 @@ Status:                 MID-MIGRATION (incomplete)
 
 **Development Environment:**
 ```
-Rust toolchain:         1.92.0 (current) ✓
-Python version:         3.13.11 ✓
-Cargo version:          1.92.0 ✓
-MkDocs:                 Installed in venv ✓
+Rust toolchain:         1.92.0 (current) [x]
+Python version:         3.13.11 [x]
+Cargo version:          1.92.0 [x]
+MkDocs:                 Installed in venv [x]
 ```
 
 **Virtual Environments:**
@@ -246,10 +246,10 @@ Efficiency:             POOR (USS bloat)
 
 **Missing Tooling:**
 ```
-✗ validate-repository.py    Deleted in recent commits
-✗ standardize_bibliography.py    Deleted in recent commits  
-✗ tokei (code metrics)      Not installed
-✗ cargo-tarpaulin (coverage)    Unknown
+ validate-repository.py    Deleted in recent commits
+ standardize_bibliography.py    Deleted in recent commits  
+ tokei (code metrics)      Not installed
+ cargo-tarpaulin (coverage)    Unknown
 ```
 
 **Makefile Targets:**
@@ -281,12 +281,12 @@ Size reduction:        88% smaller if cleaned
 ```
 
 **Repository Health Score: 25/100**
-- ✗ 174 untracked files (incomplete migration)
-- ✗ 88% bloat (USS system)
-- ✗ Missing validation tooling
-- ✗ Mid-migration state
-- ✓ Modern toolchain
-- ✓ Core implementations clean
+-  174 untracked files (incomplete migration)
+-  88% bloat (USS system)
+-  Missing validation tooling
+-  Mid-migration state
+- [x] Modern toolchain
+- [x] Core implementations clean
 
 ---
 
@@ -299,16 +299,16 @@ Size reduction:        88% smaller if cleaned
 Hosted PDFs:            10 files
 Archive directory:      papers-archive/ with download automation
 Metadata:               bibliography.bib exists
-Download system:        Makefile with download targets ✓
-Access verification:    verify_access.py exists ✓
+Download system:        Makefile with download targets [x]
+Access verification:    verify_access.py exists [x]
 ```
 
 **Archive Quality Score: 70/100**
-- ✓ Automated download system
-- ✓ Access verification tooling
-- ✓ Metadata management
-- ✗ Limited PDF collection (10 files for 700+ citations)
-- ✗ No link validation currently running
+- [x] Automated download system
+- [x] Access verification tooling
+- [x] Metadata management
+-  Limited PDF collection (10 files for 700+ citations)
+-  No link validation currently running
 
 ### 4.2 Documentation Build System
 
@@ -330,12 +330,12 @@ Impact:                 Non-critical (timestamps fallback works)
 ```
 
 **Documentation Build Score: 60/100**
-- ✓ Primary build works
-- ✓ Live server functional
-- ✓ Plugin ecosystem configured
-- ✗ 50+ warnings (git tracking)
-- ✗ Backup config broken
-- ✗ Cannot build with --strict
+- [x] Primary build works
+- [x] Live server functional
+- [x] Plugin ecosystem configured
+-  50+ warnings (git tracking)
+-  Backup config broken
+-  Cannot build with --strict
 
 ---
 
@@ -347,10 +347,10 @@ Impact:                 Non-critical (timestamps fallback works)
 |-------------------------|---------------|--------------|-----|----------|
 | **Code Quality**        |               |              |     |          |
 | Rust Test Coverage      | 20%          | 80%          | -60% | HIGH    |
-| Clean Builds            | 100%         | 100%         | ✓    | -       |
-| Linter Warnings         | 0            | 0            | ✓    | -       |
+| Clean Builds            | 100%         | 100%         | [x]    | -       |
+| Linter Warnings         | 0            | 0            | [x]    | -       |
 | **Documentation**       |               |              |     |          |
-| Total Docs              | 167 files    | 167 files    | ✓    | -       |
+| Total Docs              | 167 files    | 167 files    | [x]    | -       |
 | Incomplete Docs (TODO)  | 11%          | <2%          | -9%  | MEDIUM  |
 | Build Warnings          | 50+          | 0            | -50+ | MEDIUM  |
 | Citation Count          | UNKNOWN      | 700+         | ?    | HIGH    |
@@ -370,18 +370,18 @@ Impact:                 Non-critical (timestamps fallback works)
 Overall Repository Health:           42/100 (NEEDS IMPROVEMENT)
 
 Component Scores:
-├─ Code Quality:                    65/100 (FAIR)
-│  ├─ Rust Primary:                 85/100 (GOOD)
-│  └─ Secondary Implementations:    15/100 (POOR)
-├─ Documentation Completeness:      55/100 (FAIR)
-│  ├─ Volume/Structure:             80/100 (GOOD)
-│  └─ Quality/Accuracy:             30/100 (POOR)
-├─ Repository Health:               25/100 (POOR)
-│  ├─ Git Cleanliness:              10/100 (CRITICAL)
-│  └─ Size Efficiency:              15/100 (CRITICAL)
-└─ Infrastructure:                  65/100 (FAIR)
-   ├─ Papers Archive:               70/100 (GOOD)
-   └─ Build System:                 60/100 (FAIR)
+ Code Quality:                    65/100 (FAIR)
+   Rust Primary:                 85/100 (GOOD)
+   Secondary Implementations:    15/100 (POOR)
+ Documentation Completeness:      55/100 (FAIR)
+   Volume/Structure:             80/100 (GOOD)
+   Quality/Accuracy:             30/100 (POOR)
+ Repository Health:               25/100 (POOR)
+   Git Cleanliness:              10/100 (CRITICAL)
+   Size Efficiency:              15/100 (CRITICAL)
+ Infrastructure:                  65/100 (FAIR)
+    Papers Archive:               70/100 (GOOD)
+    Build System:                 60/100 (FAIR)
 ```
 
 ---

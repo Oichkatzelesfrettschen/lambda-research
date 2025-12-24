@@ -7,25 +7,25 @@
 
 | Metric | Current | Target | Status |
 |--------|---------|--------|--------|
-| Build Status | ✓ PASS | PASS | ✓ |
-| Test Suite | ✓ 8 tests | 40 tests | ⚠ |
-| Linter | ✓ 0 warnings | 0 warnings | ✓ |
-| Git Status | ✗ 176 untracked | 0 untracked | ✗ |
-| Repo Size | ✗ 12GB | <2GB | ✗ |
+| Build Status | [x] PASS | PASS | [x] |
+| Test Suite | [x] 8 tests | 40 tests |  |
+| Linter | [x] 0 warnings | 0 warnings | [x] |
+| Git Status |  176 untracked | 0 untracked |  |
+| Repo Size |  12GB | <2GB |  |
 
 ## Priority Actions
 
-### 🔴 CRITICAL (Do Immediately)
+### [CRITICAL] CRITICAL (Do Immediately)
 1. **Complete git migration**: 176 files untracked → 0
 2. **Remove USS bloat**: 12GB → 1.3GB (88% reduction)
 3. **Restore validation tools**: validate-repository.py, standardize_bibliography.py
 
-### 🟡 HIGH (This Week)
+### [HIGH] HIGH (This Week)
 4. **Add tests**: 8 → 40 tests (50% coverage)
 5. **Verify citations**: Unknown → 700+ validated
 6. **Fix doc build**: 50+ warnings → 0 warnings
 
-### 🟢 MEDIUM (This Month)
+### [MEDIUM] MEDIUM (This Month)
 7. **Complete docs**: 19 TODO markers → <5
 8. **Add benchmarks**: 0 → 10+ benchmarks
 9. **Test church-unsolvable**: 0 tests → 20+ tests
@@ -40,14 +40,14 @@ Run daily:
 ## Key Findings
 
 **Strengths:**
-- ✓ Clean Rust code (0 warnings, modular design)
-- ✓ Comprehensive docs (168 files, 25K lines)
-- ✓ Modern toolchain (Rust 1.92.0, Python 3.13)
+- [x] Clean Rust code (0 warnings, modular design)
+- [x] Comprehensive docs (168 files, 25K lines)
+- [x] Modern toolchain (Rust 1.92.0, Python 3.13)
 
 **Critical Issues:**
-- ✗ Incomplete migration (176 untracked files)
-- ✗ 88% bloat (USS system: 9.5GB of 12GB total)
-- ✗ 80% untested (4 of 5 crates have 0 tests)
+-  Incomplete migration (176 untracked files)
+-  88% bloat (USS system: 9.5GB of 12GB total)
+-  80% untested (4 of 5 crates have 0 tests)
 
 ## Progress Tracking
 

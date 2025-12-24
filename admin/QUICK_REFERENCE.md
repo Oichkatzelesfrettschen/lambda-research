@@ -10,9 +10,9 @@
 
 | Aspect | Status | Grade |
 |--------|--------|-------|
-| **Academic Content** | 700+ papers, 31 categories, comprehensive bibliographies | A+ 🏆 |
+| **Academic Content** | 700+ papers, 31 categories, comprehensive bibliographies | A+  |
 | **Structure** | Thematic docs/ hierarchy (foundation→types→theory→advanced) | A |
-| **Git Integration** | Major restructuring UNCOMMITTED | F 🔴 |
+| **Git Integration** | Major restructuring UNCOMMITTED | F [CRITICAL] |
 | **Navigation** | 7 competing indices, 5 landing pages | D |
 | **Identity** | README says "10 papers", reality is "700+ papers" | D |
 | **Configuration** | 1/2 configs working (simplified is broken) | C |
@@ -24,7 +24,7 @@
 
 ## Critical Issues (Fix Now)
 
-### 1. 🔴 COMMIT RESTRUCTURING
+### 1. [CRITICAL] COMMIT RESTRUCTURING
 ```bash
 git add docs/ admin/ RESEARCH_PLAN.md USS_REPORT.md
 git commit -m "feat: restructure to thematic docs/ hierarchy"
@@ -32,13 +32,13 @@ git push
 ```
 **Why Critical**: All changes could be lost, collaborators can't see them
 
-### 2. 🟡 FIX IDENTITY CRISIS
+### 2. [HIGH] FIX IDENTITY CRISIS
 
 **Choose one**:
 - **Option A** (Recommended): Embrace 700+ paper scope, update README
 - **Option B**: Archive 90% of content, truly simplify to 10 papers
 
-### 3. 🟡 FIX BROKEN CONFIG
+### 3. [HIGH] FIX BROKEN CONFIG
 ```bash
 pip install mkdocs-awesome-pages-plugin mkdocs-macros-plugin
 # OR remove these plugins from mkdocs-simplified.yml
@@ -50,21 +50,21 @@ pip install mkdocs-awesome-pages-plugin mkdocs-macros-plugin
 
 ```
 docs/
-├── index.md                    # Main landing (beginner-focused)
-├── foundation/                 # 5 categories (untyped → CoC)
-├── type-systems/               # 12 categories (linear → probabilistic)
-├── theory/                     # 6 categories (proof → directed types)
-├── advanced/                   # 8 categories (concurrent → geometric)
-├── fundamentals/               # Beginner entry (Church, Girard)
-├── implementations/            # Code examples (Python, Haskell)
-├── introduction/               # Cross-refs, catalog, pathways
-├── research/                   # Experiments, breakthroughs, impact
-└── [7 index files]            # ⚠️ NEED CONSOLIDATION
+ index.md                    # Main landing (beginner-focused)
+ foundation/                 # 5 categories (untyped → CoC)
+ type-systems/               # 12 categories (linear → probabilistic)
+ theory/                     # 6 categories (proof → directed types)
+ advanced/                   # 8 categories (concurrent → geometric)
+ fundamentals/               # Beginner entry (Church, Girard)
+ implementations/            # Code examples (Python, Haskell)
+ introduction/               # Cross-refs, catalog, pathways
+ research/                   # Experiments, breakthroughs, impact
+ [7 index files]            # [WARNING] NEED CONSOLIDATION
 
 admin/                          # Meta-docs (not published)
-├── TODO_AUDIT.md              # Incomplete sections
-├── DOCUMENTATION_ARCHITECTURE_ANALYSIS.md  # This analysis
-└── IMMEDIATE_ACTION_PLAN.md   # Next steps
+ TODO_AUDIT.md              # Incomplete sections
+ DOCUMENTATION_ARCHITECTURE_ANALYSIS.md  # This analysis
+ IMMEDIATE_ACTION_PLAN.md   # Next steps
 ```
 
 ---
@@ -72,13 +72,13 @@ admin/                          # Meta-docs (not published)
 ## Configuration Strategy
 
 ### mkdocs.yml - PRIMARY (Researchers)
-- ✅ **Works**: Builds successfully
+- [OK] **Works**: Builds successfully
 - **Audience**: Academics, researchers
 - **Scope**: All 31 categories, 700+ papers
 - **Features**: BibTeX, git tracking, comprehensive nav
 
 ### mkdocs-simplified.yml - SECONDARY (Learners)
-- ❌ **Broken**: Missing plugins
+- [FAIL] **Broken**: Missing plugins
 - **Audience**: Beginners, students
 - **Scope**: Curated paths, essential papers
 - **Features**: Tagged nav ([BEGINNER], [ADVANCED])
@@ -113,19 +113,19 @@ admin/                          # Meta-docs (not published)
 
 ## Content Quality
 
-### ✅ Excellent
+### [OK] Excellent
 - Bibliography files (30/31 complete)
 - Cross-reference system
 - Academic citations (700+)
 - Landing pages exist for all categories
 
-### ⚠️ Needs Work
+### [WARNING] Needs Work
 - tutorials/ subdirectories (mostly empty)
 - implementations/ subdirectories (mostly empty)
 - 19/31 categories have TODOs
 - Broken links in simplified config
 
-### ❌ Missing
+### [FAIL] Missing
 - Unified learning paths
 - Implementation READMEs
 - Tutorial READMEs
@@ -215,7 +215,7 @@ For questions about:
 ---
 
 **Bottom Line**: 
-- Academic content is world-class ✅
-- Restructuring was the right move ✅
-- Need to commit changes and fix identity 🔴
-- 20 hours of work to complete Phase 1 ⏱️
+- Academic content is world-class [OK]
+- Restructuring was the right move [OK]
+- Need to commit changes and fix identity [CRITICAL]
+- 20 hours of work to complete Phase 1 ⏱

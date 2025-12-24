@@ -1,7 +1,7 @@
 # Implementation Roadmap: Executing the Analysis
 
 **Created**: December 23, 2024  
-**Status**: 🚀 READY TO EXECUTE  
+**Status**: [ACTION] READY TO EXECUTE  
 **Estimated Total**: 26 hours over 4 weeks  
 **Current Health**: 36/100 → **Target**: 85/100
 
@@ -22,10 +22,10 @@ This roadmap implements the findings from the comprehensive repository analysis 
 **Goal**: Make repository stable, consistent, and collaborative  
 **Health Impact**: 36 → 60 (+67%)
 
-### Task 1.1: Complete Git Migration [CRITICAL] ⏱️ 30 min
+### Task 1.1: Complete Git Migration [CRITICAL] ⏱ 30 min
 
 **Owner**: Git/Repository Management  
-**Priority**: 🔴 IMMEDIATE (data loss risk)
+**Priority**: [CRITICAL] IMMEDIATE (data loss risk)
 
 **Actions**:
 ```bash
@@ -82,19 +82,19 @@ git push origin master
 
 ---
 
-### Task 1.2: Remove Repository Bloat [HIGH] ⏱️ 2 hours
+### Task 1.2: Remove Repository Bloat [HIGH] ⏱ 2 hours
 
 **Owner**: consolidation-architect  
-**Priority**: 🔴 HIGH (97% size reduction opportunity)
+**Priority**: [CRITICAL] HIGH (97% size reduction opportunity)
 
-**Sub-task 1.2.1: Delete Abandoned Virtual Environment** ⏱️ 10 min
+**Sub-task 1.2.1: Delete Abandoned Virtual Environment** ⏱ 10 min
 ```bash
 # .audit-venv is unused (not in Makefile, no references)
 rm -rf .audit-venv
 du -sh venv/ uss-venv/  # Verify remaining sizes
 ```
 
-**Sub-task 1.2.2: USS Decision - Extract to Separate Repository** ⏱️ 90 min
+**Sub-task 1.2.2: USS Decision - Extract to Separate Repository** ⏱ 90 min
 
 **Option A: Extract USS (Recommended)**
 ```bash
@@ -144,7 +144,7 @@ git add experiments/README.md
 git commit -m "refactor: extract USS experimental system to separate repository"
 ```
 
-**Option B: Make USS Optional** ⏱️ 30 min
+**Option B: Make USS Optional** ⏱ 30 min
 ```bash
 # If keeping USS in repo
 mv requirements_experiments.txt requirements-science-optional.txt
@@ -178,12 +178,12 @@ git commit -m "feat: make USS experiments optional to reduce default install siz
 
 ---
 
-### Task 1.3: Fix CLAUDE.md Contradictions [HIGH] ⏱️ 2 hours
+### Task 1.3: Fix CLAUDE.md Contradictions [HIGH] ⏱ 2 hours
 
 **Owner**: documentation-architect + chief-architect  
-**Priority**: 🔴 HIGH (documentation accuracy)
+**Priority**: [CRITICAL] HIGH (documentation accuracy)
 
-**Sub-task 1.3.1: Update Implementation Strategy Section** ⏱️ 60 min
+**Sub-task 1.3.1: Update Implementation Strategy Section** ⏱ 60 min
 
 **Agent Task**: `documentation-architect`
 ```
@@ -215,7 +215,7 @@ Preserve sections about:
 - Multi-language ecosystem (Haskell, OCaml, etc.)
 ```
 
-**Sub-task 1.3.2: Create Implementation Guide** ⏱️ 60 min
+**Sub-task 1.3.2: Create Implementation Guide** ⏱ 60 min
 
 **Agent Task**: `documentation-architect`
 ```
@@ -244,14 +244,14 @@ Include code examples and clear navigation.
 
 ---
 
-### Task 1.4: Fix or Remove Broken MkDocs Config [MEDIUM] ⏱️ 1 hour
+### Task 1.4: Fix or Remove Broken MkDocs Config [MEDIUM] ⏱ 1 hour
 
 **Owner**: documentation-architect  
-**Priority**: 🟡 MEDIUM (working build is higher priority than dual configs)
+**Priority**: [HIGH] MEDIUM (working build is higher priority than dual configs)
 
 **Decision Point**: Fix or Delete?
 
-**Option A: Delete Simplified Config** ⏱️ 20 min (Recommended)
+**Option A: Delete Simplified Config** ⏱ 20 min (Recommended)
 ```bash
 # Reasoning: mkdocs.yml works, simplified is broken
 git rm mkdocs-simplified.yml
@@ -261,7 +261,7 @@ git commit -m "refactor: remove broken simplified config, use single mkdocs.yml"
 # (addressed in Task 2.7)
 ```
 
-**Option B: Fix Simplified Config** ⏱️ 1 hour
+**Option B: Fix Simplified Config** ⏱ 1 hour
 ```bash
 # Install missing plugins
 pip install mkdocs-awesome-pages-plugin mkdocs-macros-plugin
@@ -281,10 +281,10 @@ pip install mkdocs-awesome-pages-plugin mkdocs-macros-plugin
 
 ---
 
-### Task 1.5: Restore and Run Validation [MEDIUM] ⏱️ 30 min
+### Task 1.5: Restore and Run Validation [MEDIUM] ⏱ 30 min
 
 **Owner**: integration-test  
-**Priority**: 🟡 MEDIUM (need baseline for broken links)
+**Priority**: [HIGH] MEDIUM (need baseline for broken links)
 
 **Actions**:
 ```bash
@@ -338,12 +338,12 @@ echo "Validation baseline established" >> admin/PHASE1_COMPLETION.md
 **Goal**: Connect implementations with academic content  
 **Health Impact**: 60 → 75 (+25%)
 
-### Task 2.1: Add Implementation Status to Bibliographies [HIGH] ⏱️ 4 hours
+### Task 2.1: Add Implementation Status to Bibliographies [HIGH] ⏱ 4 hours
 
 **Owner**: documentation-architect + code-review-specialist  
-**Priority**: 🟡 HIGH (closes paper-code gap)
+**Priority**: [HIGH] HIGH (closes paper-code gap)
 
-**Sub-task 2.1.1: Audit Rust Implementations** ⏱️ 1 hour
+**Sub-task 2.1.1: Audit Rust Implementations** ⏱ 1 hour
 
 **Agent Task**: `code-review-specialist`
 ```
@@ -379,7 +379,7 @@ Output format (JSON):
 Save to: admin/implementation-status.json
 ```
 
-**Sub-task 2.1.2: Update 30 Bibliography Files** ⏱️ 3 hours
+**Sub-task 2.1.2: Update 30 Bibliography Files** ⏱ 3 hours
 
 **Agent Task**: `documentation-architect`
 ```
@@ -393,7 +393,7 @@ Template:
 ```markdown
 ## Implementation Status
 
-### ✅ Implemented
+### [OK] Implemented
 
 **Church, A. (1936)**. "An Unsolvable Problem of Elementary Number Theory"
 - Implementation: `tapl-rust::lambda-core::Term`, `tapl-rust::lambda-eval::Evaluator`
@@ -407,13 +407,13 @@ Template:
 - Tests: 8 passing, 60% coverage
 - Status: Partial (type inference incomplete)
 
-### 🚧 In Progress
+###  In Progress
 
 **Girard, J-Y. (1972)**. "Interprétation fonctionnelle et élimination des coupures"
 - Status: System F type checking implemented, polymorphic inference in progress
 - Tracked: GitHub issue #XX
 
-### ❌ Not Yet Implemented
+### [FAIL] Not Yet Implemented
 
 **Martin-Löf, P. (1984)**. "Intuitionistic Type Theory"
 - Priority: High
@@ -430,7 +430,7 @@ Process all 30 files in docs/{foundation,type-systems,theory,advanced}/*/bibliog
 - [ ] Implementation audit complete (admin/implementation-status.json exists)
 - [ ] All 30 bibliography files updated with implementation status
 - [ ] Papers linked to code with relative paths
-- [ ] Clear distinction between ✅ complete, 🚧 in-progress, ❌ not-implemented
+- [ ] Clear distinction between [OK] complete,  in-progress, [FAIL] not-implemented
 - [ ] Test coverage and example locations documented
 
 **Agent Assignment**: 
@@ -439,22 +439,22 @@ Process all 30 files in docs/{foundation,type-systems,theory,advanced}/*/bibliog
 
 ---
 
-### Task 2.2: Create Rust Implementation Documentation [MEDIUM] ⏱️ 3 hours
+### Task 2.2: Create Rust Implementation Documentation [MEDIUM] ⏱ 3 hours
 
 **Owner**: documentation-architect + bare-metal-runtime  
-**Priority**: 🟡 MEDIUM (enables contributors)
+**Priority**: [HIGH] MEDIUM (enables contributors)
 
 **Structure**:
 ```
 docs/implementations/rust/
-├── README.md              [Overview and quick start]
-├── architecture.md        [Workspace design, crate responsibilities]
-├── development.md         [Build, test, debug workflow]
-├── extending.md           [How to add new calculus variants]
-├── examples.md            [Working examples with explanations]
-├── testing.md             [Testing strategy, property-based tests]
-├── performance.md         [Benchmarks, optimization notes]
-└── integration.md         [How implementations connect to papers]
+ README.md              [Overview and quick start]
+ architecture.md        [Workspace design, crate responsibilities]
+ development.md         [Build, test, debug workflow]
+ extending.md           [How to add new calculus variants]
+ examples.md            [Working examples with explanations]
+ testing.md             [Testing strategy, property-based tests]
+ performance.md         [Benchmarks, optimization notes]
+ integration.md         [How implementations connect to papers]
 ```
 
 **Agent Task**: `documentation-architect`
@@ -525,10 +525,10 @@ Include working, tested code snippets.
 
 ---
 
-### Task 2.3: Consolidate Index Files [MEDIUM] ⏱️ 2 hours
+### Task 2.3: Consolidate Index Files [MEDIUM] ⏱ 2 hours
 
 **Owner**: documentation-architect  
-**Priority**: 🟡 MEDIUM (improves navigation)
+**Priority**: [HIGH] MEDIUM (improves navigation)
 
 **Current State**: 7 scattered index files
 ```
@@ -544,14 +544,14 @@ docs/ARCHIVE_STATISTICS.md
 **Target State**: Consolidated in docs/indices/
 ```
 docs/indices/
-├── README.md                 [Entry point explaining all indices]
-├── comprehensive.md          [Full cross-reference system]
-├── by-author.md             [Alphabetical by author]
-├── chronological.md         [Timeline 1918-2025]
-├── by-topic.md              [Organized by research area]
-├── by-citation.md           [Citation network analysis]
-├── access-type.md           [Open access, paywalled, etc.]
-└── statistics.md            [Repository statistics]
+ README.md                 [Entry point explaining all indices]
+ comprehensive.md          [Full cross-reference system]
+ by-author.md             [Alphabetical by author]
+ chronological.md         [Timeline 1918-2025]
+ by-topic.md              [Organized by research area]
+ by-citation.md           [Citation network analysis]
+ access-type.md           [Open access, paywalled, etc.]
+ statistics.md            [Repository statistics]
 ```
 
 **Agent Task**: `documentation-architect`
@@ -576,10 +576,10 @@ docs/indices/
 
 ---
 
-### Task 2.4: Consolidate Validation Scripts [LOW] ⏱️ 1 hour
+### Task 2.4: Consolidate Validation Scripts [LOW] ⏱ 1 hour
 
 **Owner**: consolidation-architect  
-**Priority**: 🟢 LOW (cleanup, not critical)
+**Priority**: [MEDIUM] LOW (cleanup, not critical)
 
 **Current State**: 2 scripts with overlapping functionality
 ```
@@ -639,15 +639,15 @@ scripts/validate-repository.py --check=structure-only
 **Goal**: Achieve production quality and comprehensive coverage  
 **Health Impact**: 75 → 85 (+13%)
 
-### Task 3.1: Increase Test Coverage [HIGH] ⏱️ 4 hours
+### Task 3.1: Increase Test Coverage [HIGH] ⏱ 4 hours
 
 **Owner**: integration-test + bare-metal-runtime  
-**Priority**: 🟡 HIGH (quality assurance)
+**Priority**: [HIGH] HIGH (quality assurance)
 
 **Current State**: 20% coverage, 8 tests  
 **Target State**: 80% coverage, 40+ tests
 
-**Sub-task 3.1.1: Add Unit Tests** ⏱️ 2 hours
+**Sub-task 3.1.1: Add Unit Tests** ⏱ 2 hours
 
 **Agent Task**: `integration-test`
 ```
@@ -692,7 +692,7 @@ Add tests following Rust conventions:
 - Use pretty_assertions for readable failures
 ```
 
-**Sub-task 3.1.2: Add Property-Based Tests** ⏱️ 2 hours
+**Sub-task 3.1.2: Add Property-Based Tests** ⏱ 2 hours
 
 **Agent Task**: `integration-test`
 ```
@@ -741,10 +741,10 @@ Generate 1000+ test cases per property.
 
 ---
 
-### Task 3.2: Create Implementation Catalog [MEDIUM] ⏱️ 2 hours
+### Task 3.2: Create Implementation Catalog [MEDIUM] ⏱ 2 hours
 
 **Owner**: documentation-architect  
-**Priority**: 🟡 MEDIUM (resolves external reference confusion)
+**Priority**: [HIGH] MEDIUM (resolves external reference confusion)
 
 **Target**: `docs/implementations/CATALOG.md`
 
@@ -795,14 +795,14 @@ Include:
 
 ---
 
-### Task 3.3: USS Integration Decision [MEDIUM] ⏱️ 2 hours
+### Task 3.3: USS Integration Decision [MEDIUM] ⏱ 2 hours
 
 **Owner**: chief-architect  
-**Priority**: 🟡 MEDIUM (clarifies scope)
+**Priority**: [HIGH] MEDIUM (clarifies scope)
 
 **Decision Required**: Extract completely OR integrate deeply?
 
-**If Extract** (from Task 1.2.2): ⏱️ 30 min
+**If Extract** (from Task 1.2.2): ⏱ 30 min
 ```bash
 # Verify extraction complete
 ls -lh ../lambda-synthesis-experiments/
@@ -813,7 +813,7 @@ cat experiments/README.md
 # Remove USS from main roadmap
 ```
 
-**If Integrate**: ⏱️ 2 hours
+**If Integrate**: ⏱ 2 hours
 
 **Agent Task**: `chief-architect`
 ```
@@ -860,10 +860,10 @@ Integrate USS properly into repository:
 
 ---
 
-### Task 3.4: Performance Benchmarking [MEDIUM] ⏱️ 2 hours
+### Task 3.4: Performance Benchmarking [MEDIUM] ⏱ 2 hours
 
 **Owner**: measurement-specialist + bare-metal-runtime  
-**Priority**: 🟡 MEDIUM (performance visibility)
+**Priority**: [HIGH] MEDIUM (performance visibility)
 
 **Agent Task**: `bare-metal-runtime`
 ```
@@ -872,10 +872,10 @@ Add Criterion benchmarks to tapl-rust:
 1. Create benchmarks/ directory structure:
    ```
    tapl-rust/benchmarks/
-   ├── beta_reduction.rs
-   ├── type_checking.rs
-   ├── parsing.rs
-   └── substitution.rs
+    beta_reduction.rs
+    type_checking.rs
+    parsing.rs
+    substitution.rs
    ```
 
 2. Benchmark key operations:
@@ -941,7 +941,7 @@ Add Criterion benchmarks to tapl-rust:
 
 ## Continuous Monitoring & Maintenance
 
-### Daily Checks ⏱️ 5 min
+### Daily Checks ⏱ 5 min
 ```bash
 # Run health dashboard
 ./check-health.sh
@@ -956,14 +956,14 @@ make build
 python scripts/validate-repository.py
 ```
 
-### Weekly Reviews ⏱️ 30 min
+### Weekly Reviews ⏱ 30 min
 - Review test coverage reports
 - Check for broken links
 - Monitor repository size
 - Review open issues/TODOs
 - Update metrics in admin/
 
-### Monthly Audits ⏱️ 2 hours
+### Monthly Audits ⏱ 2 hours
 - Full link validation
 - Bibliography verification
 - Citation accuracy check

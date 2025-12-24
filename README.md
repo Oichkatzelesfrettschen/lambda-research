@@ -2,15 +2,15 @@
 
 **Essential papers and guided learning paths through the mathematics of computation**
 
-**🎯 Purpose**: Help students and researchers learn lambda calculus through carefully curated, accessible papers with clear explanations.
+**[TARGET] Purpose**: Help students and researchers learn lambda calculus through carefully curated, accessible papers with clear explanations.
 
-**📊 What we provide**: 10 essential papers + guided learning paths + 200+ external bibliography links
+**[METRICS] What we provide**: 10 essential papers + guided learning paths + 200+ external bibliography links
 
-**✅ What works**: PDF viewers, mobile-friendly design, honest scope
+**[OK] What works**: PDF viewers, mobile-friendly design, honest scope
 
 ## Quick Start
 
-### 🌱 New to Lambda Calculus?
+###  New to Lambda Calculus?
 **[Start with Fundamentals →](https://oichkatzelesfrettschen.github.io/lambda-research/fundamentals/)**
 - Church (1936) - Where it all began
 - Girard (1989) - Proofs and Types (most readable)
@@ -22,13 +22,13 @@
 - Modern type theory and category theory
 - Research frontier topics
 
-### 💻 Prefer Learning by Coding?
+###  Prefer Learning by Coding?
 **[Try Implementations →](https://oichkatzelesfrettschen.github.io/lambda-research/implementations/)**
 - Build your own lambda calculus interpreter
 - Working examples in multiple languages
 - Hands-on tutorials and exercises
 
-### 📚 Need Specific Papers?
+### [DOCS] Need Specific Papers?
 **[Browse Research Library →](https://oichkatzelesfrettschen.github.io/lambda-research/research/)**
 - 10 curated, accessible research papers
 - Links to 200+ external papers

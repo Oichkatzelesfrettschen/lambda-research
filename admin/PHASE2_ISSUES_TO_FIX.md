@@ -44,6 +44,6 @@ python3 scripts/validate-repository.py
 **Expected Result After Fix**:
 - Broken URLs: 0
 - URL Health: 100%
-- Overall Status: ✅ PASSED
+- Overall Status: [OK] PASSED
 
 ---

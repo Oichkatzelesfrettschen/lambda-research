@@ -18,17 +18,17 @@ Displays current repository health score and critical metrics.
 
 | File | Size | Purpose |
 |------|------|---------|
-| **BASELINE_EXECUTIVE_SUMMARY.md** | 11KB | 📋 Start here - Executive overview |
-| **BASELINE_METRICS.md** | 24KB | 📊 Complete baseline analysis (11 sections) |
-| **METRICS_SUMMARY.md** | 2KB | 📌 Quick reference card |
-| **METRICS_CITATION_CORRECTION.md** | 5KB | 🔍 Citation count correction |
-| **check-health.sh** | 5KB | 🤖 Automated health dashboard |
+| **BASELINE_EXECUTIVE_SUMMARY.md** | 11KB | [TASKS] Start here - Executive overview |
+| **BASELINE_METRICS.md** | 24KB | [METRICS] Complete baseline analysis (11 sections) |
+| **METRICS_SUMMARY.md** | 2KB |  Quick reference card |
+| **METRICS_CITATION_CORRECTION.md** | 5KB |  Citation count correction |
+| **check-health.sh** | 5KB | [AGENT] Automated health dashboard |
 
 ---
 
 ## Read in This Order
 
-### 1️⃣ Executive Summary (5 min read)
+### 1⃣ Executive Summary (5 min read)
 **File**: `BASELINE_EXECUTIVE_SUMMARY.md`
 
 Read this first for:
@@ -37,7 +37,7 @@ Read this first for:
 - 4-week improvement roadmap
 - Key findings and recommendations
 
-### 2️⃣ Quick Reference (1 min read)
+### 2⃣ Quick Reference (1 min read)
 **File**: `METRICS_SUMMARY.md`
 
 Quick lookup for:
@@ -45,7 +45,7 @@ Quick lookup for:
 - Priority actions
 - Progress tracking
 
-### 3️⃣ Complete Baseline (30 min read)
+### 3⃣ Complete Baseline (30 min read)
 **File**: `BASELINE_METRICS.md`
 
 Deep dive into:
@@ -55,7 +55,7 @@ Deep dive into:
 - Continuous monitoring strategy
 - Complete action plans
 
-### 4️⃣ Citation Correction (5 min read)
+### 4⃣ Citation Correction (5 min read)
 **File**: `METRICS_CITATION_CORRECTION.md`
 
 Understanding:
@@ -68,20 +68,20 @@ Understanding:
 
 ## Key Metrics Summary
 
-### 🔴 Critical (Must Fix Immediately)
-- ✗ **178 untracked files** (target: 0)
-- ✗ **12GB repository** (target: 1.3GB)
-- ✗ **Missing validation tools**
+### [CRITICAL] Critical (Must Fix Immediately)
+-  **178 untracked files** (target: 0)
+-  **12GB repository** (target: 1.3GB)
+-  **Missing validation tools**
 
-### 🟡 High Priority (This Week)
-- ⚠ **8 tests only** (target: 40)
-- ⚠ **33 citations verified** (claimed: 708)
-- ⚠ **50+ build warnings** (target: 0)
+### [HIGH] High Priority (This Week)
+-  **8 tests only** (target: 40)
+-  **33 citations verified** (claimed: 708)
+-  **50+ build warnings** (target: 0)
 
-### 🟢 Strengths (Keep These)
-- ✓ **Clean builds** (0 warnings)
-- ✓ **Modern toolchain** (Rust 1.92.0)
-- ✓ **170 doc files** (25K lines)
+### [MEDIUM] Strengths (Keep These)
+- [x] **Clean builds** (0 warnings)
+- [x] **Modern toolchain** (Rust 1.92.0)
+- [x] **170 doc files** (25K lines)
 
 ---
 
@@ -122,11 +122,11 @@ git status --porcelain | wc -l   # Must be 0
 
 This baseline follows **strict measurement principles**:
 
-✅ **Objective**: Every metric measured with automated tools  
-✅ **Reproducible**: All commands documented and repeatable  
-✅ **Honest**: Corrected inflated claims (citations: 708 → 33)  
-✅ **Validated**: Cross-checked with multiple methods  
-✅ **Conservative**: Used estimates only when exact measurement unavailable  
+[OK] **Objective**: Every metric measured with automated tools  
+[OK] **Reproducible**: All commands documented and repeatable  
+[OK] **Honest**: Corrected inflated claims (citations: 708 → 33)  
+[OK] **Validated**: Cross-checked with multiple methods  
+[OK] **Conservative**: Used estimates only when exact measurement unavailable  
 
 **Core Principle**: 
 > "Measure actual state, not aspirational claims."
@@ -136,30 +136,30 @@ This baseline follows **strict measurement principles**:
 ## What This Baseline Establishes
 
 ### Code Quality
-- ✅ 482 Rust LOC (source only)
-- ✅ 8 tests (100% pass rate)
-- ✅ 0 warnings (clean builds)
-- ⚠ 20% test coverage (estimated)
-- ❌ 0 benchmarks
+- [OK] 482 Rust LOC (source only)
+- [OK] 8 tests (100% pass rate)
+- [OK] 0 warnings (clean builds)
+-  20% test coverage (estimated)
+- [FAIL] 0 benchmarks
 
 ### Documentation
-- ✅ 170 markdown files
-- ✅ 25,162 lines of documentation
-- ⚠ 33 verified citations (not 708)
-- ⚠ 11% incomplete (19 TODO markers)
-- ❌ 50+ build warnings
+- [OK] 170 markdown files
+- [OK] 25,162 lines of documentation
+-  33 verified citations (not 708)
+-  11% incomplete (19 TODO markers)
+- [FAIL] 50+ build warnings
 
 ### Repository Health
-- ❌ 178 untracked files
-- ❌ 12GB total (79% bloat)
-- ⚠ Mid-migration state
-- ❌ Missing validation tools
+- [FAIL] 178 untracked files
+- [FAIL] 12GB total (79% bloat)
+-  Mid-migration state
+- [FAIL] Missing validation tools
 
 ### Infrastructure
-- ✅ Modern toolchain (Rust 1.92.0, Python 3.13)
-- ✅ MkDocs documentation system
-- ⚠ 10 PDFs in archive
-- ❌ Simplified config broken
+- [OK] Modern toolchain (Rust 1.92.0, Python 3.13)
+- [OK] MkDocs documentation system
+-  10 PDFs in archive
+- [FAIL] Simplified config broken
 
 ---
 
@@ -202,12 +202,12 @@ Target: 80/100 by 2026-01-20 (4 weeks)
 
 Repository improvement is successful when:
 
-1. ✅ All builds pass with zero warnings
-2. ✅ Test coverage > 50% (40+ tests)
-3. ✅ Git status clean (0 untracked)
-4. ✅ Repository size < 2GB
-5. ✅ Documentation builds cleanly (--strict)
-6. ✅ Health score > 75/100
+1. [OK] All builds pass with zero warnings
+2. [OK] Test coverage > 50% (40+ tests)
+3. [OK] Git status clean (0 untracked)
+4. [OK] Repository size < 2GB
+5. [OK] Documentation builds cleanly (--strict)
+6. [OK] Health score > 75/100
 
 **Every claim must be backed by measurement.**
 
@@ -307,10 +307,10 @@ These baseline metrics and tools are part of the lambda-research repository. Use
 
 ---
 
-**Ready to improve?** Start with `./check-health.sh` and Week 1 priorities. Track progress daily. Reach 75/100 in 4 weeks. 📈
+**Ready to improve?** Start with `./check-health.sh` and Week 1 priorities. Track progress daily. Reach 75/100 in 4 weeks. [PROGRESS]
 
 ---
 
 *Last Updated: 2025-12-23*  
 *Next Review: 2025-12-30*  
-*Status: ✅ Baseline established, ready for improvement*
+*Status: [OK] Baseline established, ready for improvement*

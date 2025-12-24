@@ -11,16 +11,16 @@
 This is a **world-class academic lambda calculus research repository** with 700+ paper citations spanning 107 years (1918-2025), comprehensive bibliographies across 21 type system categories, and production-quality Rust implementations. However, it suffers from **incomplete migration**, **architectural contradictions**, and **9.5GB of orthogonal experimental bloat**.
 
 **The Good:**
-- ✅ Exceptional academic foundation (30 bibliography files, premier venues)
-- ✅ Clean Rust implementations (1,411 LOC, modular workspace design)
-- ✅ Modern documentation infrastructure (MkDocs, GitHub Pages)
-- ✅ Automated validation and paper archive systems
+- [OK] Exceptional academic foundation (30 bibliography files, premier venues)
+- [OK] Clean Rust implementations (1,411 LOC, modular workspace design)
+- [OK] Modern documentation infrastructure (MkDocs, GitHub Pages)
+- [OK] Automated validation and paper archive systems
 
 **The Critical:**
-- 🔴 **178 untracked files** - Major restructuring exists but uncommitted to git
-- 🔴 **97% bloat** - 9.5GB USS experimental system orthogonal to core mission
-- 🔴 **Documentation contradicts reality** - Claims "external implementations" but has internal Rust workspace
-- 🔴 **Broken navigation** - Simplified MkDocs config has dead links
+- [CRITICAL] **178 untracked files** - Major restructuring exists but uncommitted to git
+- [CRITICAL] **97% bloat** - 9.5GB USS experimental system orthogonal to core mission
+- [CRITICAL] **Documentation contradicts reality** - Claims "external implementations" but has internal Rust workspace
+- [CRITICAL] **Broken navigation** - Simplified MkDocs config has dead links
 
 **The Bottom Line:**
 With **20-26 hours of focused consolidation over 2-4 weeks**, this repository can become THE definitive lambda calculus research platform. Without action, it risks becoming unmaintainable due to technical debt and scope creep.
@@ -41,22 +41,22 @@ A **comprehensive lambda calculus research platform** combining:
 
 | Category | Metric | Status |
 |----------|--------|--------|
-| **Academic** | 700+ paper citations | ✅ |
-| | 30 bibliography files | ✅ |
-| | 21 type system categories | ✅ |
-| | 10 hosted PDFs | ✅ |
-| **Code** | 1,411 LOC Rust (tapl-rust: 482 + church: 929) | ✅ |
-| | 821 LOC Python (scripts) | ✅ |
-| | 5 Rust crates in workspace | ✅ |
-| | 20% test coverage (8 tests) | ⚠️ |
-| **Docs** | 170 markdown files | ✅ |
-| | 25,000+ lines documentation | ✅ |
-| | 2 MkDocs configs (1 broken) | ⚠️ |
-| | 7 competing index files | ⚠️ |
-| **Infrastructure** | 12.4GB total size | 🔴 |
-| | 9.5GB USS virtual env (77% of repo) | 🔴 |
-| | 178 untracked files | 🔴 |
-| | 3 virtual environments | ⚠️ |
+| **Academic** | 700+ paper citations | [OK] |
+| | 30 bibliography files | [OK] |
+| | 21 type system categories | [OK] |
+| | 10 hosted PDFs | [OK] |
+| **Code** | 1,411 LOC Rust (tapl-rust: 482 + church: 929) | [OK] |
+| | 821 LOC Python (scripts) | [OK] |
+| | 5 Rust crates in workspace | [OK] |
+| | 20% test coverage (8 tests) | [WARNING] |
+| **Docs** | 170 markdown files | [OK] |
+| | 25,000+ lines documentation | [OK] |
+| | 2 MkDocs configs (1 broken) | [WARNING] |
+| | 7 competing index files | [WARNING] |
+| **Infrastructure** | 12.4GB total size | [CRITICAL] |
+| | 9.5GB USS virtual env (77% of repo) | [CRITICAL] |
+| | 178 untracked files | [CRITICAL] |
+| | 3 virtual environments | [WARNING] |
 
 ---
 
@@ -66,57 +66,57 @@ A **comprehensive lambda calculus research platform** combining:
 
 ```
 lambda-research/                      [12.4GB total]
-├── docs/                             [170 files, 25K lines]
-│   ├── foundation/                   [5 categories: untyped → CoC]
-│   ├── type-systems/                 [12 categories: linear → probabilistic]
-│   ├── theory/                       [6 categories: proof theory → directed types]
-│   ├── advanced/                     [8 categories: quantum → geometric algebra]
-│   ├── bibliography/                 [30 comprehensive bibliographies]
-│   ├── implementations/              [3 guides: Rust, Haskell, Python]
-│   └── research/                     [USS experiments, breakthrough analysis]
-│
-├── sources/rust-implementations/     [1,411 LOC]
-│   ├── tapl-rust/                    [482 LOC - MAIN WORKSPACE]
-│   │   ├── lambda-core/              [Term representation, substitution]
-│   │   ├── lambda-eval/              [Evaluation strategies]
-│   │   ├── lambda-types/             [Type checking, inference]
-│   │   ├── lambda-parser/            [Parsing lambda expressions]
-│   │   └── lambda-examples/          [Working examples]
-│   └── church-unsolvable-1936/       [929 LOC - Experimental]
-│
-├── papers-archive/                   [10 PDFs + metadata]
-│   ├── historical/                   [Church 1936, 1941]
-│   ├── classical/                    [Girard 1987, 1989]
-│   ├── modern/                       [Martin-Löf 1984, HoTT]
-│   └── scripts/                      [Automated downloads]
-│
-├── implementations/                  [Educational examples]
-│   ├── scala/                        [Minimal STLC]
-│   ├── idris/                        [Dependent types demo]
-│   ├── scheme/                       [Untyped LC]
-│   └── sml/                          [Functional implementation]
-│
-├── src/                              [119MB USS experimental system]
-│   ├── kernels/                      [Triton GPU kernels]
-│   ├── models/                       [PyTorch transformer]
-│   └── data/                         [10M synthetic lambda terms]
-│
-├── scripts/                          [821 LOC Python]
-│   ├── validate-repository.py        [Link validation, structure checks]
-│   ├── standardize_bibliography.py   [Bibliography consistency]
-│   ├── link-validator.py             [DUPLICATE of validate subset]
-│   └── profile_uss.sh                [USS performance profiling]
-│
-├── admin/                            [Meta-documentation]
-│   ├── DOCUMENTATION_ARCHITECTURE_ANALYSIS.md
-│   ├── IMMEDIATE_ACTION_PLAN.md
-│   ├── TODO_AUDIT.md
-│   └── [10+ additional meta-docs]
-│
-└── Virtual Environments:
-    ├── venv/                         [264MB - MkDocs, validation]
-    ├── uss-venv/                     [9.5GB - PyTorch, CUDA, Triton]
-    └── .audit-venv/                  [28MB - ABANDONED]
+ docs/                             [170 files, 25K lines]
+    foundation/                   [5 categories: untyped → CoC]
+    type-systems/                 [12 categories: linear → probabilistic]
+    theory/                       [6 categories: proof theory → directed types]
+    advanced/                     [8 categories: quantum → geometric algebra]
+    bibliography/                 [30 comprehensive bibliographies]
+    implementations/              [3 guides: Rust, Haskell, Python]
+    research/                     [USS experiments, breakthrough analysis]
+
+ sources/rust-implementations/     [1,411 LOC]
+    tapl-rust/                    [482 LOC - MAIN WORKSPACE]
+       lambda-core/              [Term representation, substitution]
+       lambda-eval/              [Evaluation strategies]
+       lambda-types/             [Type checking, inference]
+       lambda-parser/            [Parsing lambda expressions]
+       lambda-examples/          [Working examples]
+    church-unsolvable-1936/       [929 LOC - Experimental]
+
+ papers-archive/                   [10 PDFs + metadata]
+    historical/                   [Church 1936, 1941]
+    classical/                    [Girard 1987, 1989]
+    modern/                       [Martin-Löf 1984, HoTT]
+    scripts/                      [Automated downloads]
+
+ implementations/                  [Educational examples]
+    scala/                        [Minimal STLC]
+    idris/                        [Dependent types demo]
+    scheme/                       [Untyped LC]
+    sml/                          [Functional implementation]
+
+ src/                              [119MB USS experimental system]
+    kernels/                      [Triton GPU kernels]
+    models/                       [PyTorch transformer]
+    data/                         [10M synthetic lambda terms]
+
+ scripts/                          [821 LOC Python]
+    validate-repository.py        [Link validation, structure checks]
+    standardize_bibliography.py   [Bibliography consistency]
+    link-validator.py             [DUPLICATE of validate subset]
+    profile_uss.sh                [USS performance profiling]
+
+ admin/                            [Meta-documentation]
+    DOCUMENTATION_ARCHITECTURE_ANALYSIS.md
+    IMMEDIATE_ACTION_PLAN.md
+    TODO_AUDIT.md
+    [10+ additional meta-docs]
+
+ Virtual Environments:
+     venv/                         [264MB - MkDocs, validation]
+     uss-venv/                     [9.5GB - PyTorch, CUDA, Triton]
+     .audit-venv/                  [28MB - ABANDONED]
 ```
 
 ### Component Analysis
@@ -140,7 +140,7 @@ lambda-research/                      [12.4GB total]
 - Broken links in simplified MkDocs config
 - README claims "10 essential papers" but structure supports 700+ comprehensive database
 
-**Health**: 🟡 70/100 - Solid foundation, integration issues
+**Health**: [HIGH] 70/100 - Solid foundation, integration issues
 
 #### 2. Implementation Layer (sources/, implementations/)
 
@@ -160,7 +160,7 @@ lambda-research/                      [12.4GB total]
 - Educational examples (implementations/) appear abandoned
 - Missing implementation status in bibliographies (which papers are implemented?)
 
-**Health**: 🟡 65/100 - Good code quality, poor integration
+**Health**: [HIGH] 65/100 - Good code quality, poor integration
 
 #### 3. Experimental Layer (src/, uss-venv/)
 
@@ -182,7 +182,7 @@ lambda-research/                      [12.4GB total]
 - Feels "bolted on" rather than integrated
 - Dependencies bloat: PyTorch + JAX + TensorFlow (unnecessary overlap)
 
-**Health**: 🔴 30/100 - Technically impressive but architecturally misplaced
+**Health**: [CRITICAL] 30/100 - Technically impressive but architecturally misplaced
 
 #### 4. Documentation Infrastructure (docs/, mkdocs configs)
 
@@ -196,19 +196,19 @@ lambda-research/                      [12.4GB total]
 - GitHub Pages deployment
 
 **Issues**:
-- Two configs: mkdocs.yml (✅ works) and mkdocs-simplified.yml (❌ broken links)
+- Two configs: mkdocs.yml ([OK] works) and mkdocs-simplified.yml ([FAIL] broken links)
 - Dual-config strategy unclear - serving different audiences or duplication?
 - 7 different landing pages competing for attention
 - Missing integration with implementations
 - Untracked directories not yet in MkDocs navigation
 
-**Health**: 🟡 60/100 - Good infrastructure, configuration confusion
+**Health**: [HIGH] 60/100 - Good infrastructure, configuration confusion
 
 ---
 
 ## Critical Issues Analysis
 
-### 🔴 CRITICAL 1: Uncommitted Restructuring
+### [CRITICAL] CRITICAL 1: Uncommitted Restructuring
 
 **Problem**: Major reorganization (01-31 numbered directories → docs/ thematic hierarchy) exists locally but **178 files are untracked** in git.
 
@@ -232,22 +232,22 @@ git commit -m "feat: restructure to thematic docs/ hierarchy"
 git push
 ```
 
-**Priority**: 🔴 **IMMEDIATE** (within 24 hours)
+**Priority**: [CRITICAL] **IMMEDIATE** (within 24 hours)
 
 ---
 
-### 🔴 CRITICAL 2: 97% Repository Bloat
+### [CRITICAL] CRITICAL 2: 97% Repository Bloat
 
 **Problem**: USS experimental system (9.5GB) dominates repository, making it hostile to clone and maintain.
 
 **Size Breakdown**:
 ```
 Total:        12.4GB
-├── uss-venv:  9.5GB  (77%) - PyTorch, CUDA, JAX, TensorFlow
-├── sources:   1.1GB  (9%)  - Mostly Rust compiler cache
-├── venv:      264MB  (2%)  - MkDocs, validation tools
-├── site:      ~1GB   (8%)  - Built documentation
-└── docs:      16MB   (<1%) - Actual content
+ uss-venv:  9.5GB  (77%) - PyTorch, CUDA, JAX, TensorFlow
+ sources:   1.1GB  (9%)  - Mostly Rust compiler cache
+ venv:      264MB  (2%)  - MkDocs, validation tools
+ site:      ~1GB   (8%)  - Built documentation
+ docs:      16MB   (<1%) - Actual content
 ```
 
 **Impact**:
@@ -273,11 +273,11 @@ mv requirements_experiments.txt requirements-science-optional.txt
 # Remove uss-venv from default setup
 ```
 
-**Priority**: 🔴 **HIGH** (Week 1)
+**Priority**: [CRITICAL] **HIGH** (Week 1)
 
 ---
 
-### 🔴 CRITICAL 3: Documentation Contradicts Reality
+### [CRITICAL] CRITICAL 3: Documentation Contradicts Reality
 
 **Problem**: CLAUDE.md claims repository uses "external TAPL implementations as references" but repository contains internal Rust workspace with 1,411 LOC.
 
@@ -317,11 +317,11 @@ Test with: `cargo test`
 # Update CLAUDE.md with external reference
 ```
 
-**Priority**: 🔴 **HIGH** (Week 1)
+**Priority**: [CRITICAL] **HIGH** (Week 1)
 
 ---
 
-### 🟡 MEDIUM 1: Broken MkDocs Simplified Config
+### [HIGH] MEDIUM 1: Broken MkDocs Simplified Config
 
 **Problem**: `mkdocs-simplified.yml` has broken navigation links and missing plugins.
 
@@ -341,11 +341,11 @@ plugins:
 # Option B: Delete simplified config, create beginner's guide as content page
 ```
 
-**Priority**: 🟡 **MEDIUM** (Week 2)
+**Priority**: [HIGH] **MEDIUM** (Week 2)
 
 ---
 
-### 🟡 MEDIUM 2: Implementation-Paper Integration Gap
+### [HIGH] MEDIUM 2: Implementation-Paper Integration Gap
 
 **Problem**: 700+ papers cited but unclear which are implemented. Rust implementations exist but not cross-referenced in bibliographies.
 
@@ -360,22 +360,22 @@ plugins:
 # In each bibliography.md:
 ## Implementation Status
 
-✅ **Church (1940)** - Simply Typed Lambda Calculus
+[OK] **Church (1940)** - Simply Typed Lambda Calculus
    - Implementation: `tapl-rust::lambda-types::SimpleType`
    - Examples: `lambda-examples/stlc.rs`
    - Tests: 5 passing
 
-✅ **Girard (1972)** - System F Polymorphism
+[OK] **Girard (1972)** - System F Polymorphism
    - Implementation: `tapl-rust::lambda-types::Polymorphic`
    - Status: In progress (type inference incomplete)
 
-❌ **Martin-Löf (1984)** - Dependent Types
+[FAIL] **Martin-Löf (1984)** - Dependent Types
    - Status: Not yet implemented
    - Complexity: High
    - Priority: Future
 ```
 
-**Priority**: 🟡 **MEDIUM** (Week 3)
+**Priority**: [HIGH] **MEDIUM** (Week 3)
 
 ---
 
@@ -385,24 +385,24 @@ plugins:
 
 **Goal**: Make repository stable, consistent, and collaborative
 
-1. **Complete Git Migration** [30 min] 🔴
+1. **Complete Git Migration** [30 min] [CRITICAL]
    ```bash
    git add docs/ admin/ && git commit -m "feat: complete thematic restructuring"
    git push
    ```
 
-2. **Remove Repository Bloat** [2 hours] 🔴
+2. **Remove Repository Bloat** [2 hours] [CRITICAL]
    ```bash
    # Extract USS to separate repo OR make optional
    rm -rf .audit-venv  # Delete abandoned venv
    ```
 
-3. **Fix CLAUDE.md Contradictions** [2 hours] 🔴
+3. **Fix CLAUDE.md Contradictions** [2 hours] [CRITICAL]
    - Update to reflect internal Rust workspace
    - Remove references to non-existent catalog
    - Document actual build process
 
-4. **Delete Broken Simplified Config** [1 hour] 🟡
+4. **Delete Broken Simplified Config** [1 hour] [HIGH]
    ```bash
    git rm mkdocs-simplified.yml
    # Create docs/guides/beginners-guide.md instead
@@ -422,18 +422,18 @@ plugins:
 
 **Goal**: Connect implementations with academic content
 
-6. **Add Implementation Status to Bibliographies** [4 hours] 🟡
-   - Mark which papers have implementations (✅/🚧/❌)
+6. **Add Implementation Status to Bibliographies** [4 hours] [HIGH]
+   - Mark which papers have implementations ([OK]//[FAIL])
    - Link to code and examples
    - Add test coverage info
 
 7. **Create Rust Implementation Documentation** [3 hours]
    ```markdown
    docs/implementations/rust/
-   ├── architecture.md       # Workspace design
-   ├── extending.md          # How to add new calculi
-   ├── examples.md           # Working examples
-   └── performance.md        # Benchmarks
+    architecture.md       # Workspace design
+    extending.md          # How to add new calculi
+    examples.md           # Working examples
+    performance.md        # Benchmarks
    ```
 
 8. **Consolidate Index Files** [2 hours]
@@ -514,11 +514,11 @@ plugins:
 # =====================================================
 # Date: 2024-12-23
 # 
-# Git Hygiene:       🔴 10/25  (178 untracked files)
-# Repository Size:   🔴  0/20  (12.4GB / 77% bloat)
-# Code Quality:      🟢 20/20  (0 warnings, clippy clean)
-# Documentation:     🟡 30/50  (broken links unknown)
-# Test Coverage:     🟡  6/15  (20% coverage)
+# Git Hygiene:       [CRITICAL] 10/25  (178 untracked files)
+# Repository Size:   [CRITICAL]  0/20  (12.4GB / 77% bloat)
+# Code Quality:      [MEDIUM] 20/20  (0 warnings, clippy clean)
+# Documentation:     [HIGH] 30/50  (broken links unknown)
+# Test Coverage:     [HIGH]  6/15  (20% coverage)
 # 
 # OVERALL HEALTH:    🟠 36/100 (NEEDS IMPROVEMENT)
 ```
@@ -618,11 +618,11 @@ rm -rf .audit-venv
 
 ```bash
 # Complete Phase 1 (Stabilization)
-# - Commit changes ✓
-# - Remove bloat ✓
-# - Fix contradictions ✓
-# - Delete broken config ✓
-# - Validate links ✓
+# - Commit changes [x]
+# - Remove bloat [x]
+# - Fix contradictions [x]
+# - Delete broken config [x]
+# - Validate links [x]
 ```
 
 ---

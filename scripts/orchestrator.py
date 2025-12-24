@@ -21,10 +21,10 @@ class TaskStatus(Enum):
     FAILED = "failed"
 
 class TaskPriority(Enum):
-    CRITICAL = "🔴"
-    HIGH = "🟡"
-    MEDIUM = "🟢"
-    LOW = "⚪"
+    CRITICAL = "[CRITICAL]"
+    HIGH = "[HIGH]"
+    MEDIUM = "[MEDIUM]"
+    LOW = "[LOW]"
 
 @dataclass
 class Task:
@@ -263,7 +263,7 @@ class TaskOrchestrator:
                 )
                 if deps_met:
                     ready.append(task)
-        return sorted(ready, key=lambda t: (t.phase, -t.priority.value.count("🔴")))
+        return sorted(ready, key=lambda t: (t.phase, -t.priority.value.count("[CRITICAL]")))
     
     def execute_task(self, task_id: str) -> bool:
         """Execute a single task"""
@@ -283,63 +283,63 @@ class TaskOrchestrator:
             else:
                 return self.execute_agent_task(task)
         except Exception as e:
-            print(f"❌ Task {task.id} failed: {e}")
+            print(f"[FAIL] Task {task.id} failed: {e}")
             task.status = TaskStatus.FAILED
             self.save_tasks()
             return False
     
     def execute_manual_task(self, task: Task) -> bool:
         """Execute a manual task with user confirmation"""
-        print(f"📋 Manual task requiring your action:\n")
+        print(f"[TASKS] Manual task requiring your action:\n")
         print(f"Commands to execute:")
         for cmd in task.commands:
             print(f"  $ {cmd}")
         print(f"\nSuccess criteria:")
         for criterion in task.success_criteria:
-            print(f"  ☐ {criterion}")
+            print(f"  [ ] {criterion}")
         
-        response = input("\n▶ Execute these commands? [y/N/s(kip)]: ").lower()
+        response = input("\n Execute these commands? [y/N/s(kip)]: ").lower()
         
         if response == 's':
             task.status = TaskStatus.PENDING
             self.save_tasks()
             return False
         elif response != 'y':
-            print("⏸️  Task skipped by user")
+            print("[PENDING]  Task skipped by user")
             return False
         
         # Execute commands
         for cmd in task.commands:
-            print(f"\n🔧 Running: {cmd}")
+            print(f"\n Running: {cmd}")
             result = subprocess.run(cmd, shell=True, cwd=self.repo_path)
             if result.returncode != 0:
-                print(f"❌ Command failed with exit code {result.returncode}")
+                print(f"[FAIL] Command failed with exit code {result.returncode}")
                 task.status = TaskStatus.FAILED
                 self.save_tasks()
                 return False
         
         # Run validation
-        print(f"\n🔍 Validating task completion...")
+        print(f"\n Validating task completion...")
         for validation_cmd in task.validation:
             print(f"  Checking: {validation_cmd}")
             result = subprocess.run(validation_cmd, shell=True, cwd=self.repo_path, 
                                     capture_output=True, text=True)
             if result.returncode != 0:
-                print(f"  ❌ Validation failed")
+                print(f"  [FAIL] Validation failed")
                 print(result.stderr)
                 task.status = TaskStatus.FAILED
                 self.save_tasks()
                 return False
-            print(f"  ✅ Passed")
+            print(f"  [OK] Passed")
         
         task.status = TaskStatus.COMPLETE
         self.save_tasks()
-        print(f"\n✅ Task {task.id} completed successfully!")
+        print(f"\n[OK] Task {task.id} completed successfully!")
         return True
     
     def execute_agent_task(self, task: Task) -> bool:
         """Execute a task via an agent"""
-        print(f"🤖 Delegating to agent: {task.owner}\n")
+        print(f"[AGENT] Delegating to agent: {task.owner}\n")
         
         # Build agent prompt from task
         prompt = f"""Execute the following task:
@@ -362,7 +362,7 @@ Please execute this task and report completion status.
         
         # For now, print agent invocation (would integrate with actual agent system)
         print(f"Agent Prompt:\n{prompt}")
-        print(f"\n⚠️  Agent integration not yet implemented.")
+        print(f"\n[WARNING]  Agent integration not yet implemented.")
         print(f"Please execute this task manually and mark as complete.\n")
         
         response = input("Mark task as complete? [y/N]: ").lower()
@@ -394,11 +394,11 @@ Please execute this task and report completion status.
             
             for task in sorted(phase_tasks, key=lambda t: t.id):
                 status_icon = {
-                    TaskStatus.PENDING: "⏸️ ",
-                    TaskStatus.IN_PROGRESS: "▶️ ",
-                    TaskStatus.BLOCKED: "🚫",
-                    TaskStatus.COMPLETE: "✅",
-                    TaskStatus.FAILED: "❌",
+                    TaskStatus.PENDING: "[PENDING] ",
+                    TaskStatus.IN_PROGRESS: "[RUNNING] ",
+                    TaskStatus.BLOCKED: "[BLOCKED]",
+                    TaskStatus.COMPLETE: "[OK]",
+                    TaskStatus.FAILED: "[FAIL]",
                 }[task.status]
                 
                 print(f"  {status_icon} {task.id}: {task.name} ({task.owner})")
@@ -462,17 +462,17 @@ def main():
                 print(f"Task {task_id} not found")
         
         elif command == "auto":
-            print("🚀 Auto-execution mode: executing all ready tasks...\n")
+            print("[ACTION] Auto-execution mode: executing all ready tasks...\n")
             while True:
                 ready_tasks = orchestrator.get_ready_tasks()
                 if not ready_tasks:
-                    print("✅ No more tasks ready. Check status for blockers.")
+                    print("[OK] No more tasks ready. Check status for blockers.")
                     break
                 
                 next_task = ready_tasks[0]
                 success = orchestrator.execute_task(next_task.id)
                 if not success:
-                    print(f"⏸️  Paused at task {next_task.id}")
+                    print(f"[PENDING]  Paused at task {next_task.id}")
                     break
         
         else:

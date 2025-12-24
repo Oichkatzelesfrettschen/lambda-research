@@ -27,11 +27,11 @@ def process_file(file_path, check_only=False):
     
     if new_content != content:
         if check_only:
-            print(f"❌ {file_path} needs standardization")
+            print(f"[FAIL] {file_path} needs standardization")
             return False
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(new_content)
-        print(f"✅ Standardized {file_path}")
+        print(f"[OK] Standardized {file_path}")
     return True
 
 def main():

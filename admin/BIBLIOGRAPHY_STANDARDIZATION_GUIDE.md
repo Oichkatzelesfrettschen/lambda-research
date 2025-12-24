@@ -84,9 +84,9 @@ Each entry must have a **Key Contribution** line explaining:
 ```
 
 ## Files Completed
-- ✅ `/01-untyped-lambda-calculus/papers/bibliography.md` - STANDARDIZED
-- 🔄 `/02-simply-typed-lambda-calculus/papers/bibliography.md` - PARTIALLY STANDARDIZED
-- ✅ `/05-martin-lof-type-theory/papers/bibliography.md` - ALREADY IN STANDARD FORMAT
+- [OK] `/01-untyped-lambda-calculus/papers/bibliography.md` - STANDARDIZED
+-  `/02-simply-typed-lambda-calculus/papers/bibliography.md` - PARTIALLY STANDARDIZED
+- [OK] `/05-martin-lof-type-theory/papers/bibliography.md` - ALREADY IN STANDARD FORMAT
 
 ## Files Requiring Standardization
 

@@ -92,12 +92,12 @@ def main():
 
         if result['status'] == 'OK' and 200 <= result.get('status_code', 0) < 400:
             working_links.append(url)
-            status = "✅ OK"
+            status = "[OK] OK"
             if result.get('redirected'):
                 status += f" (redirected to {result['final_url'][:50]}...)"
         else:
             broken_links.append((url, result))
-            status = f"❌ {result['status']}"
+            status = f"[FAIL] {result['status']}"
             if 'error' in result:
                 status += f": {result['error'][:30]}..."
 
@@ -119,7 +119,7 @@ def main():
         print("BROKEN LINKS REPORT")
         print(f"{'='*50}")
         for url, result in broken_links:
-            print(f"\n❌ {url}")
+            print(f"\n[FAIL] {url}")
             print(f"   Status: {result['status']}")
             if 'error' in result:
                 print(f"   Error: {result['error']}")
